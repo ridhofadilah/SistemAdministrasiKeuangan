@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="com.mycompany.cucumbertesting.DemoTest" time="0.384" errors="0" skipped="0">
+<testsuite tests="18" failures="0" name="com.mycompany.cucumbertesting.DemoTest" time="0.543" errors="0" skipped="6">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
-    <property name="java.vm.version" value="25.121-b13"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_141\jre\bin"/>
+    <property name="java.vm.version" value="25.141-b15"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
@@ -11,16 +11,16 @@
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
     <property name="user.script" value=""/>
-    <property name="user.country" value="ID"/>
+    <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="E:\learning\CucumberTesting"/>
-    <property name="java.runtime.version" value="1.8.0_121-b13"/>
+    <property name="user.dir" value="E:\College\Semester 5\IMPAL 100SKS\SistemAdministrasiKeuangan\CucumberTesting"/>
+    <property name="java.runtime.version" value="1.8.0_141-b15"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_141\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\MIAfandi\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\User\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
@@ -29,29 +29,29 @@
     <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.2\java\maven\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_121\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\php;C:\Apache24;C:\Apache24\bin;C:\composer;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\MIAfandi\AppData\Local\Microsoft\WindowsApps;C:\Users\MIAfandi\AppData\Roaming\Composer\vendor\bin;C:\Users\MIAfandi\AppData\Roaming\npm;F:\Sonar-testing\sonarqube-6.7\bin\windows-x86-64;F:\Sonar-testing\sonar-runner-2.4\bin;F:\Sonar-testing\sonar-scanner-3.0.3.778-windows\bin;F:\Sonar-testing\apache-maven-3.5.2\bin;F:\Sonar-testing\sonar-runner-2.4;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_141\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Docker\Docker\Resources\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\HashiCorp\Vagrant\bin;C:\Program Files\MATLAB\R2016b\runtime\win64;C:\Program Files\MATLAB\R2016b\bin;C:\Program Files\MATLAB\R2016b\polyspace\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\xampp\php;C:\Users\User\Downloads\php-7.1.10-Win32-VC14-x64;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\Users\User\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\User\AppData\Local\Programs\Python\Python36-32\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Roaming\Composer\vendor\bin;C:\Users\User\AppData\Roaming\npm;E:\College\Semester 5\IMPAL 100SKS\sonarqube\sonarqube-6.7\bin\windows-x86-64;E:\College\Semester 5\IMPAL 100SKS\sonarqube\sonar-runner-2.4;E:\College\Semester 5\IMPAL 100SKS\sonarqube\sonar-runner-2.4\bin;E:\College\Semester 5\IMPAL 100SKS\sonarqube\sonar-scanner-3.0.3.778-windows\bin;E:\College\Semester 5\IMPAL 100SKS\sonarqube\apache-maven-3.5.2\bin;E:\College\Semester 5\IMPAL 100SKS\sonarqube\Cucumber\spring-boot-cli-1.5.8.RELEASE-bin\spring-1.5.8.RELEASE\bin;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="user.home" value="C:\Users\MIAfandi"/>
+    <property name="user.home" value="C:\Users\User"/>
     <property name="user.timezone" value="Asia/Bangkok"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="MIAfandi"/>
+    <property name="user.name" value="User"/>
     <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_121\jre"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_141\jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_121"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_121\jre\classes"/>
+    <property name="java.version" value="1.8.0_141"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_141\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_141\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_141\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_141\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_141\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_141\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_141\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_141\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_141\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="maven.home" value="C:\Program Files\NetBeans 8.2\java\maven"/>
     <property name="file.separator" value="\"/>
@@ -61,7 +61,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Skenario: Memasukan User Baru" name="Dengan Data user baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
+  <testcase classname="Skenario: Memasukan User Baru" name="Dengan Data user baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0.001"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Ketika Memasukan data user dengan nama \&quot;badu\&quot;" time="0"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Maka respon \&quot;user sukses dimasukan\&quot;" time="0"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Skenario: Memasukan User Baru" time="0.001"/>
@@ -69,4 +69,26 @@
   <testcase classname="Skenario: Memasukan User Baru" name="Ketika Memasukan data user dengan nama \&quot;deni\&quot;" time="0"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Maka respon gagal dengan pesan \&quot;duplicate\&quot;" time="0"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Skenario: Memasukan User Baru" time="0.001"/>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Dengan Data pembayaran baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Ketika Melakukan pembayaran mahasiswa" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Maka responnya \&quot;Mahasiswa sukses melakukan pembayaran\&quot;" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Skenario: Melakukan Pembayaran Mahasiswa" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Skenario: Melakukan Pembayaran Mahasiswa" time="0.002"/>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Dengan Data pembayaran baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Ketika Melakukan pembayaran mahasiswa" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Maka responnya gagal dengan pesan \&quot;Mahasiswa gagal melakukan pembayaran\&quot;" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Skenario: Melakukan Pembayaran Mahasiswa" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Skenario: Melakukan Pembayaran Mahasiswa" time="0.002"/>
 </testsuite>

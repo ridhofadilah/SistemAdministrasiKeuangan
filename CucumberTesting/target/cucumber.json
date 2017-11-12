@@ -18,7 +18,7 @@
         "steps": [
           {
             "result": {
-              "duration": 66134731,
+              "duration": 91813775,
               "status": "passed"
             },
             "line": 8,
@@ -30,7 +30,7 @@
           },
           {
             "result": {
-              "duration": 1498072,
+              "duration": 2264732,
               "status": "passed"
             },
             "line": 9,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 40114,
+              "duration": 65699,
               "status": "passed"
             },
             "line": 10,
@@ -82,7 +82,7 @@
         "steps": [
           {
             "result": {
-              "duration": 19328,
+              "duration": 32849,
               "status": "passed"
             },
             "line": 14,
@@ -94,7 +94,7 @@
           },
           {
             "result": {
-              "duration": 87521,
+              "duration": 61545,
               "status": "passed"
             },
             "line": 15,
@@ -112,7 +112,7 @@
           },
           {
             "result": {
-              "duration": 27715,
+              "duration": 52107,
               "status": "passed"
             },
             "line": 16,
@@ -142,5 +142,129 @@
     "id": "mengelola-user",
     "keyword": "Fitur",
     "uri": "com/mycompany/cucumbertesting/DemoTest.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: id"
+      }
+    ],
+    "line": 3,
+    "elements": [
+      {
+        "line": 7,
+        "name": "Melakukan Pembayaran Mahasiswa",
+        "description": "",
+        "id": "mengelola-pembayaran-mahasiswa;melakukan-pembayaran-mahasiswa",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 59657,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Data pembayaran baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem",
+            "match": {
+              "location": "DemoContext.data_pembayaran_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Melakukan pembayaran mahasiswa",
+            "match": {},
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "responnya \"Mahasiswa sukses melakukan pembayaran\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mahasiswa sukses melakukan pembayaran",
+                  "offset": 11
+                }
+              ],
+              "location": "DemoContext.responnya(String)"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@Normal"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Melakukan Pembayaran Mahasiswa",
+        "description": "",
+        "id": "mengelola-pembayaran-mahasiswa;melakukan-pembayaran-mahasiswa",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 44177,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Data pembayaran baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem",
+            "match": {
+              "location": "DemoContext.data_pembayaran_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Melakukan pembayaran mahasiswa",
+            "match": {},
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "responnya gagal dengan pesan \"Mahasiswa gagal melakukan pembayaran\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mahasiswa gagal melakukan pembayaran",
+                  "offset": 30
+                }
+              ],
+              "location": "DemoContext.responnya_gagal_dengan_pesan(String)"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 12,
+            "name": "@Gagal"
+          }
+        ]
+      }
+    ],
+    "name": "Mengelola Pembayaran Mahasiswa",
+    "description": "Mengelola Data Pembayaran Mahasiswa",
+    "id": "mengelola-pembayaran-mahasiswa",
+    "keyword": "Fitur",
+    "uri": "com/mycompany/cucumbertesting/PembayaranMahasiswa.feature"
   }
 ]
