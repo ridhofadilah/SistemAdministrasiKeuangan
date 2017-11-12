@@ -1,0 +1,5 @@
+Erricson Hardiansyah (1301154186)
+Lalu Gias Irham (1301154368)
+M. Irwan Afandi (1301154424)
+Sayid M Ridho Fadilah (1301154312)
+Trisha Maharani (1301154536)
