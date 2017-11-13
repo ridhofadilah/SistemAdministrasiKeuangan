@@ -38,4 +38,11 @@ public class Demo {
         else
             return "Segera Lakukan Pembayaran";                
     }
+    
+    public static String inputKonfirmasiPembayaran(String kodeKonfirmasi){
+        if (kodeKonfirmasi.equals("PB001"))
+            return "Pembayaran berhasil dikonfimasi";
+        else
+            return "Gagal data tidak lengkap";                
+    }
 }

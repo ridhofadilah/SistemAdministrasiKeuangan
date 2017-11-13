@@ -31,7 +31,7 @@ public class LoginContext {
     }
 
     @Ketika("^Login ke dalam sistem keuangan dengan account \"([^\"]*)\"$")
-    public void mLogin_ke_dalam_sistem_keuangan_dengan_account(String arg1) throws Throwable {
+    public void Login_ke_dalam_sistem_keuangan_dengan_account(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         respon = Demo.validasiLogin(arg1);
     }

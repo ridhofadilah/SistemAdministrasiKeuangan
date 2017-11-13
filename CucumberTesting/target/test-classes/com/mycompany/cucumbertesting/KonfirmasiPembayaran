@@ -14,4 +14,4 @@
            Skenario: Data yang Dimasukkan Tidak Lengkap
 		Dengan Data konfirmasi pembayaran yang diinput melalui sistem
 		Ketika Cek status pembayaran dengan nim " "
-		Maka respon sistem gagal "Data tidak lengkap"
+		Maka respon sistem gagal "Gagal data tidak lengkap"
