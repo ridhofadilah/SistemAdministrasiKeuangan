@@ -1,0 +1,17 @@
+Story : Konfirmasi Pembayaran Mahasiswa
+Sebagai Mahasiswa
+Untuk mengkonfirmasi pembayaran yang telah dilakukan di Bank
+Saya ingin merubah status pembayaran yang telah dilakukan
+Skenario 1: Konfirmasi Pembayaran Berhasil Dilakukan
+Diketahui: Mahasiswa telah melakukan pembayaran di bank
+Ketika:
+1. Mahasiswa memilih menu konfirmasi pembayaran dan masuk ke halaman konfirmasi pembayaran.
+2. Mahasiswa mengisi form konfirmasi pembayaran.
+Jika: Mahasiswa telah menginputkan semua data sesuai format dan klik tombol ok
+Maka: Akan muncul notif bahwa konfimasi telah berhasil dilakukan, proses perubahan status pembayaran akan berganti max 1x24 jam.
+Skenario 2: Proses Konfirmasi Gagal Dilakukan
+Ketika:
+1. Mahasiswa memilih menu konfirmasi pembayaran dan masuk ke halaman konfirmasi pembayaran.
+2. Mahasiswa mengisi form konfirmasi pembayaran.
+Jika: Data yang diisi tidak lengkap atau full namun ada sebagian data yang tidak sesuai format form.
+Maka: Ada notif konfirmasi gagal, dan diminta mengisi format konfirmasi sesuai dengan permintaan form.
