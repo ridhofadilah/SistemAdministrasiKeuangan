@@ -45,4 +45,10 @@ public class Demo {
         else
             return "Gagal data tidak lengkap";                
     }
+    
+    public static String viewPembagianDana(String btnViewPembagianDana){
+        if (btnViewPembagianDana.equals("view pembagian dana"))
+            return "Tampil Data Pembagian Dana"; 
+        return "Tampil Data Pembagian Dana";
+    }
 }
