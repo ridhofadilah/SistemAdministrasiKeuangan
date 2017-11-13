@@ -31,4 +31,11 @@ public class Demo {
         else
             return "Login Gagal cek account anda";                
     }
+    
+    public static String cekStatusPembayaran(String nim){
+        if (nim.equals("1301154424"))
+            return "Status Pembayaran Lunas";
+        else
+            return "Segera Lakukan Pembayaran";                
+    }
 }
