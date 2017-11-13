@@ -45,7 +45,7 @@ formatter.match({
   "location": "DemoContext.data_user_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 67818422,
+  "duration": 74928433,
   "status": "passed"
 });
 formatter.match({
@@ -58,7 +58,7 @@ formatter.match({
   "location": "DemoContext.memasukan_data_user_dengan_nama(String)"
 });
 formatter.result({
-  "duration": 1534539,
+  "duration": 1697913,
   "status": "passed"
 });
 formatter.match({
@@ -71,7 +71,7 @@ formatter.match({
   "location": "DemoContext.respon(String)"
 });
 formatter.result({
-  "duration": 58712,
+  "duration": 51418,
   "status": "passed"
 });
 formatter.scenario({
@@ -107,7 +107,7 @@ formatter.match({
   "location": "DemoContext.data_user_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 20786,
+  "duration": 22245,
   "status": "passed"
 });
 formatter.match({
@@ -120,7 +120,7 @@ formatter.match({
   "location": "DemoContext.memasukan_data_user_dengan_nama(String)"
 });
 formatter.result({
-  "duration": 35373,
+  "duration": 54701,
   "status": "passed"
 });
 formatter.match({
@@ -133,7 +133,133 @@ formatter.match({
   "location": "DemoContext.respon_gagal_dengan_pesan(String)"
 });
 formatter.result({
-  "duration": 35738,
+  "duration": 71841,
+  "status": "passed"
+});
+formatter.uri("com/mycompany/cucumbertesting/InputDataPengajuanDana.feature");
+formatter.feature({
+  "comments": [
+    {
+      "line": 1,
+      "value": "# language: id"
+    }
+  ],
+  "line": 3,
+  "name": "Mengelola Pengajuan Dana Fakultas",
+  "description": "     Mengelola Data Pengajuan Dana Fakultas",
+  "id": "mengelola-pengajuan-dana-fakultas",
+  "keyword": "Fitur"
+});
+formatter.scenario({
+  "line": 7,
+  "name": "Melakukan Input Pengajuan Dana",
+  "description": "",
+  "id": "mengelola-pengajuan-dana-fakultas;melakukan-input-pengajuan-dana",
+  "type": "scenario",
+  "keyword": "Skenario",
+  "tags": [
+    {
+      "line": 6,
+      "name": "@Berhasil"
+    }
+  ]
+});
+formatter.step({
+  "line": 8,
+  "name": "Data pengajuan dana yang akan dimasukan sesuai format",
+  "keyword": "Dengan "
+});
+formatter.step({
+  "line": 9,
+  "name": "Melakukan pengajuan dana",
+  "keyword": "Ketika "
+});
+formatter.step({
+  "line": 10,
+  "name": "respon pengajuan dana \"Pengajuan Dana Berhasil\"",
+  "keyword": "Maka "
+});
+formatter.match({
+  "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_sesuai_format()"
+});
+formatter.result({
+  "duration": 55795,
+  "status": "passed"
+});
+formatter.match({
+  "location": "DemoContext.melakukan_pengajuan_dana()"
+});
+formatter.result({
+  "duration": 22245,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Pengajuan Dana Berhasil",
+      "offset": 23
+    }
+  ],
+  "location": "DemoContext.respon_pengajuan_dana(String)"
+});
+formatter.result({
+  "duration": 40478,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 13,
+  "name": "Melakukan Input Pengajuan Dana",
+  "description": "",
+  "id": "mengelola-pengajuan-dana-fakultas;melakukan-input-pengajuan-dana",
+  "type": "scenario",
+  "keyword": "Skenario",
+  "tags": [
+    {
+      "line": 12,
+      "name": "@Gagal"
+    }
+  ]
+});
+formatter.step({
+  "line": 14,
+  "name": "Data pengajuan dana yang akan dimasukan sesuai format",
+  "keyword": "Dengan "
+});
+formatter.step({
+  "line": 15,
+  "name": "Melakukan pengajuan dana",
+  "keyword": "Ketika "
+});
+formatter.step({
+  "line": 16,
+  "name": "respon gagal pengajuan dana \"Pengajuan Dana Gagal\"",
+  "keyword": "Maka "
+});
+formatter.match({
+  "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_sesuai_format()"
+});
+formatter.result({
+  "duration": 24798,
+  "status": "passed"
+});
+formatter.match({
+  "location": "DemoContext.melakukan_pengajuan_dana()"
+});
+formatter.result({
+  "duration": 28810,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Pengajuan Dana Gagal",
+      "offset": 29
+    }
+  ],
+  "location": "DemoContext.respon_gagal_pengajuan_dana(String)"
+});
+formatter.result({
+  "duration": 62359,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/InputDataPengeluaran.feature");
@@ -183,14 +309,14 @@ formatter.match({
   "location": "DemoContext.data_pengeluaran_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 52148,
+  "duration": 32092,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pengeluaran_dana()"
 });
 formatter.result({
-  "duration": 14951,
+  "duration": 23339,
   "status": "passed"
 });
 formatter.match({
@@ -203,7 +329,7 @@ formatter.match({
   "location": "DemoContext.respon_pengeluaran_dana(String)"
 });
 formatter.result({
-  "duration": 42302,
+  "duration": 50689,
   "status": "passed"
 });
 formatter.scenario({
@@ -239,14 +365,14 @@ formatter.match({
   "location": "DemoContext.data_pengeluaran_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 39020,
+  "duration": 35009,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pengeluaran_dana()"
 });
 formatter.result({
-  "duration": 13493,
+  "duration": 35738,
   "status": "passed"
 });
 formatter.match({
@@ -259,7 +385,133 @@ formatter.match({
   "location": "DemoContext.respon_gagal_pengeluaran_dana(String)"
 });
 formatter.result({
-  "duration": 41937,
+  "duration": 67464,
+  "status": "passed"
+});
+formatter.uri("com/mycompany/cucumbertesting/LaporanTahunan.feature");
+formatter.feature({
+  "comments": [
+    {
+      "line": 1,
+      "value": "# language: id"
+    }
+  ],
+  "line": 3,
+  "name": "Mengelola Laporan Tahunan",
+  "description": "     Mengelola Data Laporan Tahunan",
+  "id": "mengelola-laporan-tahunan",
+  "keyword": "Fitur"
+});
+formatter.scenario({
+  "line": 7,
+  "name": "Melakukan Input Laporan Tahunan",
+  "description": "",
+  "id": "mengelola-laporan-tahunan;melakukan-input-laporan-tahunan",
+  "type": "scenario",
+  "keyword": "Skenario",
+  "tags": [
+    {
+      "line": 6,
+      "name": "@Normal"
+    }
+  ]
+});
+formatter.step({
+  "line": 8,
+  "name": "Data laporan tahunan yang akan dimasukkan dan sesuai format",
+  "keyword": "Dengan "
+});
+formatter.step({
+  "line": 9,
+  "name": "Melakukan laporan tahunan",
+  "keyword": "Ketika "
+});
+formatter.step({
+  "line": 10,
+  "name": "respon laporan tahunan \"Laporan Tahunan tersimpan\"",
+  "keyword": "Maka "
+});
+formatter.match({
+  "location": "DemoContext.data_laporan_tahunan_yang_akan_dimasukkan_dan_sesuai_format()"
+});
+formatter.result({
+  "duration": 44855,
+  "status": "passed"
+});
+formatter.match({
+  "location": "InputPengajuanDanaContext.melakukan_laporan_tahunan()"
+});
+formatter.result({
+  "duration": 34644,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Laporan Tahunan tersimpan",
+      "offset": 24
+    }
+  ],
+  "location": "DemoContext.respon_laporan_tahunan(String)"
+});
+formatter.result({
+  "duration": 76217,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 13,
+  "name": "Melakukan Input Laporan Tahunan",
+  "description": "",
+  "id": "mengelola-laporan-tahunan;melakukan-input-laporan-tahunan",
+  "type": "scenario",
+  "keyword": "Skenario",
+  "tags": [
+    {
+      "line": 12,
+      "name": "@Gagal"
+    }
+  ]
+});
+formatter.step({
+  "line": 14,
+  "name": "Data laporan tahunan yang akan dimasukkan dan sesuai format",
+  "keyword": "Dengan "
+});
+formatter.step({
+  "line": 15,
+  "name": "Melakukan laporan tahunan",
+  "keyword": "Ketika "
+});
+formatter.step({
+  "line": 16,
+  "name": "respon gagal laporan tahunan \"Laporan Tahunan gagal tersimpan\"",
+  "keyword": "Maka "
+});
+formatter.match({
+  "location": "DemoContext.data_laporan_tahunan_yang_akan_dimasukkan_dan_sesuai_format()"
+});
+formatter.result({
+  "duration": 46313,
+  "status": "passed"
+});
+formatter.match({
+  "location": "InputPengajuanDanaContext.melakukan_laporan_tahunan()"
+});
+formatter.result({
+  "duration": 45220,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Laporan Tahunan gagal tersimpan",
+      "offset": 30
+    }
+  ],
+  "location": "DemoContext.respon_gagal_laporan_tahunan(String)"
+});
+formatter.result({
+  "duration": 78040,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/Login.feature");
@@ -309,7 +561,7 @@ formatter.match({
   "location": "LoginContext.Data_account_yang_dimiliki_ketika_divalidasi_ada_di_database_system()"
 });
 formatter.result({
-  "duration": 46313,
+  "duration": 86427,
   "status": "passed"
 });
 formatter.match({
@@ -322,7 +574,7 @@ formatter.match({
   "location": "LoginContext.Login_ke_dalam_sistem_keuangan_dengan_account(String)"
 });
 formatter.result({
-  "duration": 66006,
+  "duration": 98097,
   "status": "passed"
 });
 formatter.match({
@@ -335,7 +587,7 @@ formatter.match({
   "location": "LoginContext.respon(String)"
 });
 formatter.result({
-  "duration": 53972,
+  "duration": 95909,
   "status": "passed"
 });
 formatter.scenario({
@@ -371,7 +623,7 @@ formatter.match({
   "location": "LoginContext.Data_account_yang_dimiliki_ketika_divalidasi_ada_di_database_system()"
 });
 formatter.result({
-  "duration": 39020,
+  "duration": 58347,
   "status": "passed"
 });
 formatter.match({
@@ -384,7 +636,7 @@ formatter.match({
   "location": "LoginContext.Login_ke_dalam_sistem_keuangan_dengan_account(String)"
 });
 formatter.result({
-  "duration": 55430,
+  "duration": 82416,
   "status": "passed"
 });
 formatter.match({
@@ -397,7 +649,7 @@ formatter.match({
   "location": "LoginContext.respon_gagal_dengan_pesan(String)"
 });
 formatter.result({
-  "duration": 55430,
+  "duration": 80228,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/PembagianDana.feature");
@@ -447,14 +699,14 @@ formatter.match({
   "location": "DemoContext.data_pembagian_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 32091,
+  "duration": 55430,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pembagian_dana()"
 });
 formatter.result({
-  "duration": 14223,
+  "duration": 25891,
   "status": "passed"
 });
 formatter.match({
@@ -467,7 +719,7 @@ formatter.match({
   "location": "DemoContext.respon_pembagian_dana(String)"
 });
 formatter.result({
-  "duration": 51419,
+  "duration": 76581,
   "status": "passed"
 });
 formatter.scenario({
@@ -503,14 +755,14 @@ formatter.match({
   "location": "DemoContext.data_pembagian_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 75852,
+  "duration": 54336,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pembagian_dana()"
 });
 formatter.result({
-  "duration": 19692,
+  "duration": 30633,
   "status": "passed"
 });
 formatter.match({
@@ -523,7 +775,7 @@ formatter.match({
   "location": "DemoContext.respon_gagal_pembagian_dana(String)"
 });
 formatter.result({
-  "duration": 88615,
+  "duration": 83510,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/PembayaranMahasiswa.feature");
@@ -573,14 +825,14 @@ formatter.match({
   "location": "DemoContext.data_pembayaran_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 37926,
+  "duration": 279703,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pembayaran_mahasiswa()"
 });
 formatter.result({
-  "duration": 15316,
+  "duration": 34644,
   "status": "passed"
 });
 formatter.match({
@@ -593,7 +845,7 @@ formatter.match({
   "location": "DemoContext.responnya(String)"
 });
 formatter.result({
-  "duration": 51783,
+  "duration": 99921,
   "status": "passed"
 });
 formatter.scenario({
@@ -629,14 +881,14 @@ formatter.match({
   "location": "DemoContext.data_pembayaran_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 45584,
+  "duration": 44490,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pembayaran_mahasiswa()"
 });
 formatter.result({
-  "duration": 14952,
+  "duration": 21880,
   "status": "passed"
 });
 formatter.match({
@@ -649,7 +901,7 @@ formatter.match({
   "location": "DemoContext.responnya_gagal_dengan_pesan(String)"
 });
 formatter.result({
-  "duration": 48866,
+  "duration": 88980,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/PengajuanDana.feature");
@@ -696,17 +948,17 @@ formatter.step({
   "keyword": "Maka "
 });
 formatter.match({
-  "location": "DemoContext.data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
+  "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 40479,
+  "duration": 327111,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pengajuan_dana()"
 });
 formatter.result({
-  "duration": 21151,
+  "duration": 56159,
   "status": "passed"
 });
 formatter.match({
@@ -719,7 +971,7 @@ formatter.match({
   "location": "DemoContext.respon_pengajuan_dana(String)"
 });
 formatter.result({
-  "duration": 62359,
+  "duration": 158632,
   "status": "passed"
 });
 formatter.scenario({
@@ -752,17 +1004,17 @@ formatter.step({
   "keyword": "Maka "
 });
 formatter.match({
-  "location": "DemoContext.data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
+  "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 36103,
+  "duration": 52513,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pengajuan_dana()"
 });
 formatter.result({
-  "duration": 19692,
+  "duration": 41572,
   "status": "passed"
 });
 formatter.match({
@@ -775,7 +1027,83 @@ formatter.match({
   "location": "DemoContext.respon_gagal_pengajuan_dana(String)"
 });
 formatter.result({
-  "duration": 60900,
+  "duration": 77310,
+  "status": "passed"
+});
+formatter.uri("com/mycompany/cucumbertesting/ViewPengeluaranDana.feature");
+formatter.feature({
+  "comments": [
+    {
+      "line": 1,
+      "value": "# language: id"
+    }
+  ],
+  "line": 3,
+  "name": "View Pengeluaran Dana",
+  "description": "     Admin Fakultas melihat detail pengeluaran dana yang pernah ia inputkan",
+  "id": "view-pengeluaran-dana",
+  "keyword": "Fitur"
+});
+formatter.scenario({
+  "line": 7,
+  "name": "Pembagian dana fakultas",
+  "description": "",
+  "id": "view-pengeluaran-dana;pembagian-dana-fakultas",
+  "type": "scenario",
+  "keyword": "Skenario",
+  "tags": [
+    {
+      "line": 6,
+      "name": "@Normal"
+    }
+  ]
+});
+formatter.step({
+  "line": 8,
+  "name": "Admin fakultas masuk ke halaman homepage admin fakultas pengeluarn dana",
+  "keyword": "Dengan "
+});
+formatter.step({
+  "line": 9,
+  "name": "Mengklik tombol pengeluaran \"view pengeluaran dana\"",
+  "keyword": "Ketika "
+});
+formatter.step({
+  "line": 10,
+  "name": "respon sistem pengeluaran \"Tampil Data Pengeluaran Dana\"",
+  "keyword": "Maka "
+});
+formatter.match({
+  "location": "ViewPengeluaranDanaContext.Admin_fakultas_masuk_ke_halaman_homepage_admin_fakultas_pengeluarn_dana()"
+});
+formatter.result({
+  "duration": 95544,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "view pengeluaran dana",
+      "offset": 29
+    }
+  ],
+  "location": "ViewPengeluaranDanaContext.Mengklik_tombol_pengeluaran(String)"
+});
+formatter.result({
+  "duration": 118153,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Tampil Data Pengeluaran Dana",
+      "offset": 27
+    }
+  ],
+  "location": "ViewPengeluaranDanaContext.respon_sistem_pengeluaran(String)"
+});
+formatter.result({
+  "duration": 81687,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/viewPembagianDana.feature");
@@ -822,10 +1150,10 @@ formatter.step({
   "keyword": "Maka "
 });
 formatter.match({
-  "location": "VeiwPembagianDana.Admin_fakultas_masuk_ke_halaman_homepage_admin_fakultas()"
+  "location": "VeiwPembagianDanaContext.Admin_fakultas_masuk_ke_halaman_homepage_admin_fakultas()"
 });
 formatter.result({
-  "duration": 66735,
+  "duration": 96273,
   "status": "passed"
 });
 formatter.match({
@@ -835,10 +1163,10 @@ formatter.match({
       "offset": 17
     }
   ],
-  "location": "VeiwPembagianDana.Mengklik_tombol(String)"
+  "location": "VeiwPembagianDanaContext.Mengklik_tombol(String)"
 });
 formatter.result({
-  "duration": 99555,
+  "duration": 97368,
   "status": "passed"
 });
 formatter.match({
@@ -848,10 +1176,10 @@ formatter.match({
       "offset": 15
     }
   ],
-  "location": "VeiwPembagianDana.respon_sistem(String)"
+  "location": "VeiwPembagianDanaContext.respon_sistem(String)"
 });
 formatter.result({
-  "duration": 67464,
+  "duration": 86427,
   "status": "passed"
 });
 });

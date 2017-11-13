@@ -7,11 +7,11 @@
            Skenario: Melakukan Input Laporan Tahunan
 		Dengan Data laporan tahunan yang akan dimasukkan dan sesuai format
 		Ketika Melakukan laporan tahunan
-		Maka respon pengeluaran dana "Laporan Tahunan tersimpan"
+		Maka respon laporan tahunan "Laporan Tahunan tersimpan"
 
            @Gagal
            Skenario: Melakukan Input Laporan Tahunan
 		Dengan Data laporan tahunan yang akan dimasukkan dan sesuai format
 		Ketika Melakukan laporan tahunan
-		Maka respon pengeluaran dana "Laporan Tahunan gagal tersimpan"
+		Maka respon gagal laporan tahunan "Laporan Tahunan gagal tersimpan"
 

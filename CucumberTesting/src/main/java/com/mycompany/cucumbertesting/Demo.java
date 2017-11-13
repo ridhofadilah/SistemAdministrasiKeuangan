@@ -51,4 +51,10 @@ public class Demo {
             return "Tampil Data Pembagian Dana"; 
         return "Tampil Data Pembagian Dana";
     }
+    
+    public static String viewPengeluranDana(String btnViewPengeluaranDana){
+        if (btnViewPengeluaranDana.equals("view pengeluaran dana"))
+            return "Tampil Data Pengeluaran Dana"; 
+        return "Tampil Data Pengeluaran Dana";
+    }
 }

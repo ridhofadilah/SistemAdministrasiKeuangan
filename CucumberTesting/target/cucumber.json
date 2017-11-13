@@ -18,7 +18,7 @@
         "steps": [
           {
             "result": {
-              "duration": 67818422,
+              "duration": 74928433,
               "status": "passed"
             },
             "line": 8,
@@ -30,7 +30,7 @@
           },
           {
             "result": {
-              "duration": 1534539,
+              "duration": 1697913,
               "status": "passed"
             },
             "line": 9,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 58712,
+              "duration": 51418,
               "status": "passed"
             },
             "line": 10,
@@ -82,7 +82,7 @@
         "steps": [
           {
             "result": {
-              "duration": 20786,
+              "duration": 22245,
               "status": "passed"
             },
             "line": 14,
@@ -94,7 +94,7 @@
           },
           {
             "result": {
-              "duration": 35373,
+              "duration": 54701,
               "status": "passed"
             },
             "line": 15,
@@ -112,7 +112,7 @@
           },
           {
             "result": {
-              "duration": 35738,
+              "duration": 71841,
               "status": "passed"
             },
             "line": 16,
@@ -154,6 +154,138 @@
     "elements": [
       {
         "line": 7,
+        "name": "Melakukan Input Pengajuan Dana",
+        "description": "",
+        "id": "mengelola-pengajuan-dana-fakultas;melakukan-input-pengajuan-dana",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 55795,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Data pengajuan dana yang akan dimasukan sesuai format",
+            "match": {
+              "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_sesuai_format()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "duration": 22245,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Melakukan pengajuan dana",
+            "match": {
+              "location": "DemoContext.melakukan_pengajuan_dana()"
+            },
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "duration": 40478,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "respon pengajuan dana \"Pengajuan Dana Berhasil\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Pengajuan Dana Berhasil",
+                  "offset": 23
+                }
+              ],
+              "location": "DemoContext.respon_pengajuan_dana(String)"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@Berhasil"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Melakukan Input Pengajuan Dana",
+        "description": "",
+        "id": "mengelola-pengajuan-dana-fakultas;melakukan-input-pengajuan-dana",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 24798,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Data pengajuan dana yang akan dimasukan sesuai format",
+            "match": {
+              "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_sesuai_format()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "duration": 28810,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Melakukan pengajuan dana",
+            "match": {
+              "location": "DemoContext.melakukan_pengajuan_dana()"
+            },
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "duration": 62359,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "respon gagal pengajuan dana \"Pengajuan Dana Gagal\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Pengajuan Dana Gagal",
+                  "offset": 29
+                }
+              ],
+              "location": "DemoContext.respon_gagal_pengajuan_dana(String)"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 12,
+            "name": "@Gagal"
+          }
+        ]
+      }
+    ],
+    "name": "Mengelola Pengajuan Dana Fakultas",
+    "description": "     Mengelola Data Pengajuan Dana Fakultas",
+    "id": "mengelola-pengajuan-dana-fakultas",
+    "keyword": "Fitur",
+    "uri": "com/mycompany/cucumbertesting/InputDataPengajuanDana.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: id"
+      }
+    ],
+    "line": 3,
+    "elements": [
+      {
+        "line": 7,
         "name": "Melakukan Input Pengeluaran Dana",
         "description": "",
         "id": "mengelola-pengeluaran-dana-fakultas;melakukan-input-pengeluaran-dana",
@@ -162,7 +294,7 @@
         "steps": [
           {
             "result": {
-              "duration": 52148,
+              "duration": 32092,
               "status": "passed"
             },
             "line": 8,
@@ -174,7 +306,7 @@
           },
           {
             "result": {
-              "duration": 14951,
+              "duration": 23339,
               "status": "passed"
             },
             "line": 9,
@@ -186,7 +318,7 @@
           },
           {
             "result": {
-              "duration": 42302,
+              "duration": 50689,
               "status": "passed"
             },
             "line": 10,
@@ -220,7 +352,7 @@
         "steps": [
           {
             "result": {
-              "duration": 39020,
+              "duration": 35009,
               "status": "passed"
             },
             "line": 14,
@@ -232,7 +364,7 @@
           },
           {
             "result": {
-              "duration": 13493,
+              "duration": 35738,
               "status": "passed"
             },
             "line": 15,
@@ -244,7 +376,7 @@
           },
           {
             "result": {
-              "duration": 41937,
+              "duration": 67464,
               "status": "passed"
             },
             "line": 16,
@@ -286,6 +418,138 @@
     "elements": [
       {
         "line": 7,
+        "name": "Melakukan Input Laporan Tahunan",
+        "description": "",
+        "id": "mengelola-laporan-tahunan;melakukan-input-laporan-tahunan",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 44855,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Data laporan tahunan yang akan dimasukkan dan sesuai format",
+            "match": {
+              "location": "DemoContext.data_laporan_tahunan_yang_akan_dimasukkan_dan_sesuai_format()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "duration": 34644,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Melakukan laporan tahunan",
+            "match": {
+              "location": "InputPengajuanDanaContext.melakukan_laporan_tahunan()"
+            },
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "duration": 76217,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "respon laporan tahunan \"Laporan Tahunan tersimpan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Laporan Tahunan tersimpan",
+                  "offset": 24
+                }
+              ],
+              "location": "DemoContext.respon_laporan_tahunan(String)"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@Normal"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Melakukan Input Laporan Tahunan",
+        "description": "",
+        "id": "mengelola-laporan-tahunan;melakukan-input-laporan-tahunan",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 46313,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Data laporan tahunan yang akan dimasukkan dan sesuai format",
+            "match": {
+              "location": "DemoContext.data_laporan_tahunan_yang_akan_dimasukkan_dan_sesuai_format()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "duration": 45220,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Melakukan laporan tahunan",
+            "match": {
+              "location": "InputPengajuanDanaContext.melakukan_laporan_tahunan()"
+            },
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "duration": 78040,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "respon gagal laporan tahunan \"Laporan Tahunan gagal tersimpan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Laporan Tahunan gagal tersimpan",
+                  "offset": 30
+                }
+              ],
+              "location": "DemoContext.respon_gagal_laporan_tahunan(String)"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 12,
+            "name": "@Gagal"
+          }
+        ]
+      }
+    ],
+    "name": "Mengelola Laporan Tahunan",
+    "description": "     Mengelola Data Laporan Tahunan",
+    "id": "mengelola-laporan-tahunan",
+    "keyword": "Fitur",
+    "uri": "com/mycompany/cucumbertesting/LaporanTahunan.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: id"
+      }
+    ],
+    "line": 3,
+    "elements": [
+      {
+        "line": 7,
         "name": "Login User",
         "description": "",
         "id": "login-user-pada-sistem;login-user",
@@ -294,7 +558,7 @@
         "steps": [
           {
             "result": {
-              "duration": 46313,
+              "duration": 86427,
               "status": "passed"
             },
             "line": 8,
@@ -306,7 +570,7 @@
           },
           {
             "result": {
-              "duration": 66006,
+              "duration": 98097,
               "status": "passed"
             },
             "line": 9,
@@ -324,7 +588,7 @@
           },
           {
             "result": {
-              "duration": 53972,
+              "duration": 95909,
               "status": "passed"
             },
             "line": 10,
@@ -358,7 +622,7 @@
         "steps": [
           {
             "result": {
-              "duration": 39020,
+              "duration": 58347,
               "status": "passed"
             },
             "line": 14,
@@ -370,7 +634,7 @@
           },
           {
             "result": {
-              "duration": 55430,
+              "duration": 82416,
               "status": "passed"
             },
             "line": 15,
@@ -388,7 +652,7 @@
           },
           {
             "result": {
-              "duration": 55430,
+              "duration": 80228,
               "status": "passed"
             },
             "line": 16,
@@ -438,7 +702,7 @@
         "steps": [
           {
             "result": {
-              "duration": 32091,
+              "duration": 55430,
               "status": "passed"
             },
             "line": 8,
@@ -450,7 +714,7 @@
           },
           {
             "result": {
-              "duration": 14223,
+              "duration": 25891,
               "status": "passed"
             },
             "line": 9,
@@ -462,7 +726,7 @@
           },
           {
             "result": {
-              "duration": 51419,
+              "duration": 76581,
               "status": "passed"
             },
             "line": 10,
@@ -496,7 +760,7 @@
         "steps": [
           {
             "result": {
-              "duration": 75852,
+              "duration": 54336,
               "status": "passed"
             },
             "line": 14,
@@ -508,7 +772,7 @@
           },
           {
             "result": {
-              "duration": 19692,
+              "duration": 30633,
               "status": "passed"
             },
             "line": 15,
@@ -520,7 +784,7 @@
           },
           {
             "result": {
-              "duration": 88615,
+              "duration": 83510,
               "status": "passed"
             },
             "line": 16,
@@ -570,7 +834,7 @@
         "steps": [
           {
             "result": {
-              "duration": 37926,
+              "duration": 279703,
               "status": "passed"
             },
             "line": 8,
@@ -582,7 +846,7 @@
           },
           {
             "result": {
-              "duration": 15316,
+              "duration": 34644,
               "status": "passed"
             },
             "line": 9,
@@ -594,7 +858,7 @@
           },
           {
             "result": {
-              "duration": 51783,
+              "duration": 99921,
               "status": "passed"
             },
             "line": 10,
@@ -628,7 +892,7 @@
         "steps": [
           {
             "result": {
-              "duration": 45584,
+              "duration": 44490,
               "status": "passed"
             },
             "line": 14,
@@ -640,7 +904,7 @@
           },
           {
             "result": {
-              "duration": 14952,
+              "duration": 21880,
               "status": "passed"
             },
             "line": 15,
@@ -652,7 +916,7 @@
           },
           {
             "result": {
-              "duration": 48866,
+              "duration": 88980,
               "status": "passed"
             },
             "line": 16,
@@ -702,19 +966,19 @@
         "steps": [
           {
             "result": {
-              "duration": 40479,
+              "duration": 327111,
               "status": "passed"
             },
             "line": 8,
             "name": "Data pengajuan dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem",
             "match": {
-              "location": "DemoContext.data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
+              "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
             },
             "keyword": "Dengan "
           },
           {
             "result": {
-              "duration": 21151,
+              "duration": 56159,
               "status": "passed"
             },
             "line": 9,
@@ -726,7 +990,7 @@
           },
           {
             "result": {
-              "duration": 62359,
+              "duration": 158632,
               "status": "passed"
             },
             "line": 10,
@@ -760,19 +1024,19 @@
         "steps": [
           {
             "result": {
-              "duration": 36103,
+              "duration": 52513,
               "status": "passed"
             },
             "line": 14,
             "name": "Data pengajuan dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem",
             "match": {
-              "location": "DemoContext.data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
+              "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
             },
             "keyword": "Dengan "
           },
           {
             "result": {
-              "duration": 19692,
+              "duration": 41572,
               "status": "passed"
             },
             "line": 15,
@@ -784,7 +1048,7 @@
           },
           {
             "result": {
-              "duration": 60900,
+              "duration": 77310,
               "status": "passed"
             },
             "line": 16,
@@ -828,25 +1092,105 @@
         "line": 7,
         "name": "Pembagian dana fakultas",
         "description": "",
+        "id": "view-pengeluaran-dana;pembagian-dana-fakultas",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 95544,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Admin fakultas masuk ke halaman homepage admin fakultas pengeluarn dana",
+            "match": {
+              "location": "ViewPengeluaranDanaContext.Admin_fakultas_masuk_ke_halaman_homepage_admin_fakultas_pengeluarn_dana()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "duration": 118153,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Mengklik tombol pengeluaran \"view pengeluaran dana\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "view pengeluaran dana",
+                  "offset": 29
+                }
+              ],
+              "location": "ViewPengeluaranDanaContext.Mengklik_tombol_pengeluaran(String)"
+            },
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "duration": 81687,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "respon sistem pengeluaran \"Tampil Data Pengeluaran Dana\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Tampil Data Pengeluaran Dana",
+                  "offset": 27
+                }
+              ],
+              "location": "ViewPengeluaranDanaContext.respon_sistem_pengeluaran(String)"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@Normal"
+          }
+        ]
+      }
+    ],
+    "name": "View Pengeluaran Dana",
+    "description": "     Admin Fakultas melihat detail pengeluaran dana yang pernah ia inputkan",
+    "id": "view-pengeluaran-dana",
+    "keyword": "Fitur",
+    "uri": "com/mycompany/cucumbertesting/ViewPengeluaranDana.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: id"
+      }
+    ],
+    "line": 3,
+    "elements": [
+      {
+        "line": 7,
+        "name": "Pembagian dana fakultas",
+        "description": "",
         "id": "view-pembagian-dana;pembagian-dana-fakultas",
         "type": "scenario",
         "keyword": "Skenario",
         "steps": [
           {
             "result": {
-              "duration": 66735,
+              "duration": 96273,
               "status": "passed"
             },
             "line": 8,
             "name": "Admin fakultas masuk ke halaman homepage admin fakultas",
             "match": {
-              "location": "VeiwPembagianDana.Admin_fakultas_masuk_ke_halaman_homepage_admin_fakultas()"
+              "location": "VeiwPembagianDanaContext.Admin_fakultas_masuk_ke_halaman_homepage_admin_fakultas()"
             },
             "keyword": "Dengan "
           },
           {
             "result": {
-              "duration": 99555,
+              "duration": 97368,
               "status": "passed"
             },
             "line": 9,
@@ -858,13 +1202,13 @@
                   "offset": 17
                 }
               ],
-              "location": "VeiwPembagianDana.Mengklik_tombol(String)"
+              "location": "VeiwPembagianDanaContext.Mengklik_tombol(String)"
             },
             "keyword": "Ketika "
           },
           {
             "result": {
-              "duration": 67464,
+              "duration": 86427,
               "status": "passed"
             },
             "line": 10,
@@ -876,7 +1220,7 @@
                   "offset": 15
                 }
               ],
-              "location": "VeiwPembagianDana.respon_sistem(String)"
+              "location": "VeiwPembagianDanaContext.respon_sistem(String)"
             },
             "keyword": "Maka "
           }

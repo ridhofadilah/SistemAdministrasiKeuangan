@@ -6,6 +6,7 @@
 package com.mycompany.cucumbertesting;
 
 import cucumber.api.CucumberOptions;
+import cucumber.api.CucumberOptions;
 import cucumber.api.java.bm.Maka;
 import cucumber.api.java.id.Dengan;
 import cucumber.api.java.id.Ketika;
@@ -15,11 +16,11 @@ import junit.framework.Assert;
  * @author MIAfandi
  */
 @CucumberOptions(plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"})
-public class VeiwPembagianDana {
-     String respon;
+public class ViewPengeluaranDanaContext {
+    String respon;
     
-    @Dengan("^Admin fakultas masuk ke halaman homepage admin fakultas$")
-    public void Admin_fakultas_masuk_ke_halaman_homepage_admin_fakultas() throws Throwable {
+    @Dengan("^Admin fakultas masuk ke halaman homepage admin fakultas pengeluarn dana$")
+    public void Admin_fakultas_masuk_ke_halaman_homepage_admin_fakultas_pengeluarn_dana() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         boolean expected = false;
         ///kode untuk cek ke database apakah user sudah ada
@@ -28,14 +29,14 @@ public class VeiwPembagianDana {
 
     }
 
-    @Ketika("^Mengklik tombol \"([^\"]*)\"$")
-    public void Mengklik_tombol (String arg1) throws Throwable {
+    @Ketika("^Mengklik tombol pengeluaran \"([^\"]*)\"$")
+    public void Mengklik_tombol_pengeluaran (String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        respon = Demo.viewPembagianDana(arg1);
+        respon = Demo.viewPengeluranDana(arg1);
     }
 
-    @Maka("^respon sistem \"([^\"]*)\"$")
-    public void respon_sistem(String arg1) throws Throwable {
+    @Maka("^respon sistem pengeluaran \"([^\"]*)\"$")
+    public void respon_sistem_pengeluaran(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         ///kode untuk cek ke database apakah user sudah ada
         Assert.assertEquals(arg1, respon);
