@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="18" failures="0" name="com.mycompany.cucumbertesting.DemoTest" time="0.543" errors="0" skipped="6">
+<testsuite tests="40" failures="0" name="com.mycompany.cucumbertesting.DemoTest" time="0.736" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_141\jre\bin"/>
@@ -64,31 +64,41 @@
   <testcase classname="Skenario: Memasukan User Baru" name="Dengan Data user baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0.001"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Ketika Memasukan data user dengan nama \&quot;badu\&quot;" time="0"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Maka respon \&quot;user sukses dimasukan\&quot;" time="0"/>
-  <testcase classname="Skenario: Memasukan User Baru" name="Skenario: Memasukan User Baru" time="0.001"/>
+  <testcase classname="Skenario: Memasukan User Baru" name="Skenario: Memasukan User Baru" time="0"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Dengan Data user baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Ketika Memasukan data user dengan nama \&quot;deni\&quot;" time="0"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Maka respon gagal dengan pesan \&quot;duplicate\&quot;" time="0"/>
   <testcase classname="Skenario: Memasukan User Baru" name="Skenario: Memasukan User Baru" time="0.001"/>
+  <testcase classname="Skenario: Melakukan Input Pengeluaran Dana" name="Dengan Data pengeluaran dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
+  <testcase classname="Skenario: Melakukan Input Pengeluaran Dana" name="Ketika Melakukan pengeluaran dana" time="0"/>
+  <testcase classname="Skenario: Melakukan Input Pengeluaran Dana" name="Maka respon pengeluaran dana \&quot;Pengeluaran Dana Berhasil\&quot;" time="0"/>
+  <testcase classname="Skenario: Melakukan Input Pengeluaran Dana" name="Skenario: Melakukan Input Pengeluaran Dana" time="0"/>
+  <testcase classname="Skenario: Melakukan Input Pengeluaran Dana" name="Dengan Data pengeluaran dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
+  <testcase classname="Skenario: Melakukan Input Pengeluaran Dana" name="Ketika Melakukan pengeluaran dana" time="0"/>
+  <testcase classname="Skenario: Melakukan Input Pengeluaran Dana" name="Maka respon gagal pengeluaran dana \&quot;Pengeluaran Dana Gagal\&quot;" time="0.001"/>
+  <testcase classname="Skenario: Melakukan Input Pengeluaran Dana" name="Skenario: Melakukan Input Pengeluaran Dana" time="0.001"/>
+  <testcase classname="Skenario: Melakukan Pembagian Dana" name="Dengan Data pembagian dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembagian Dana" name="Ketika Melakukan pembagian dana" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembagian Dana" name="Maka respon pembagian dana \&quot;Pembagian Dana Berhasil\&quot;" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembagian Dana" name="Skenario: Melakukan Pembagian Dana" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembagian Dana" name="Dengan Data pembagian dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembagian Dana" name="Ketika Melakukan pembagian dana" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembagian Dana" name="Maka respon gagal pembagian dana \&quot;Pembagian Dana Gagal\&quot;" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembagian Dana" name="Skenario: Melakukan Pembagian Dana" time="0"/>
   <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Dengan Data pembayaran baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
-  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Ketika Melakukan pembayaran mahasiswa" time="0">
-    <skipped/>
-  </testcase>
-  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Maka responnya \&quot;Mahasiswa sukses melakukan pembayaran\&quot;" time="0.001">
-    <skipped/>
-  </testcase>
-  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Skenario: Melakukan Pembayaran Mahasiswa" time="0.002">
-    <skipped/>
-  </testcase>
-  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Skenario: Melakukan Pembayaran Mahasiswa" time="0.002"/>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Ketika Melakukan pembayaran mahasiswa" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Maka responnya \&quot;Mahasiswa sukses melakukan pembayaran\&quot;" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Skenario: Melakukan Pembayaran Mahasiswa" time="0"/>
   <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Dengan Data pembayaran baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
-  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Ketika Melakukan pembayaran mahasiswa" time="0.001">
-    <skipped/>
-  </testcase>
-  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Maka responnya gagal dengan pesan \&quot;Mahasiswa gagal melakukan pembayaran\&quot;" time="0.002">
-    <skipped/>
-  </testcase>
-  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Skenario: Melakukan Pembayaran Mahasiswa" time="0.002">
-    <skipped/>
-  </testcase>
-  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Skenario: Melakukan Pembayaran Mahasiswa" time="0.002"/>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Ketika Melakukan pembayaran mahasiswa" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Maka responnya gagal dengan pesan \&quot;Mahasiswa gagal melakukan pembayaran\&quot;" time="0"/>
+  <testcase classname="Skenario: Melakukan Pembayaran Mahasiswa" name="Skenario: Melakukan Pembayaran Mahasiswa" time="0"/>
+  <testcase classname="Skenario: Melakukan Pengajuan Dana" name="Dengan Data pengajuan dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0.001"/>
+  <testcase classname="Skenario: Melakukan Pengajuan Dana" name="Ketika Melakukan pengajuan dana" time="0"/>
+  <testcase classname="Skenario: Melakukan Pengajuan Dana" name="Maka respon pengajuan dana \&quot;Pengajuan Dana Berhasil\&quot;" time="0"/>
+  <testcase classname="Skenario: Melakukan Pengajuan Dana" name="Skenario: Melakukan Pengajuan Dana" time="0"/>
+  <testcase classname="Skenario: Melakukan Pengajuan Dana" name="Dengan Data pengajuan dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem" time="0"/>
+  <testcase classname="Skenario: Melakukan Pengajuan Dana" name="Ketika Melakukan pengajuan dana" time="0"/>
+  <testcase classname="Skenario: Melakukan Pengajuan Dana" name="Maka respon gagal pengajuan dana \&quot;Pengajuan Dana Gagal\&quot;" time="0"/>
+  <testcase classname="Skenario: Melakukan Pengajuan Dana" name="Skenario: Melakukan Pengajuan Dana" time="0"/>
 </testsuite>

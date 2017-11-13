@@ -81,4 +81,121 @@ public class DemoContext {
         String ans = "Mahasiswa gagal melakukan pembayaran";
         Assert.assertEquals(arg1, ans);
     }
+    
+    @Ketika("^Melakukan pembayaran mahasiswa$")
+    public void melakukan_pembayaran_mahasiswa() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new PendingException();
+    boolean expected = false;
+        boolean result = false;
+        Assert.assertEquals(expected, result);
+}
+    
+    @Dengan("^Data pembagian dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem$")
+public void data_pembagian_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new PendingException();
+    boolean expected = false;
+        boolean result = false;
+        Assert.assertEquals(expected, result);
+}
+
+@Ketika("^Melakukan pembagian dana$")
+public void melakukan_pembagian_dana() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+   // throw new PendingException();
+   boolean expected = false;
+        boolean result = false;
+        Assert.assertEquals(expected, result);
+}
+
+@Maka("^respon pembagian dana \"([^\"]*)\"$")
+public void respon_pembagian_dana(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new PendingException();
+    String ans = "Pembagian Dana Berhasil";
+        Assert.assertEquals(arg1, ans);
+}
+@Maka("^respon gagal pembagian dana \"([^\"]*)\"$")
+public void respon_gagal_pembagian_dana(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+   // throw new PendingException();
+   
+    String ans = "Pembagian Dana Gagal";
+        Assert.assertEquals(arg1, ans);
+}
+@Dengan("^Data pengajuan dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem$")
+public void data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new PendingException();
+    
+   boolean expected = false;
+        boolean result = false;
+        Assert.assertEquals(expected, result);
+}
+
+@Ketika("^Melakukan pengajuan dana$")
+public void melakukan_pengajuan_dana() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new PendingException();
+    
+   boolean expected = false;
+        boolean result = false;
+        Assert.assertEquals(expected, result);
+    
+}
+
+@Maka("^respon pengajuan dana \"([^\"]*)\"$")
+public void respon_pengajuan_dana(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+   // throw new PendingException();
+   
+    String ans = "Pengajuan Dana Berhasil";
+        Assert.assertEquals(arg1, ans);
+}
+
+@Maka("^respon gagal pengajuan dana \"([^\"]*)\"$")
+public void respon_gagal_pengajuan_dana(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+   // throw new PendingException();
+   
+    String ans = "Pengajuan Dana Gagal";
+        Assert.assertEquals(arg1, ans);
+}
+
+@Dengan("^Data pengeluaran dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem$")
+public void data_pengeluaran_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new PendingException();
+    boolean expected = false;
+        boolean result = false;
+        Assert.assertEquals(expected, result);
+}
+
+@Ketika("^Melakukan pengeluaran dana$")
+public void melakukan_pengeluaran_dana() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new PendingException();
+    boolean expected = false;
+        boolean result = false;
+        Assert.assertEquals(expected, result);
+}
+
+@Maka("^respon pengeluaran dana \"([^\"]*)\"$")
+public void respon_pengeluaran_dana(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+   // throw new PendingException();
+   
+    String ans = "Pengeluaran Dana Berhasil";
+        Assert.assertEquals(arg1, ans);
+}
+
+@Maka("^respon gagal pengeluaran dana \"([^\"]*)\"$")
+public void respon_gagal_pengeluaran_dana(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+   
+    String ans = "Pengeluaran Dana Gagal";
+        Assert.assertEquals(arg1, ans);
+}
+
 }
