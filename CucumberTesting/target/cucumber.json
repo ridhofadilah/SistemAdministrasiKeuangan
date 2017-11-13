@@ -18,7 +18,7 @@
         "steps": [
           {
             "result": {
-              "duration": 102682828,
+              "duration": 68396792,
               "status": "passed"
             },
             "line": 8,
@@ -30,7 +30,7 @@
           },
           {
             "result": {
-              "duration": 2302113,
+              "duration": 2454973,
               "status": "passed"
             },
             "line": 9,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 60413,
+              "duration": 61265,
               "status": "passed"
             },
             "line": 10,
@@ -82,7 +82,7 @@
         "steps": [
           {
             "result": {
-              "duration": 41911,
+              "duration": 24798,
               "status": "passed"
             },
             "line": 14,
@@ -94,7 +94,7 @@
           },
           {
             "result": {
-              "duration": 60413,
+              "duration": 53242,
               "status": "passed"
             },
             "line": 15,
@@ -112,7 +112,7 @@
           },
           {
             "result": {
-              "duration": 47198,
+              "duration": 36467,
               "status": "passed"
             },
             "line": 16,
@@ -162,7 +162,7 @@
         "steps": [
           {
             "result": {
-              "duration": 49840,
+              "duration": 30268,
               "status": "passed"
             },
             "line": 8,
@@ -174,7 +174,7 @@
           },
           {
             "result": {
-              "duration": 24920,
+              "duration": 14951,
               "status": "passed"
             },
             "line": 9,
@@ -186,7 +186,7 @@
           },
           {
             "result": {
-              "duration": 74383,
+              "duration": 43031,
               "status": "passed"
             },
             "line": 10,
@@ -220,7 +220,7 @@
         "steps": [
           {
             "result": {
-              "duration": 32472,
+              "duration": 27715,
               "status": "passed"
             },
             "line": 14,
@@ -232,7 +232,7 @@
           },
           {
             "result": {
-              "duration": 43044,
+              "duration": 17504,
               "status": "passed"
             },
             "line": 15,
@@ -244,7 +244,7 @@
           },
           {
             "result": {
-              "duration": 55126,
+              "duration": 73299,
               "status": "passed"
             },
             "line": 16,
@@ -286,6 +286,150 @@
     "elements": [
       {
         "line": 7,
+        "name": "Login User",
+        "description": "",
+        "id": "login-user-pada-sistem;login-user",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 47772,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Data account yang dimiliki ketika divalidasi ada di database system",
+            "match": {
+              "location": "LoginContext.Data_account_yang_dimiliki_ketika_divalidasi_ada_di_database_system()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "duration": 49230,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Login ke dalam sistem keuangan dengan account \"irwan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "irwan",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginContext.mLogin_ke_dalam_sistem_keuangan_dengan_account(String)"
+            },
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "duration": 74028,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "respon login \"Login Berhasil\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Login Berhasil",
+                  "offset": 14
+                }
+              ],
+              "location": "LoginContext.respon(String)"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@Normal"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Login User",
+        "description": "",
+        "id": "login-user-pada-sistem;login-user",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 59441,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Data account yang dimiliki ketika divalidasi ada di database system",
+            "match": {
+              "location": "LoginContext.Data_account_yang_dimiliki_ketika_divalidasi_ada_di_database_system()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "duration": 70382,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Login ke dalam sistem keuangan dengan account \"afandi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "afandi",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginContext.mLogin_ke_dalam_sistem_keuangan_dengan_account(String)"
+            },
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "duration": 72570,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "respon login gagal \"Login Gagal cek account anda\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Login Gagal cek account anda",
+                  "offset": 20
+                }
+              ],
+              "location": "LoginContext.respon_gagal_dengan_pesan(String)"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 12,
+            "name": "@Gagal"
+          }
+        ]
+      }
+    ],
+    "name": "Login User pada Sistem",
+    "description": "     Mengelola Login User pada Sistem",
+    "id": "login-user-pada-sistem",
+    "keyword": "Fitur",
+    "uri": "com/mycompany/cucumbertesting/Login.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: id"
+      }
+    ],
+    "line": 3,
+    "elements": [
+      {
+        "line": 7,
         "name": "Melakukan Pembagian Dana",
         "description": "",
         "id": "mengelola-pembagian-dana-fakultas;melakukan-pembagian-dana",
@@ -294,7 +438,7 @@
         "steps": [
           {
             "result": {
-              "duration": 37003,
+              "duration": 48866,
               "status": "passed"
             },
             "line": 8,
@@ -306,7 +450,7 @@
           },
           {
             "result": {
-              "duration": 27941,
+              "duration": 27715,
               "status": "passed"
             },
             "line": 9,
@@ -318,7 +462,7 @@
           },
           {
             "result": {
-              "duration": 79670,
+              "duration": 80228,
               "status": "passed"
             },
             "line": 10,
@@ -352,7 +496,7 @@
         "steps": [
           {
             "result": {
-              "duration": 35492,
+              "duration": 40114,
               "status": "passed"
             },
             "line": 14,
@@ -364,7 +508,7 @@
           },
           {
             "result": {
-              "duration": 30584,
+              "duration": 23339,
               "status": "passed"
             },
             "line": 15,
@@ -376,7 +520,7 @@
           },
           {
             "result": {
-              "duration": 80425,
+              "duration": 83145,
               "status": "passed"
             },
             "line": 16,
@@ -426,7 +570,7 @@
         "steps": [
           {
             "result": {
-              "duration": 46065,
+              "duration": 47772,
               "status": "passed"
             },
             "line": 8,
@@ -438,7 +582,7 @@
           },
           {
             "result": {
-              "duration": 31339,
+              "duration": 32456,
               "status": "passed"
             },
             "line": 9,
@@ -450,7 +594,7 @@
           },
           {
             "result": {
-              "duration": 71741,
+              "duration": 90439,
               "status": "passed"
             },
             "line": 10,
@@ -484,7 +628,7 @@
         "steps": [
           {
             "result": {
-              "duration": 46065,
+              "duration": 40479,
               "status": "passed"
             },
             "line": 14,
@@ -496,7 +640,7 @@
           },
           {
             "result": {
-              "duration": 19634,
+              "duration": 37197,
               "status": "passed"
             },
             "line": 15,
@@ -508,7 +652,7 @@
           },
           {
             "result": {
-              "duration": 57392,
+              "duration": 64182,
               "status": "passed"
             },
             "line": 16,
@@ -558,7 +702,7 @@
         "steps": [
           {
             "result": {
-              "duration": 46065,
+              "duration": 44125,
               "status": "passed"
             },
             "line": 8,
@@ -570,7 +714,7 @@
           },
           {
             "result": {
-              "duration": 27186,
+              "duration": 23339,
               "status": "passed"
             },
             "line": 9,
@@ -582,7 +726,7 @@
           },
           {
             "result": {
-              "duration": 78914,
+              "duration": 66006,
               "status": "passed"
             },
             "line": 10,
@@ -616,7 +760,7 @@
         "steps": [
           {
             "result": {
-              "duration": 41534,
+              "duration": 43761,
               "status": "passed"
             },
             "line": 14,
@@ -628,7 +772,7 @@
           },
           {
             "result": {
-              "duration": 32094,
+              "duration": 62359,
               "status": "passed"
             },
             "line": 15,
@@ -640,7 +784,7 @@
           },
           {
             "result": {
-              "duration": 107610,
+              "duration": 84240,
               "status": "passed"
             },
             "line": 16,

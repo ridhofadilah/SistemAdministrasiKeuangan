@@ -24,4 +24,11 @@ public class Demo {
             return "duplicate";
                 
     }
+    
+    public static String validasiLogin(String account){
+        if (account.equals("irwan"))
+            return "Login Berhasil";
+        else
+            return "Login Gagal cek account anda";                
+    }
 }
