@@ -16,7 +16,7 @@ import junit.framework.Assert;
  * @author MIAfandi
  */
 @CucumberOptions(plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"})
-public class StatusPembayranContext {
+public class StatusPembayaranContext {
     String respon;
     
     @Dengan("^Nim yang diinputkan pada kolom cek status pada menu cek status pembayaran mahasiswa$")

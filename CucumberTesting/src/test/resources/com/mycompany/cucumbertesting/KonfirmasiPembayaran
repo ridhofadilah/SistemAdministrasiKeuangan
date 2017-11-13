@@ -1,0 +1,17 @@
+
+# language: id
+
+    Fitur: Konfirmasi Pebayaran Mahasiswa
+           Melakukan Konfirmasi Pembayaran yang Telah Dilakukan Sebelumnya
+
+           @Normal
+           Skenario: Data yang Dimasukkan Lengkap
+		Dengan Data konfirmasi pembayaran yang diinput melalui sistem
+		Ketika Input data konfirmasi pembayaran dengan id "PB001"
+		Maka respon sistem berhasil "Pembayaran berhasil dikonfimasi"
+
+           @Gagal
+           Skenario: Data yang Dimasukkan Tidak Lengkap
+		Dengan Data konfirmasi pembayaran yang diinput melalui sistem
+		Ketika Cek status pembayaran dengan nim " "
+		Maka respon sistem gagal "Data tidak lengkap"
