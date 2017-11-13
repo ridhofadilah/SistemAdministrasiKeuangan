@@ -1,0 +1,8 @@
+Sebagai : Wakil Rektor Bagian Keuangan
+Untuk : Pembagian Dana masing-masing fakultas
+Keingingan : memberikan dana fakultas untuk keperluan akademik maupun pembangunan
+
+Skenario:
+1. Wakil rektor bagian keuangann masuk ke laman input pembagian dana
+2. wakil rektor akan membagi dana sesuai dengan kebutuhan masing-masing fakultas
+3. wakil rektor akan menginputkan data pembagian dana dan sistem akan menyimpannya ke dalam database
