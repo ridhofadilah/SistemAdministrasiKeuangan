@@ -124,8 +124,9 @@ public void respon_gagal_pembagian_dana(String arg1) throws Throwable {
     String ans = "Pembagian Dana Gagal";
         Assert.assertEquals(arg1, ans);
 }
-@Dengan("^Data pengajuan dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem$")
-public void data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem() throws Throwable {
+    
+@Dengan("^Data pengajuan dana yang akan dimasukan tersedia dan sesuai format$")
+public void data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_sesuai_format() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
     //throw new PendingException();
     
@@ -195,6 +196,41 @@ public void respon_gagal_pengeluaran_dana(String arg1) throws Throwable {
     // Write code here that turns the phrase above into concrete actions
    
     String ans = "Pengeluaran Dana Gagal";
+        Assert.assertEquals(arg1, ans);
+}
+    
+@Dengan("^Data laporan tahunan yang akan dimasukkan dan sesuai format$")
+public void data_laporan_tahunan_yang_akan_dimasukkan_dan_sesuai_format() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new PendingException();
+    boolean expected = false;
+        boolean result = false;
+        Assert.assertEquals(expected, result);
+}
+
+@Ketika("^Melakukan input laporan tahunan$")
+public void melakukan_input_laporan_tahunan() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new PendingException();
+    boolean expected = false;
+        boolean result = false;
+        Assert.assertEquals(expected, result);
+}
+
+@Maka("^respon laporan tahunan \"([^\"]*)\"$")
+public void respon_laporan_tahunan(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+   // throw new PendingException();
+   
+    String ans = "Laporan Tahunan tersimpan";
+        Assert.assertEquals(arg1, ans);
+}
+
+@Maka("^respon gagal laporan tahunan \"([^\"]*)\"$")
+public void respon_gagal_laporan_tahunan(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+   
+    String ans = "Laporan Tahunan gagal tersimpan";
         Assert.assertEquals(arg1, ans);
 }
 
