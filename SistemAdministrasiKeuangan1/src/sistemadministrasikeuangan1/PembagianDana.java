@@ -7,13 +7,15 @@ package sistemadministrasikeuangan1;
 
 /**
  *
- * @author User
+ * @author MIAfandi
  */
-public class AdminFakultas extends User{
+public class PembagianDana {
     private String idFakultas;
+    private int dana;
 
-    public AdminFakultas(String username, String password, String name, String kontak) {
-        super(username, password, name, kontak);
+    public PembagianDana(String idFakultas, int dana) {
+        this.idFakultas = idFakultas;
+        this.dana = dana;
     }
 
     public String getIdFakultas() {
@@ -23,6 +25,13 @@ public class AdminFakultas extends User{
     public void setIdFakultas(String idFakultas) {
         this.idFakultas = idFakultas;
     }
-    
-    
+
+    public int getDana() {
+        return dana;
+    }
+
+    public void setDana(int dana) {
+        this.dana = dana;
+    }
+       
 }
