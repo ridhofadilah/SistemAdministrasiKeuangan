@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import Model.Database;
+
 /**
  *
  * @author MIAfandi
@@ -15,7 +17,7 @@ public class MainDriver {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Database d = new Database();
     }
     
 }

@@ -12,10 +12,17 @@ package Model;
 public class PengeluaranDana {
     private String idPengeluaran;
     private String idFakultas;
-    private String tujuan;
-    private String waktu;
+    private String tahunAjar;
+    private String Keterangan;
     private int total;
-    private String keterangan;
+
+    public PengeluaranDana(String idPengeluaran, String idFakultas, String tahunAjar, String Keterangan, int total) {
+        this.idPengeluaran = idPengeluaran;
+        this.idFakultas = idFakultas;
+        this.tahunAjar = tahunAjar;
+        this.Keterangan = Keterangan;
+        this.total = total;
+    }
 
     public String getIdPengeluaran() {
         return idPengeluaran;
@@ -33,20 +40,20 @@ public class PengeluaranDana {
         this.idFakultas = idFakultas;
     }
 
-    public String getTujuan() {
-        return tujuan;
+    public String getTahunAjar() {
+        return tahunAjar;
     }
 
-    public void setTujuan(String tujuan) {
-        this.tujuan = tujuan;
+    public void setTahunAjar(String tahunAjar) {
+        this.tahunAjar = tahunAjar;
     }
 
-    public String getWaktu() {
-        return waktu;
+    public String getKeterangan() {
+        return Keterangan;
     }
 
-    public void setWaktu(String waktu) {
-        this.waktu = waktu;
+    public void setKeterangan(String Keterangan) {
+        this.Keterangan = Keterangan;
     }
 
     public int getTotal() {
@@ -55,23 +62,6 @@ public class PengeluaranDana {
 
     public void setTotal(int total) {
         this.total = total;
-    }
-
-    public String getKeterangan() {
-        return keterangan;
-    }
-
-    public void setKeterangan(String keterangan) {
-        this.keterangan = keterangan;
-    }
-
-    public PengeluaranDana(String idPengeluaran, String idFakultas, String tujuan, String waktu, int total, String keterangan) {
-        this.idPengeluaran = "PLD"+idPengeluaran;
-        this.idFakultas = idFakultas;
-        this.tujuan = tujuan;
-        this.waktu = waktu;
-        this.total = total;
-        this.keterangan = keterangan;
     }
     
 }
