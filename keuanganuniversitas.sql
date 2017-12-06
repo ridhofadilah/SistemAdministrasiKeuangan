@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2017 at 09:20 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 7.1.2
+-- Generation Time: Dec 06, 2017 at 07:34 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -29,15 +31,16 @@ SET time_zone = "+00:00";
 CREATE TABLE `adminfakultas` (
   `idFakultas` varchar(30) NOT NULL,
   `namaFakultas` varchar(30) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `password` varchar(50) NOT NULL,
+  `danfakultas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `adminfakultas`
 --
 
-INSERT INTO `adminfakultas` (`idFakultas`, `namaFakultas`, `password`) VALUES
-('FKFIF', 'Fakultas Teknik Informatika', 'ifjayaraga');
+INSERT INTO `adminfakultas` (`idFakultas`, `namaFakultas`, `password`, `danfakultas`) VALUES
+('FKFIF', 'Fakultas Teknik Informatika', 'ifjayaraga', 0);
 
 -- --------------------------------------------------------
 
@@ -82,7 +85,7 @@ CREATE TABLE `pembayaran` (
   `idMahasiswa` varchar(30) NOT NULL,
   `ajaran` varchar(30) NOT NULL,
   `total` int(15) NOT NULL,
-  `status` int(3) NOT NULL
+  `status` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -96,7 +99,7 @@ CREATE TABLE `pengajuandana` (
   `idFakultas` varchar(30) NOT NULL,
   `tujuan` varchar(100) NOT NULL,
   `total` int(20) NOT NULL,
-  `keterangan` int(255) NOT NULL
+  `status` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -109,7 +112,7 @@ CREATE TABLE `pengeluarandana` (
   `idPengeluaran` varchar(30) NOT NULL,
   `idFakultas` varchar(30) NOT NULL,
   `tujuan` varchar(255) NOT NULL,
-  `waktu` date NOT NULL,
+  `waktu` varchar(20) NOT NULL,
   `total` int(15) NOT NULL,
   `keterangan` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
@@ -193,6 +196,7 @@ ALTER TABLE `pengajuandana`
 --
 ALTER TABLE `pengeluarandana`
   ADD CONSTRAINT `pengeluarandana_ibfk_1` FOREIGN KEY (`idFakultas`) REFERENCES `adminfakultas` (`idFakultas`) ON DELETE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

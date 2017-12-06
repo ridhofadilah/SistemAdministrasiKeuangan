@@ -15,7 +15,7 @@ public class Fakultas {
     private String password;
 
     public Fakultas(String idFakultas, String namaFakultas, String password) {
-        this.idFakultas = "fak"+idFakultas;
+        this.idFakultas = "FAK"+idFakultas;
         this.namaFakultas = namaFakultas;
         this.password = password;
     }

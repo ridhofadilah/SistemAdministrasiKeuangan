@@ -13,14 +13,14 @@ public class Pembayaran {
     private String idPembayaran;
     private String ajaran;
     private int total;
-    private int status;
+    private String status;
     private Mahasiswa [] mahasiswa = new Mahasiswa[1];
 
     public Pembayaran(String idPembayaran, String ajaran, int total) {
-        this.idPembayaran = "pb"+idPembayaran;
+        this.idPembayaran = "PMB"+idPembayaran;
         this.ajaran = ajaran;
         this.total = total;
-        this.status = 0;
+        this.status = "0";
     }
 
     public String getIdPembayaran() {
@@ -47,11 +47,11 @@ public class Pembayaran {
         this.total = total;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
