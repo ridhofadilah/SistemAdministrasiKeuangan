@@ -133,8 +133,8 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfUsernameActionPerformed
 
-    public void addListener(ActionListener ae){
-        btnLogin.addActionListener(ae);
+    public void addListener(ActionListener e){
+        btnLogin.addActionListener(e);
     }
     
     public JButton getBtnLogin() {
