@@ -16,12 +16,12 @@ public class PengajuanDana {
     public int total;
     private String status;
 
-    public PengajuanDana(String idPengajuan, String idFakultas, String tujuan, int total) {
-        this.idPengajuan = "PJD"+idPengajuan;
+    public PengajuanDana(String idPengajuan, String idFakultas, String tujuan, int total, String status) {
+        this.idPengajuan = idPengajuan;
         this.idFakultas = idFakultas;
         this.tujuan = tujuan;
         this.total = total;
-        this.status = "0";
+        this.status = status;
     }
 
     public String getStatus() {

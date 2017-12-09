@@ -13,11 +13,13 @@ public class Fakultas {
     private String idFakultas;
     private String namaFakultas;
     private String password;
-
-    public Fakultas(String idFakultas, String namaFakultas, String password) {
-        this.idFakultas = "FAK"+idFakultas;
+    private int danaFakultas;
+    
+    public Fakultas(String idFakultas, String namaFakultas, String password, int danaFakultas) {
+        this.idFakultas = idFakultas;
         this.namaFakultas = namaFakultas;
         this.password = password;
+        this.danaFakultas = danaFakultas;
     }
 
     public String getIdFakultas() {

@@ -6,6 +6,7 @@
 package View;
 
 import java.awt.event.ActionListener;
+import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JRadioButton;
@@ -131,6 +132,8 @@ public class MenuAdmin extends javax.swing.JFrame {
         jLabel4.setText("ID Pembayaran                    :");
 
         jLabel5.setText("ID Mahasiswa                       :");
+
+        tfIDPembayaranA.setEditable(false);
 
         jLabel6.setText("Total                                     :");
 
@@ -268,7 +271,16 @@ public class MenuAdmin extends javax.swing.JFrame {
         return tfTotalBayarA;
     }
     
-    
+    public void refresh(String s){
+        tfIDMahasiswaA.setText(s);
+        tfTotalBayarA.setText(s);
+        tfIDPembayaranKonfirmasiA.setText(s);
+        comboTahunAjarA.setSelectedIndex(0);
+        rbSetuju.getSelectedIcon();
+        Random r = new Random();
+        int randId = r.nextInt(999-111) + 111;
+        tfIDPembayaranA.setText("PMB"+Integer.toString(randId));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddPembayaranA;

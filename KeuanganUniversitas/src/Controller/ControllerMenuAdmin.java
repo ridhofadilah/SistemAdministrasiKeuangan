@@ -24,7 +24,8 @@ public class ControllerMenuAdmin implements ActionListener {
     ControllerMenuAdmin(Aplikasi model) {
             this.model=model;
             data.connect();
-            view= new MenuAdmin();
+            view= new MenuAdmin();            
+            view.refresh("");
             view.setVisible(true);
             view.addListener(this);
     }

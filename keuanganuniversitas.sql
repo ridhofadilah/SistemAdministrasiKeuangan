@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2017 at 07:34 AM
+-- Generation Time: Dec 08, 2017 at 06:01 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -32,14 +32,14 @@ CREATE TABLE `adminfakultas` (
   `idFakultas` varchar(30) NOT NULL,
   `namaFakultas` varchar(30) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `danfakultas` int(11) NOT NULL
+  `danafakultas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `adminfakultas`
 --
 
-INSERT INTO `adminfakultas` (`idFakultas`, `namaFakultas`, `password`, `danfakultas`) VALUES
+INSERT INTO `adminfakultas` (`idFakultas`, `namaFakultas`, `password`, `danafakultas`) VALUES
 ('FKFIF', 'Fakultas Teknik Informatika', 'ifjayaraga', 0);
 
 -- --------------------------------------------------------
@@ -85,8 +85,17 @@ CREATE TABLE `pembayaran` (
   `idMahasiswa` varchar(30) NOT NULL,
   `ajaran` varchar(30) NOT NULL,
   `total` int(15) NOT NULL,
-  `status` varchar(3) NOT NULL
+  `status` varchar(3) NOT NULL,
+  `statusbayar` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pembayaran`
+--
+
+INSERT INTO `pembayaran` (`idPembayaran`, `idMahasiswa`, `ajaran`, `total`, `status`, `statusbayar`) VALUES
+('PMB123', 'MHSIF0001', '2016/2017', 1500000, '0', '1'),
+('PMB124', 'MHSIF0001', '2017/2018', 1600000, '0', '1');
 
 -- --------------------------------------------------------
 
@@ -111,10 +120,9 @@ CREATE TABLE `pengajuandana` (
 CREATE TABLE `pengeluarandana` (
   `idPengeluaran` varchar(30) NOT NULL,
   `idFakultas` varchar(30) NOT NULL,
-  `tujuan` varchar(255) NOT NULL,
-  `waktu` varchar(20) NOT NULL,
-  `total` int(15) NOT NULL,
-  `keterangan` varchar(3) NOT NULL
+  `tahun ajar` varchar(10) NOT NULL,
+  `keterangan` varchar(255) NOT NULL,
+  `total` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 --

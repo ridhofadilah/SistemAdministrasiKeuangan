@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import Model.Database;
+import Model.*;
 
 /**
  *
@@ -13,11 +13,9 @@ import Model.Database;
  */
 public class MainDriver {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        Database d = new Database();
+        Aplikasi driver = new Aplikasi();
+        new ControllerLogin(driver);
     }
     
 }

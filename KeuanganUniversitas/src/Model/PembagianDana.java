@@ -15,7 +15,7 @@ public class PembagianDana {
     private int totalDana;
 
     public PembagianDana(String idPembagian, String idFakultas, int totalDana) {
-        this.idPembagian = "PBD"+idPembagian;
+        this.idPembagian = idPembagian;
         this.idFakultas = idFakultas;
         this.totalDana = totalDana;
     }

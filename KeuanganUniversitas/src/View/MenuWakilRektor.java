@@ -147,6 +147,8 @@ public class MenuWakilRektor extends javax.swing.JFrame {
 
         jLabel6.setText("Total Dana                      :");
 
+        tfPembagian.setEditable(false);
+
         btnAddPembagianDana.setText("ADD");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -200,10 +202,7 @@ public class MenuWakilRektor extends javax.swing.JFrame {
 
         tabelPengajuanWR.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "ID Pengajuan", "Tujuan", "Total", "Status"

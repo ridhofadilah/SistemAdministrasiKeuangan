@@ -126,6 +126,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     
     public void addListener(ActionListener e){
         btnAddPembayaran.addActionListener(e);
+        btlLogoutMahasiswa.addActionListener(e);
     }
 
     public JButton getBtlLogoutMahasiswa() {
@@ -149,6 +150,11 @@ public class MenuMahasiswa extends javax.swing.JFrame {
      */
     public JTextField getTfTotalBayar() {
         return tfTotalBayar;
+    }
+    
+    public void refresh(String s){
+        tfIDPembayaran.setText(s);
+        tfTotalBayar.setText(s);
     }
     
 

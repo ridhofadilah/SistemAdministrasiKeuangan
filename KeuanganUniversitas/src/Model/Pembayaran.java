@@ -12,15 +12,18 @@ package Model;
 public class Pembayaran {
     private String idPembayaran;
     private String ajaran;
+    private String idMahasiswa;
     private int total;
     private String status;
-    private Mahasiswa [] mahasiswa = new Mahasiswa[1];
+    private String statusBayar;
 
-    public Pembayaran(String idPembayaran, String ajaran, int total) {
-        this.idPembayaran = "PMB"+idPembayaran;
+    public Pembayaran(String idPembayaran, String ajaran, String idMahasiswa, int total, String status, String statusBayar) {
+        this.idPembayaran = idPembayaran;
+        this.idMahasiswa = idMahasiswa;
         this.ajaran = ajaran;
         this.total = total;
-        this.status = "0";
+        this.status = status;
+        this.statusBayar = statusBayar;
     }
 
     public String getIdPembayaran() {
