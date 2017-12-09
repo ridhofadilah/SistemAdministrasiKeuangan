@@ -6,6 +6,8 @@
 package Model;
 
 import View.MenuMahasiswa;
+import View.MenuWakilRektor;
+import javax.swing.JTextField;
 
 /**
  *
@@ -61,5 +63,55 @@ public class Aplikasi {
         data.updatePembayaranMahasiswa(id,idMahasiswa);
     }
 
-   
+    public void konfirmasiPengajuan(String text, String setuju) {
+        data.konfirmasiPengajuanDana(text,setuju);
+    }
+
+    public PengajuanDana cariIDPengajuan(String text) {
+        pengajuan = data.findIDPengajuan(text);
+        if (pengajuan != null){
+            return pengajuan;
+        } else {
+            return null;
+        }
+    }
+
+    public void showTabelPengajuan(MenuWakilRektor view) {
+        data.loadDataPengajuanWR(view);
+        data.loadDataPengajuanDiterima(view);
+        data.loadDataPengajuanDitolak(view);
+    }
+
+    public void showTabelDana(MenuWakilRektor view) {
+        data.loadDataDanaMasuk(view);
+        data.loadDataDanaKeluar(view);
+    }
+
+    public void showTabelPembagianWR(MenuWakilRektor view) {
+        data.loadPembagianWR(view);
+    }
+
+    public Fakultas cariFakultas(String text) {
+        fakultas = data.searchFakultas(text);
+        if (fakultas !=null){
+            return fakultas;
+        } else {
+            return null;
+        }
+    }
+
+    public void tambahPembagianDana(PembagianDana pd) {
+        data.addPembagianDana(pd);
+    }
+
+    public void updateDanaFakultas(PembagianDana pd, Fakultas f) {
+        data.UpdateDanaF(pd, f);
+    }
+
+    public int showDana() {
+        return data.showDanaUniversitas();
+    }
+
+    
+
 }

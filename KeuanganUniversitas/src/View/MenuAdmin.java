@@ -35,6 +35,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -75,8 +76,10 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         jLabel2.setText("ID Pembayaran                      :");
 
+        buttonGroup1.add(rbSetuju);
         rbSetuju.setText("Setuju");
 
+        buttonGroup1.add(rbTidakSetuju);
         rbTidakSetuju.setText("Tidak Setuju");
 
         btnKonfirmasiPembayaran.setText("Konfirmasi");
@@ -155,13 +158,12 @@ public class MenuAdmin extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jLabel7))
                 .addGap(40, 40, 40)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(comboTahunAjarA, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tfIDPembayaranA, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                        .addComponent(tfIDMahasiswaA)
-                        .addComponent(tfTotalBayarA))
-                    .addComponent(btnAddPembayaranA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tfIDPembayaranA, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                    .addComponent(tfIDMahasiswaA)
+                    .addComponent(tfTotalBayarA)
+                    .addComponent(btnAddPembayaranA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboTahunAjarA, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(140, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -276,7 +278,8 @@ public class MenuAdmin extends javax.swing.JFrame {
         tfTotalBayarA.setText(s);
         tfIDPembayaranKonfirmasiA.setText(s);
         comboTahunAjarA.setSelectedIndex(0);
-        rbSetuju.getSelectedIcon();
+        rbSetuju.setSelected(false);
+        rbTidakSetuju.setSelected(false);
         Random r = new Random();
         int randId = r.nextInt(999-111) + 111;
         tfIDPembayaranA.setText("PMB"+Integer.toString(randId));
@@ -286,6 +289,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JButton btnAddPembayaranA;
     private javax.swing.JButton btnKonfirmasiPembayaran;
     private javax.swing.JButton btnLogout;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> comboTahunAjarA;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

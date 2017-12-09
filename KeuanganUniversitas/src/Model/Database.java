@@ -6,6 +6,7 @@
 package Model;
 
 import View.MenuMahasiswa;
+import View.MenuWakilRektor;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -162,6 +163,381 @@ public class Database {
             JOptionPane.showMessageDialog(null,"Failed");
             return false;
         }
+    }
+
+    public void konfirmasiPengajuanDana(String text, String setuju) {
+        try {
+            String sql = "UPDATE PENGAJUANDANA SET status= '"+setuju+"' WHERE idPengajuan= '"+text+"'";
+            statement.execute(sql);
+            JOptionPane.showMessageDialog(null, "Done!");
+        }catch(SQLException ex){
+            JOptionPane.showMessageDialog(null,"Failed");
+        }
+    }
+
+    public PengajuanDana findIDPengajuan(String text) {
+        PengajuanDana pd = null;
+        try {
+            String query = "SELECT * FROM PENGAJUANDANA WHERE idPengajuan= '" + text +"'";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {
+                pd = new PengajuanDana(rs.getString(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getString(5));
+            }
+            return pd;
+        } catch (Exception ex) {
+            return null;
+        }
+    }
+
+    public void loadDataPengajuanWR(MenuWakilRektor view) {
+        String[] kolom = {"ID Pengajuan", "ID Fakultas", "Tujuan", "Total"};
+        _tabel = new DefaultTableModel(null, kolom) {
+            Class[] types = new Class[]{
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            // Agar table tidak bisa diedit
+            @Override
+            public boolean isCellEditable(int row, int col) {
+                int cola = _tabel.getColumnCount();
+                return (col < cola) ? false : true;
+            }
+        };
+        view.getTabelPengajuanWR().setModel(_tabel);
+        try {
+            HapusTabel();
+            String sql = "SELECT * from PENGAJUANDANA where status = 0";
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String idPengajuan = rs.getString(1);
+                String idFakultas = rs.getString(2);
+                String Tujuan = rs.getString(3);
+                int total = rs.getInt(4);
+                Object[] data = {idPengajuan, idFakultas, Tujuan, total};
+                _tabel.addRow(data);
+            }
+            view.getTabelPengajuanWR().getColumnModel().getColumn(0).setPreferredWidth(20);
+            view.getTabelPengajuanWR().getColumnModel().getColumn(1).setPreferredWidth(20);
+            view.getTabelPengajuanWR().getColumnModel().getColumn(2).setPreferredWidth(100);
+            view.getTabelPengajuanWR().getColumnModel().getColumn(3).setPreferredWidth(30);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+    
+    public void loadDataPengajuanDiterima(MenuWakilRektor view) {
+        String[] kolom = {"ID Pengajuan", "ID Fakultas", "Tujuan", "Total"};
+        _tabel = new DefaultTableModel(null, kolom) {
+            Class[] types = new Class[]{
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            // Agar table tidak bisa diedit
+            @Override
+            public boolean isCellEditable(int row, int col) {
+                int cola = _tabel.getColumnCount();
+                return (col < cola) ? false : true;
+            }
+        };
+        view.getTabelPengajuanDiterima().setModel(_tabel);
+        try {
+            HapusTabel();
+            String sql = "SELECT * from PENGAJUANDANA where status = 1";
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String idPengajuan = rs.getString(1);
+                String idFakultas = rs.getString(2);
+                String Tujuan = rs.getString(3);
+                int total = rs.getInt(4);
+                Object[] data = {idPengajuan, idFakultas, Tujuan, total};
+                _tabel.addRow(data);
+            }
+            view.getTabelPengajuanDiterima().getColumnModel().getColumn(0).setPreferredWidth(20);
+            view.getTabelPengajuanDiterima().getColumnModel().getColumn(1).setPreferredWidth(20);
+            view.getTabelPengajuanDiterima().getColumnModel().getColumn(2).setPreferredWidth(100);
+            view.getTabelPengajuanDiterima().getColumnModel().getColumn(3).setPreferredWidth(30);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+    
+    public void loadDataPengajuanDitolak(MenuWakilRektor view) {
+        String[] kolom = {"ID Pengajuan", "ID Fakultas", "Tujuan", "Total"};
+        _tabel = new DefaultTableModel(null, kolom) {
+            Class[] types = new Class[]{
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            // Agar table tidak bisa diedit
+            @Override
+            public boolean isCellEditable(int row, int col) {
+                int cola = _tabel.getColumnCount();
+                return (col < cola) ? false : true;
+            }
+        };
+        view.getTabelPengajuanDitolak().setModel(_tabel);
+        try {
+            HapusTabel();
+            String sql = "SELECT * from PENGAJUANDANA where status = -1";
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String idPengajuan = rs.getString(1);
+                String idFakultas = rs.getString(2);
+                String Tujuan = rs.getString(3);
+                int total = rs.getInt(4);
+                Object[] data = {idPengajuan, idFakultas, Tujuan, total};
+                _tabel.addRow(data);
+            }
+            view.getTabelPengajuanDitolak().getColumnModel().getColumn(0).setPreferredWidth(20);
+            view.getTabelPengajuanDitolak().getColumnModel().getColumn(1).setPreferredWidth(20);
+            view.getTabelPengajuanDitolak().getColumnModel().getColumn(2).setPreferredWidth(100);
+            view.getTabelPengajuanDitolak().getColumnModel().getColumn(3).setPreferredWidth(30);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+
+    void loadDataDanaMasuk(MenuWakilRektor view) {
+        String[] kolom = {"ID Pembayaran", "ID Mahasiswa", "Tahun Ajar", "Total"};
+        _tabel = new DefaultTableModel(null, kolom) {
+            Class[] types = new Class[]{
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            // Agar table tidak bisa diedit
+            @Override
+            public boolean isCellEditable(int row, int col) {
+                int cola = _tabel.getColumnCount();
+                return (col < cola) ? false : true;
+            }
+        };
+        view.getTabelDanaMasuk().setModel(_tabel);
+        try {
+            HapusTabel();
+            String sql = "SELECT * from PEMBAYARAN where status = 1";
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String idPembayaran = rs.getString(1);
+                String idMahasiswa = rs.getString(2);
+                String tahunAjar = rs.getString(3);
+                int total = rs.getInt(4);
+                Object[] data = {idPembayaran, idMahasiswa, tahunAjar, total};
+                _tabel.addRow(data);
+            }
+            view.getTabelDanaMasuk().getColumnModel().getColumn(0).setPreferredWidth(30);
+            view.getTabelDanaMasuk().getColumnModel().getColumn(1).setPreferredWidth(30);
+            view.getTabelDanaMasuk().getColumnModel().getColumn(2).setPreferredWidth(30);
+            view.getTabelDanaMasuk().getColumnModel().getColumn(3).setPreferredWidth(30);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+
+    void loadDataDanaKeluar(MenuWakilRektor view) {
+        String[] kolom = {"ID Pengeluaran", "ID Fakultas", "Tahun Ajar","Keterangan", "Total"};
+        _tabel = new DefaultTableModel(null, kolom) {
+            Class[] types = new Class[]{
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            // Agar table tidak bisa diedit
+            @Override
+            public boolean isCellEditable(int row, int col) {
+                int cola = _tabel.getColumnCount();
+                return (col < cola) ? false : true;
+            }
+        };
+        view.getTabelDanaKeluar().setModel(_tabel);
+        try {
+            HapusTabel();
+            String sql = "SELECT * from PENGELUARANDANA";
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String idPengeluaran = rs.getString(1);
+                String idFakultas = rs.getString(2);
+                String tahunAjar = rs.getString(3);
+                String keterangan = rs.getString(4);
+                int total = rs.getInt(5);
+                Object[] data = {idPengeluaran, idFakultas, tahunAjar, keterangan, total};
+                _tabel.addRow(data);
+            }
+            view.getTabelDanaKeluar().getColumnModel().getColumn(0).setPreferredWidth(15);
+            view.getTabelDanaKeluar().getColumnModel().getColumn(1).setPreferredWidth(15);
+            view.getTabelDanaKeluar().getColumnModel().getColumn(2).setPreferredWidth(15);
+            view.getTabelDanaKeluar().getColumnModel().getColumn(3).setPreferredWidth(100);
+            view.getTabelDanaKeluar().getColumnModel().getColumn(4).setPreferredWidth(15);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+
+    public void loadPembagianWR(MenuWakilRektor view) {
+        String[] kolom = {"ID PEMBAGIAN", "ID Fakultas", "Total"};
+        _tabel = new DefaultTableModel(null, kolom) {
+            Class[] types = new Class[]{
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            // Agar table tidak bisa diedit
+            @Override
+            public boolean isCellEditable(int row, int col) {
+                int cola = _tabel.getColumnCount();
+                return (col < cola) ? false : true;
+            }
+        };
+        view.getTabelPembagianWR().setModel(_tabel);
+        try {
+            HapusTabel();
+            String sql = "SELECT * from PEMBAGIANDANA";
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String idPembagian = rs.getString(1);
+                String idFakultas = rs.getString(2);
+                int total = rs.getInt(3);
+                Object[] data = {idPembagian, idFakultas, total};
+                _tabel.addRow(data);
+            }
+            view.getTabelDanaKeluar().getColumnModel().getColumn(0).setPreferredWidth(30);
+            view.getTabelDanaKeluar().getColumnModel().getColumn(1).setPreferredWidth(30);
+            view.getTabelDanaKeluar().getColumnModel().getColumn(2).setPreferredWidth(30);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+
+    public Fakultas searchFakultas(String text) {
+        Fakultas f = null;
+        try {
+            String query = "SELECT * FROM ADMINFAKULTAS WHERE idFakultas= '" + text +"'";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {
+                f = new Fakultas(rs.getString(1), rs.getString(2), rs.getString(3), rs.getInt(4));
+            }
+            return f;
+        } catch (Exception ex) {
+            return null;
+        }
+    }
+
+    public void addPembagianDana(PembagianDana pd) {
+        try {
+            String sql = "INSERT INTO PEMBAGIANDANA (idPembagian,idFakultas,TotalDana) VALUES ("+
+                    "'"+pd.getIdPembagian()+"',"+
+                    "'"+pd.getIdFakultas()+"',"+
+                    "'"+pd.getTotalDana()+"')";
+            statement.execute(sql,Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs=statement.getGeneratedKeys();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+
+    public void UpdateDanaF(PembagianDana pd, Fakultas f) {
+        try {
+            int total = f.getDanaFakultas() + pd.getTotalDana();
+            String sql = "UPDATE ADMINFAKULTAS SET danafakultas= '"+total+"' WHERE idFakultas= '"+pd.getIdFakultas()+"'";
+            statement.execute(sql);
+            JOptionPane.showMessageDialog(null, "Done!");
+        }catch(SQLException ex){
+            JOptionPane.showMessageDialog(null,"Failed");
+        }
+    }
+
+    public int sumPembayaran(){
+        try {
+            String query = "SELECT SUM(total) FROM PEMBAYARAN where Status= 1";
+            ResultSet rs = statement.executeQuery(query);
+            int totalDanaMasuk=0;
+            while (rs.next()) {
+                totalDanaMasuk = rs.getInt(1);
+            }
+            return totalDanaMasuk;
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Failed");
+            return 0;
+        }
+    }
+    
+    public int sumPengeluaran(){
+         try {
+            String query = "SELECT SUM(TotalDana) FROM PEMBAGIANDANA";
+            ResultSet rs = statement.executeQuery(query);
+            int totalDanaKeluar=0;
+            while (rs.next()) {
+                totalDanaKeluar = rs.getInt(1);
+            }
+            return totalDanaKeluar;
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Failed");
+            return 0;
+        }
+    }
+    
+    public int sumPengajuan(){
+        try {
+            String query = "SELECT SUM(total) FROM PENGAJUANDANA where status = 1";
+            ResultSet rs = statement.executeQuery(query);
+            int totalDanaKeluar=0;
+            while (rs.next()) {
+                totalDanaKeluar = rs.getInt(1);
+            }
+            return totalDanaKeluar;
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Failed");
+            return 0;
+        }
+    }
+    
+    public int showDanaUniversitas() {
+        return sumPembayaran()-sumPengeluaran()-sumPengajuan();
     }
   
 }

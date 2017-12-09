@@ -22,6 +22,14 @@ public class Fakultas {
         this.danaFakultas = danaFakultas;
     }
 
+    public int getDanaFakultas() {
+        return danaFakultas;
+    }
+
+    public void setDanaFakultas(int danaFakultas) {
+        this.danaFakultas = danaFakultas;
+    }
+
     public String getIdFakultas() {
         return idFakultas;
     }

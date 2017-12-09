@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2017 at 06:01 PM
+-- Generation Time: Dec 09, 2017 at 11:42 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -40,7 +40,8 @@ CREATE TABLE `adminfakultas` (
 --
 
 INSERT INTO `adminfakultas` (`idFakultas`, `namaFakultas`, `password`, `danafakultas`) VALUES
-('FKFIF', 'Fakultas Teknik Informatika', 'ifjayaraga', 0);
+('FKFIF', 'Fakultas Teknik Informatika', 'ifjayaraga', 10155679),
+('FKFIK', 'Fakultas Industri Kreatif', 'aaa123', 150000);
 
 -- --------------------------------------------------------
 
@@ -74,6 +75,17 @@ CREATE TABLE `pembagiandana` (
   `TotalDana` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `pembagiandana`
+--
+
+INSERT INTO `pembagiandana` (`idPembagian`, `idFakultas`, `TotalDana`) VALUES
+('PBG123', 'FKFIF', 600000),
+('PBG124', 'FKFIF', 900000),
+('PBG181', 'FKFIF', 100000),
+('PBG357', 'FKFIF', 55556),
+('PBG480', 'FKFIF', 50000);
+
 -- --------------------------------------------------------
 
 --
@@ -94,8 +106,9 @@ CREATE TABLE `pembayaran` (
 --
 
 INSERT INTO `pembayaran` (`idPembayaran`, `idMahasiswa`, `ajaran`, `total`, `status`, `statusbayar`) VALUES
-('PMB123', 'MHSIF0001', '2016/2017', 1500000, '0', '1'),
-('PMB124', 'MHSIF0001', '2017/2018', 1600000, '0', '1');
+('PMB123', 'MHSIF0001', '2016/2017', 1500000, '1', '1'),
+('PMB124', 'MHSIF0001', '2017/2018', 1600000, '0', '1'),
+('PMB125', 'MHSIF0001', '2018/2019', 5000000, '1', '1');
 
 -- --------------------------------------------------------
 
@@ -111,6 +124,15 @@ CREATE TABLE `pengajuandana` (
   `status` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `pengajuandana`
+--
+
+INSERT INTO `pengajuandana` (`idPengajuan`, `idFakultas`, `tujuan`, `total`, `status`) VALUES
+('PGJ123', 'FKFIF', 'makan', 12345, '-1'),
+('PGJ124', 'FKFIF', 'MINUM', 5432123, '-1'),
+('PGJ453', 'FKFIF', 'main', 123, '1');
+
 -- --------------------------------------------------------
 
 --
@@ -124,6 +146,14 @@ CREATE TABLE `pengeluarandana` (
   `keterangan` varchar(255) NOT NULL,
   `total` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `pengeluarandana`
+--
+
+INSERT INTO `pengeluarandana` (`idPengeluaran`, `idFakultas`, `tahun ajar`, `keterangan`, `total`) VALUES
+('PGL123', 'FKFIF', '2016/2017', 'makan banyak', 100000),
+('PGL124', 'FKFIF', '2017/2018', 'jalan jalan ke meikarta', 500000);
 
 --
 -- Indexes for dumped tables
