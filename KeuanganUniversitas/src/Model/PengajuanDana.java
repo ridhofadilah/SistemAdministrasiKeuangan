@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
-/**
- *
- * @author User
- */
 public class PengajuanDana {
     public String idPengajuan;
     public String idFakultas;
@@ -62,6 +53,5 @@ public class PengajuanDana {
 
     public void setTotal(int total) {
         this.total = total;
-    }
-    
+    }   
 }

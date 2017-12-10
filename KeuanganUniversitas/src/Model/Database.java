@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
+import View.MenuAdmin;
 import View.MenuMahasiswa;
 import View.MenuWakilRektor;
 import java.sql.Connection;
@@ -15,10 +11,6 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author MIAfandi
- */
 public class Database {
 
     private String server = "jdbc:mysql://localhost:3306/keuanganuniversitas";
@@ -174,6 +166,16 @@ public class Database {
             JOptionPane.showMessageDialog(null,"Failed");
         }
     }
+    
+    public void konfirmasiPembayaranMahasiswa(String text, String setuju) {
+        try {
+            String sql = "UPDATE PEMBAYARAN SET status= '"+setuju+"' WHERE idPembayaran= '"+text+"'";
+            statement.execute(sql);
+            JOptionPane.showMessageDialog(null, "Done!");
+        }catch(SQLException ex){
+            JOptionPane.showMessageDialog(null,"Failed");
+        }
+    }
 
     public PengajuanDana findIDPengajuan(String text) {
         PengajuanDana pd = null;
@@ -184,6 +186,20 @@ public class Database {
                 pd = new PengajuanDana(rs.getString(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getString(5));
             }
             return pd;
+        } catch (Exception ex) {
+            return null;
+        }
+    }
+    
+    public Pembayaran findIDPembayaran(String text) {
+        Pembayaran pb = null;
+        try {
+            String query = "SELECT * FROM PEMBAYARAN WHERE idPembayaran= '" + text +"'";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {
+                pb = new Pembayaran(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getString(4));
+            }
+            return pb;
         } catch (Exception ex) {
             return null;
         }
@@ -452,6 +468,51 @@ public class Database {
             JOptionPane.showMessageDialog(null, "Failed");
         }
     }
+    
+      void loadDataPembayaran(MenuAdmin view) {
+        String[] kolom = {"ID Pembayaran", "ID Mahasiswa", "Total", "Status"};
+        _tabel = new DefaultTableModel(null, kolom) {
+            Class[] types = new Class[]{
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            // Agar table tidak bisa diedit
+            @Override
+            public boolean isCellEditable(int row, int col) {
+                int cola = _tabel.getColumnCount();
+                return (col < cola) ? false : true;
+            }
+        };
+        view.getTabelPembayaran().setModel(_tabel);
+        try {
+            HapusTabel();
+            String sql = "SELECT * from PEMBAYARAN";
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String idPembayaran = rs.getString(1);
+                String idMahasiswa = rs.getString(2);
+                int total = rs.getInt(3);
+                String status = rs.getString(4);
+                Object[] data = {idPembayaran, idMahasiswa, total, status};
+                _tabel.addRow(data);
+            }
+            view.getTabelPembayaran().getColumnModel().getColumn(0).setPreferredWidth(15);
+            view.getTabelPembayaran().getColumnModel().getColumn(1).setPreferredWidth(15);
+            view.getTabelPembayaran().getColumnModel().getColumn(2).setPreferredWidth(15);
+            view.getTabelPembayaran().getColumnModel().getColumn(3).setPreferredWidth(100);
+            view.getTabelPembayaran().getColumnModel().getColumn(4).setPreferredWidth(15);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
 
     public Fakultas searchFakultas(String text) {
         Fakultas f = null;
@@ -462,6 +523,34 @@ public class Database {
                 f = new Fakultas(rs.getString(1), rs.getString(2), rs.getString(3), rs.getInt(4));
             }
             return f;
+        } catch (Exception ex) {
+            return null;
+        }
+    }
+    
+    public Pembayaran searchPembayaran(String text) {
+        Pembayaran p = null;
+        try {
+            String query = "SELECT * FROM PEMBAYARAN WHERE idMahasiswa= '" + text +"'";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {
+                p = new Pembayaran(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getString(4));
+            }
+            return p;
+        } catch (Exception ex) {
+            return null;
+        }
+    }
+    
+    public Mahasiswa searchMahasiswa(String text) {
+        Mahasiswa m = null;
+        try {
+            String query = "SELECT * FROM MAHASISWA WHERE idMahasiswa= '" + text +"'";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {
+                m = new Mahasiswa(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
+            }
+            return m;
         } catch (Exception ex) {
             return null;
         }
@@ -479,6 +568,22 @@ public class Database {
             JOptionPane.showMessageDialog(null, "Failed");
         }
     }
+    
+    public void addPembayaran(Pembayaran pb) {
+        try {
+            String sql = "INSERT INTO PEMBAYARAN (idPembayaran,idMahasiswa,ajaran,total,status,statusbayar) VALUES ("+
+                    "'"+pb.getIdPembayaran()+"',"+
+                    "'"+pb.getIdMahasiswa()+"',"+
+                    "'"+pb.getAjaran()+"',"+
+                    "'"+pb.getTotal()+"',"+
+                    "'"+pb.getStatus()+"',"+
+                    "'"+pb.getStatusBayar()+"')";
+            statement.execute(sql,Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs=statement.getGeneratedKeys();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
 
     public void UpdateDanaF(PembagianDana pd, Fakultas f) {
         try {
@@ -490,7 +595,7 @@ public class Database {
             JOptionPane.showMessageDialog(null,"Failed");
         }
     }
-
+    
     public int sumPembayaran(){
         try {
             String query = "SELECT SUM(total) FROM PEMBAYARAN where Status= 1";
@@ -538,6 +643,5 @@ public class Database {
     
     public int showDanaUniversitas() {
         return sumPembayaran()-sumPengeluaran()-sumPengajuan();
-    }
-  
+    } 
 }

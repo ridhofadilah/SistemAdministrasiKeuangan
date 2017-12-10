@@ -3,25 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/Fakultas.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/View/MenuFakultas.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerMenuFakultas.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerLogin.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/View/MenuWakilRektor.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/Pembayaran.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerMenuWakilRektor.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/View/MenuAdmin.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/Mahasiswa.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/View/Login.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/PengajuanDana.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/Database.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/Aplikasi.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerMenuAdmin.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/View/MenuMahasiswa.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/MainDriver.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/PembagianDana.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/PengeluaranDana.java</file>
-            <file>file:/F:/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerMenuMahasiswa.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Controller/ControllerMenuAdmin.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Model/Fakultas.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Model/PengeluaranDana.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Model/Database.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Model/Aplikasi.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Controller/ControllerMenuMahasiswa.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Model/Pembayaran.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Controller/MainDriver.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/View/Login.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Model/PengajuanDana.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/View/MenuFakultas.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Model/Mahasiswa.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Model/PembagianDana.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/View/MenuMahasiswa.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Controller/ControllerLogin.java</file>
+            <file>file:/D:/SistemAdministrasiKeuangan-master/KeuanganUniversitas/src/Controller/ControllerMenuFakultas.java</file>
         </group>
     </open-files>
 </project-private>

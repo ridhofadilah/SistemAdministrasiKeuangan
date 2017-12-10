@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import Model.Aplikasi;
@@ -14,10 +9,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author User
- */
 public class ControllerLogin implements ActionListener {
     private Aplikasi model;
     private Login view;
@@ -26,7 +17,7 @@ public class ControllerLogin implements ActionListener {
     ControllerLogin(Aplikasi model) {
             this.model=model;
             data.connect();
-            view= new Login();
+            view = new Login();
             view.setVisible(true);
             view.addListener(this);
     }
@@ -38,22 +29,22 @@ public class ControllerLogin implements ActionListener {
             String uname = view.getTfUsername();
             String pw = view.getTfPassword();
             if (uname.equals("")|| pw.equals("")){
-                JOptionPane.showMessageDialog(null, "fill the username/password");
+                JOptionPane.showMessageDialog(null,"Fill the username/password");
             } else if (uname.equals("admin") && pw.equals("admin")){
                 new ControllerMenuAdmin(model);
                 view.dispose();
             } else if (uname.equals("wakilrektor") && pw.equals("wakilrektor")){
                 new ControllerMenuWakilRektor(model);
                 view.dispose();
-            } else if (model.findMahasiswa(uname,pw)!= null){
+            } else if (model.findMahasiswa(uname,pw) != null){
                 Mahasiswa m = model.findMahasiswa(uname, pw);
-                new ControllerMenuMahasiswa(model,m);
+                new ControllerMenuMahasiswa(model, m);
                 view.dispose();
             } else if (model.findFakultas(uname,pw) != null){
                 Fakultas f = model.findFakultas(uname, pw);
-                new ControllerMenuFakultas(model,f);
+                new ControllerMenuFakultas(model, f);
             } else {
-                JOptionPane.showMessageDialog(null, "Sorry user is not in database");
+                JOptionPane.showMessageDialog(null, "Sorry user is not in database!");
             }
         }
     }

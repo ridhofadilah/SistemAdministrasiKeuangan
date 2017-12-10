@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
 import View.MenuMahasiswa;
 import View.MenuWakilRektor;
+import View.MenuAdmin;
 import javax.swing.JTextField;
 
-/**
- *
- * @author User
- */
 public class Aplikasi {
 
     private Database data;
@@ -67,10 +59,23 @@ public class Aplikasi {
         data.konfirmasiPengajuanDana(text,setuju);
     }
 
+    public void konfirmasiPembayaran(String text, String setuju) {
+        data.konfirmasiPembayaranMahasiswa(text, setuju);
+    }
+    
     public PengajuanDana cariIDPengajuan(String text) {
         pengajuan = data.findIDPengajuan(text);
         if (pengajuan != null){
             return pengajuan;
+        } else {
+            return null;
+        }
+    }
+    
+    public Pembayaran cariIDPembayaran(String text) {
+        pembayaran = data.findIDPembayaran(text);
+        if (pembayaran != null){
+            return pembayaran;
         } else {
             return null;
         }
@@ -87,14 +92,36 @@ public class Aplikasi {
         data.loadDataDanaKeluar(view);
     }
 
+    public void showTabelPembayaran(MenuAdmin view) {
+        data.loadDataPembayaran(view);
+    }
+    
     public void showTabelPembagianWR(MenuWakilRektor view) {
         data.loadPembagianWR(view);
     }
-
+    
     public Fakultas cariFakultas(String text) {
         fakultas = data.searchFakultas(text);
         if (fakultas !=null){
             return fakultas;
+        } else {
+            return null;
+        }
+    }
+    
+    public Pembayaran cariPembayaran(String text) {
+        pembayaran = data.searchPembayaran(text);
+        if (pembayaran !=null){
+            return pembayaran;
+        } else {
+            return null;
+        }
+    }
+    
+    public Mahasiswa cariMahasiswa(String text) {
+        mahasiswa = data.searchMahasiswa(text);
+        if (mahasiswa !=null){
+            return mahasiswa;
         } else {
             return null;
         }
@@ -107,11 +134,12 @@ public class Aplikasi {
     public void updateDanaFakultas(PembagianDana pd, Fakultas f) {
         data.UpdateDanaF(pd, f);
     }
+    
+    public void tambahPembayaran(Pembayaran pb) {
+        data.addPembayaran(pb);
+    }
 
     public int showDana() {
         return data.showDanaUniversitas();
     }
-
-    
-
 }

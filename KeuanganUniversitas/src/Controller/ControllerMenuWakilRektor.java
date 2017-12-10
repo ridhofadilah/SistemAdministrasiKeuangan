@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import Model.Aplikasi;
@@ -15,10 +10,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author User
- */
 public class ControllerMenuWakilRektor implements ActionListener{
     private Aplikasi model;
     private MenuWakilRektor view;
@@ -49,7 +40,7 @@ public class ControllerMenuWakilRektor implements ActionListener{
                 if (pd != null){
                     if (view.getRbSetujuPengajuan().isSelected()){
                         if (pd.getTotal() > Integer.parseInt(view.getTfDanaUniversitas().getText())){
-                            JOptionPane.showMessageDialog(null, "Sorry insufficient funds");
+                            JOptionPane.showMessageDialog(null, "Sorry insufficient funds!");
                         } else {
                             model.konfirmasiPengajuan(view.getTfIDPengajuanWR().getText(), "1");
                         }
@@ -58,21 +49,21 @@ public class ControllerMenuWakilRektor implements ActionListener{
                     }
                     
                 } else {
-                    JOptionPane.showMessageDialog(null, "Cant Find that ID");
+                    JOptionPane.showMessageDialog(null, "Sorry ID can't be found!");
                 }
             }
         } else if (source == view.getBtnAddPembagianDana()){
             if (view.getTfFakultas().equals("") || view.getTfTotaLDana().equals("")){
-                JOptionPane.showMessageDialog(null, "Fill all the textfield");
+                JOptionPane.showMessageDialog(null, "Fill all the textfield!");
             } else {
                 if (model.cariFakultas(view.getTfFakultas().getText()) != null){
                     PembagianDana pd = new PembagianDana(view.getTfPembagian().getText(), view.getTfFakultas().getText(), Integer.parseInt(view.getTfTotaLDana().getText()));
-                    Fakultas f= model.cariFakultas(view.getTfFakultas().getText());
+                    Fakultas f = model.cariFakultas(view.getTfFakultas().getText());
                     if (pd.getTotalDana() > Integer.parseInt(view.getTfDanaUniversitas().getText())){
-                        JOptionPane.showMessageDialog(null, "Sorry insufficient funds");
+                        JOptionPane.showMessageDialog(null, "Sorry insufficient funds!");
                     } else {
                         model.tambahPembagianDana(pd);
-                        model.updateDanaFakultas(pd,f);
+                        model.updateDanaFakultas(pd, f);
                     }
                 }
             }
@@ -83,6 +74,5 @@ public class ControllerMenuWakilRektor implements ActionListener{
         model.showTabelPengajuan(view);
         view.getTfDanaUniversitas().setText(Integer.toString(model.showDana()));
         view.refresh("");
-    }
-    
+    }  
 }

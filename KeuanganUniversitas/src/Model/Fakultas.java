@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
-/**
- *
- * @author MIAfandi
- */
 public class Fakultas {
     private String idFakultas;
     private String namaFakultas;
@@ -52,7 +43,5 @@ public class Fakultas {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-    
-    
+    }    
 }

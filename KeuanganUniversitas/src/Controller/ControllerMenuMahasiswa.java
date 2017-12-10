@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import Model.Aplikasi;
@@ -14,10 +9,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author User
- */
 public class ControllerMenuMahasiswa implements ActionListener{
     private Aplikasi model;
     private MenuMahasiswa view;
@@ -31,16 +22,15 @@ public class ControllerMenuMahasiswa implements ActionListener{
         this.view = new MenuMahasiswa();
         view.setVisible(true);
         view.addListener(this);
-        model.showTabelTagihan(view,mahasiswa.getIdMahasiswa());
+        model.showTabelTagihan(view, mahasiswa.getIdMahasiswa());
     }
 
-    
     @Override
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
         if (source == view.getBtnAddPembayaran()){
             if (view.getTfIDPembayaran().getText().equals("") || view.getTfTotalBayar().getText().equals("")){
-                JOptionPane.showMessageDialog(null, "Please fill all the text");
+                JOptionPane.showMessageDialog(null, "Please fill all the text!");
             } else {
                 String id = view.getTfIDPembayaran().getText();
                 int total = Integer.parseInt(view.getTfTotalBayar().getText());
@@ -48,13 +38,11 @@ public class ControllerMenuMahasiswa implements ActionListener{
                     Pembayaran p = model.findIDPembayaran(id, mahasiswa.getIdMahasiswa());
                     if (total == p.getTotal()){
                         model.updatePembayaranM(id,mahasiswa.getIdMahasiswa());
-//                        new ControllerMenuMahasiswa(model, mahasiswa);
-//                        view.dispose();
                     } else {
-                        JOptionPane.showMessageDialog(null, "Sorry incorrect amount");
+                        JOptionPane.showMessageDialog(null, "Sorry incorrect amount!");
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "Sorry Can't find that ID");
+                    JOptionPane.showMessageDialog(null, "Sorry ID can't be found!");
                 }
             }   
         } else if (source == view.getBtlLogoutMahasiswa()){
@@ -63,5 +51,4 @@ public class ControllerMenuMahasiswa implements ActionListener{
         }
         view.refresh("");
     }
-    
 }
