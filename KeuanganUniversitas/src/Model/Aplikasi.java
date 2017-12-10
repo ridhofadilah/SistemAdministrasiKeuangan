@@ -112,6 +112,11 @@ public class Aplikasi {
         return data.showDanaUniversitas();
     }
 
+    public void tambahPengeluaranFakultas(PengeluaranDana f){
+        data.addPengeluaranFakultas(f);
+    }
     
-
+    public int showDanaSisa(String id){
+        return (data.sumPembagianDanaFakultas(id)-data.sumPengeluranFakultas(id));
+    }
 }

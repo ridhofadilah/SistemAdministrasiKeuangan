@@ -539,5 +539,51 @@ public class Database {
     public int showDanaUniversitas() {
         return sumPembayaran()-sumPengeluaran()-sumPengajuan();
     }
-  
+  //======== Fakultas
+    public void addPengeluaranFakultas (PengeluaranDana f){
+        try {
+            String sql = "INSERT INTO PENGELUARANDANA VALUES ("+
+                    //"'"+a+"',"+
+                    "'"+f.getIdPengeluaran()+"',"+
+                    "'"+f.getIdFakultas()+"',"+
+                    "'"+f.getTahunAjar()+"',"+
+                    "'"+f.getKeterangan()+"',"
+                    +f.getTotal()+");";
+            statement.execute(sql,Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs=statement.getGeneratedKeys();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+    
+    public int sumPengeluranFakultas(String idFakultas){
+        try {
+            String query = "SELECT SUM(total) FROM PENGELUARANDANA where idFakultas = '"+idFakultas+"';";
+            ResultSet rs = statement.executeQuery(query);
+            int totalPengeluaranFakultas=0;
+            while (rs.next()) {
+                totalPengeluaranFakultas = rs.getInt(1);
+            }
+            return totalPengeluaranFakultas;
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Failed");
+            return 0;
+        }
+    }
+    
+    public int sumPembagianDanaFakultas(String idFakultas){
+        try {
+            String query = "SELECT SUM(TotalDana) FROM PEMBAGIANDANA where idFakultas = '"+idFakultas+"';";
+            ResultSet rs = statement.executeQuery(query);
+            int danaFakultas=0;
+            while (rs.next()) {
+                danaFakultas = rs.getInt(1);
+            }
+            System.out.println(danaFakultas);
+            return danaFakultas;
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Failed");
+            return 0;
+        }
+    }
 }
