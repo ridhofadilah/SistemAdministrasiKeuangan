@@ -3,17 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/View/MenuFakultas.java</file>
-            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerMenuAdmin.java</file>
             <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/Aplikasi.java</file>
-            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerMenuFakultas.java</file>
-            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/MainDriver.java</file>
-            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/Mahasiswa.java</file>
-            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerMenuMahasiswa.java</file>
+            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/View/MenuFakultas.java</file>
             <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/Database.java</file>
-            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerMenuWakilRektor.java</file>
-            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/Fakultas.java</file>
+            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/MainDriver.java</file>
             <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/View/MenuMahasiswa.java</file>
+            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerMenuFakultas.java</file>
+            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Controller/ControllerMenuMahasiswa.java</file>
+            <file>file:/E:/learning/SistemAdministrasiKeuangan/KeuanganUniversitas/src/Model/Mahasiswa.java</file>
         </group>
     </open-files>
 </project-private>

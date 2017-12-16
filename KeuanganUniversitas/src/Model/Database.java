@@ -693,12 +693,12 @@ public class Database {
         }
     }
     
-        public void loadPembagianDanaFakultas(MenuFakultas view, String idFakultas) {
+    public void loadPembagianDanaFakultas(MenuFakultas view, String idFakultas) {
         String[] kolom = {"ID PEMBAGIAN", "Total Dana"};
         _tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
-                java.lang.String.class,
+                java.lang.String.class
             };
 
             @Override
@@ -731,4 +731,58 @@ public class Database {
         }
     }
     
+    public void loadPengeluaranFakultas(MenuFakultas view, String idFakultas) {
+        String[] kolom = {"ID Pengeluaran","Tahun Ajar", "Total"};
+        _tabel = new DefaultTableModel(null, kolom) {
+            Class[] types = new Class[]{
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            // Agar table tidak bisa diedit
+            @Override
+            public boolean isCellEditable(int row, int col) {
+                int cola = _tabel.getColumnCount();
+                return (col < cola) ? false : true;
+            }
+        };
+        view.getTabelPengeluaran().setModel(_tabel);
+        try {
+            HapusTabel();
+            String sql = "SELECT idPengeluaran,tahunajar, total from PENGELUARANDANA where idFakultas='"+idFakultas+"';";
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String idPengeluaran = rs.getString(1);
+                String tahunajar = rs.getString(2);
+                int total = rs.getInt(3);
+                Object[] data = {idPengeluaran, tahunajar, total};
+                _tabel.addRow(data);
+            }
+            view.getTabelPengeluaran().getColumnModel().getColumn(0).setPreferredWidth(30);
+            view.getTabelPengeluaran().getColumnModel().getColumn(1).setPreferredWidth(30);
+            view.getTabelPengeluaran().getColumnModel().getColumn(2).setPreferredWidth(30);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+    
+    public PengeluaranDana cariPengeluaran(String text) {
+        PengeluaranDana keluar = null;
+        try {
+            String query = "SELECT * FROM PENGELUARANDANA WHERE idPengeluaran= '" + text +"';";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {
+                keluar = new PengeluaranDana(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getInt(5));
+            }
+            return keluar;
+        } catch (Exception ex) {
+            return null;
+        }
+    }
 }

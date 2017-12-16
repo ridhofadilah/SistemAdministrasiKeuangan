@@ -142,7 +142,7 @@ INSERT INTO `pengajuandana` (`idPengajuan`, `idFakultas`, `tujuan`, `total`, `st
 CREATE TABLE `pengeluarandana` (
   `idPengeluaran` varchar(30) NOT NULL,
   `idFakultas` varchar(30) NOT NULL,
-  `tahun ajar` varchar(10) NOT NULL,
+  `tahunajar` varchar(10) NOT NULL,
   `keterangan` varchar(255) NOT NULL,
   `total` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;

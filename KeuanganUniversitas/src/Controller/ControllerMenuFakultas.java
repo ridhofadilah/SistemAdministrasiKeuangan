@@ -25,6 +25,7 @@ public class ControllerMenuFakultas implements ActionListener{
         view.refresh("");
         view.getTfDana().setText(Integer.toString(model.showDanaSisa(fakultas.getIdFakultas())));
         model.showTabelPembagianDanaFakultas(view,fakultas.getIdFakultas());
+        model.showTabelPengeluaranDanaFakultas(view, fakultas.getIdFakultas());
     }
     
     @Override
@@ -43,19 +44,32 @@ public class ControllerMenuFakultas implements ActionListener{
                     JOptionPane.showMessageDialog(null, "Input Success");
                 }else{
                     JOptionPane.showMessageDialog(null, "Not enough Dana that we have");
-                }        
+                } 
+                view.getTaKeterangan().setText("");
+                view.getTfTotalPengeluaran().setText("");
             }else{
                 JOptionPane.showMessageDialog(null, "Fill all the data");
-            }
-            
+            }           
         }else if (source == view.getBtnLihatKeterangan()){
-            
+            String keterangan = view.getTfLihatIDPengeluaran().getText();
+            if(!view.getTfLihatIDPengeluaran().getText().equals("")){
+                PengeluaranDana p = model.cariPengeluaran(keterangan);
+                if(p!=null){
+                    view.getLabelKeterangan().setText(p.getKeterangan());
+                    view.getTfLihatIDPengeluaran().setText("");
+                }else{
+                    JOptionPane.showMessageDialog(null, "ID not found, please fill the true ID");
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "Please fill ID Pengeluaran");
+            }
         }else if (source == view.getBtnAddPengajuan()){
             
         }else if (source == view.getBtnLogoutFakultas()){
             new ControllerLogin(model);
             view.dispose();
         }
+        model.showTabelPengeluaranDanaFakultas(view, fakultas.getIdFakultas());
         view.getTfDana().setText(Integer.toString(model.showDanaSisa(fakultas.getIdFakultas())));
         view.refresh("");
     }

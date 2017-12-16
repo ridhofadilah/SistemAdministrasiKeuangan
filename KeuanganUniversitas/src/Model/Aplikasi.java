@@ -157,4 +157,17 @@ public class Aplikasi {
     public void showTabelPembagianDanaFakultas(MenuFakultas view,String id){
         data.loadPembagianDanaFakultas(view, id);
     }
+    
+    public void showTabelPengeluaranDanaFakultas(MenuFakultas view,String id){
+        data.loadPengeluaranFakultas(view, id);
+    }
+    
+    public PengeluaranDana cariPengeluaran(String IdPengeluran) {
+        pengeluaran = data.cariPengeluaran(IdPengeluran);
+        if (pengeluaran !=null){
+            return pengeluaran;
+        } else {
+            return null;
+        }
+    }   
 }

@@ -228,7 +228,7 @@ public class MenuFakultas extends javax.swing.JFrame {
 
         jLabel8.setText("Keterangan :");
 
-        labelKeterangan.setText("ini ntar ditulis keterangannya");
+        labelKeterangan.setText("keterangan kegunaan");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -245,7 +245,7 @@ public class MenuFakultas extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addGap(18, 18, 18)
                 .addComponent(labelKeterangan)
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -472,7 +472,7 @@ public class MenuFakultas extends javax.swing.JFrame {
         tfIDPengeluaran.setText(s);
         Random r = new Random();
         int randId = r.nextInt(999-111) + 111;
-        tfIDPengeluaran.setText(""+Integer.toString(randId));
+        tfIDPengeluaran.setText("PGL"+Integer.toString(randId));
     }
 
     
