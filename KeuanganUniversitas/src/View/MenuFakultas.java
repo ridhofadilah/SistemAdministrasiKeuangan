@@ -271,7 +271,7 @@ public class MenuFakultas extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel9.setText("ID Pengajuan                    :");
+        jLabel9.setText("ID Pengajuan                      :");
 
         jLabel10.setText("Tujuan                               :");
 
@@ -307,14 +307,14 @@ public class MenuFakultas extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 103, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnAddPengajuan)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel10)
                             .addComponent(jLabel11)
-                            .addComponent(jLabel9))
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(26, 26, 26)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tfTotalPengajuan, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -473,6 +473,13 @@ public class MenuFakultas extends javax.swing.JFrame {
         Random r = new Random();
         int randId = r.nextInt(999-111) + 111;
         tfIDPengeluaran.setText("PGL"+Integer.toString(randId));
+    }
+    
+    public void SetIDPengajuan(String s){
+        tfPengajuan.setText(s);
+        Random r = new Random();
+        int randId = r.nextInt(999-111) + 111;
+        tfPengajuan.setText("PGJ"+Integer.toString(randId));
     }
 
     

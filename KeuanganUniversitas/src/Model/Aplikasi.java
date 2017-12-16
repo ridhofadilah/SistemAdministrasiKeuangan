@@ -169,5 +169,13 @@ public class Aplikasi {
         } else {
             return null;
         }
-    }   
+    } 
+    
+    public void addPengajuanDana(PengajuanDana pj){
+        data.tambahPengajuanDanaFakultas(pj);
+    }
+    
+    public void showTablePengajuanDanaFakultas(MenuFakultas view, String idFakultas){
+        data.loadPengajuanDanaFakultas(view, idFakultas);
+    }
 }

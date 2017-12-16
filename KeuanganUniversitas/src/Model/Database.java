@@ -785,4 +785,69 @@ public class Database {
             return null;
         }
     }
+    
+    public void tambahPengajuanDanaFakultas(PengajuanDana pj){
+        try {
+            String sql = "INSERT INTO PENGAJUANDANA VALUES ("+
+                    "'"+pj.getIdPengajuan()+"',"+
+                    "'"+pj.getIdFakultas()+"',"+
+                    "'"+pj.getTujuan()+"',"+
+                    pj.getTotal()+","+
+                    "'"+pj.getStatus()+"');";
+            statement.execute(sql,Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs=statement.getGeneratedKeys();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed insert");
+        }
+    }
+    
+
+    public void loadPengajuanDanaFakultas(MenuFakultas view, String idFakultas) {
+        String[] kolom = {"ID Pengajuan","Total", "Status"};
+        _tabel = new DefaultTableModel(null, kolom) {
+            Class[] types = new Class[]{
+                java.lang.String.class,
+                java.lang.String.class,
+                java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            // Agar table tidak bisa diedit
+            @Override
+            public boolean isCellEditable(int row, int col) {
+                int cola = _tabel.getColumnCount();
+                return (col < cola) ? false : true;
+            }
+        };
+        view.getTabelPengajuanDanaF().setModel(_tabel);
+        try {
+            HapusTabel();
+            String sql = "SELECT idPengajuan,total,status from PENGAJUANDANA where idFakultas='"+idFakultas+"';";
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String idPengeluaran = rs.getString(1);
+                int total = rs.getInt(2);
+                String status = "";
+                if(rs.getString(3).equals("1")){
+                    status = "Diterima";
+                }else if (rs.getString(3).equals("0")){
+                    status = "Diajukan";
+                }else if (rs.getString(3).equals("-1")){
+                    status ="Ditolak";
+                }
+
+                Object[] data = {idPengeluaran, total, status};
+                _tabel.addRow(data);
+            }
+            view.getTabelPengajuanDanaF().getColumnModel().getColumn(0).setPreferredWidth(30);
+            view.getTabelPengajuanDanaF().getColumnModel().getColumn(1).setPreferredWidth(30);
+            view.getTabelPengajuanDanaF().getColumnModel().getColumn(2).setPreferredWidth(30);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
 }

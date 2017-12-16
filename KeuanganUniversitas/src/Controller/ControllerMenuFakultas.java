@@ -3,6 +3,7 @@ package Controller;
 import Model.Aplikasi;
 import Model.Database;
 import Model.Fakultas;
+import Model.PengajuanDana;
 import Model.PengeluaranDana;
 import View.MenuFakultas;
 import java.awt.event.ActionEvent;
@@ -26,6 +27,8 @@ public class ControllerMenuFakultas implements ActionListener{
         view.getTfDana().setText(Integer.toString(model.showDanaSisa(fakultas.getIdFakultas())));
         model.showTabelPembagianDanaFakultas(view,fakultas.getIdFakultas());
         model.showTabelPengeluaranDanaFakultas(view, fakultas.getIdFakultas());
+        model.showTablePengajuanDanaFakultas(view, fakultas.getIdFakultas());
+        view.SetIDPengajuan("");
     }
     
     @Override
@@ -64,7 +67,20 @@ public class ControllerMenuFakultas implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Please fill ID Pengeluaran");
             }
         }else if (source == view.getBtnAddPengajuan()){
-            
+            if(!view.getTaTujuanPengajuan().getText().equals("") && !view.getTfTotalPengajuan().getText().equals("")){
+                String idPengajuan = view.getTfPengajuan().getText();
+                String idFakultas = fakultas.getIdFakultas();
+                String tujuanPengajuan = view.getTaTujuanPengajuan().getText();
+                int totalPengajuan = Integer.parseInt(view.getTfTotalPengajuan().getText());
+                PengajuanDana pj = new PengajuanDana(idPengajuan, idFakultas, tujuanPengajuan, totalPengajuan, "0");
+                model.addPengajuanDana(pj); 
+                JOptionPane.showMessageDialog(null, "Add Data Success");
+                //setText
+                view.getTaTujuanPengajuan().setText("");
+                view.getTfTotalPengajuan().setText("");
+            }else{
+                JOptionPane.showMessageDialog(null, "Plese fill all the blank");
+            }
         }else if (source == view.getBtnLogoutFakultas()){
             new ControllerLogin(model);
             view.dispose();
@@ -72,6 +88,8 @@ public class ControllerMenuFakultas implements ActionListener{
         model.showTabelPengeluaranDanaFakultas(view, fakultas.getIdFakultas());
         view.getTfDana().setText(Integer.toString(model.showDanaSisa(fakultas.getIdFakultas())));
         view.refresh("");
+        view.SetIDPengajuan("");
+        model.showTablePengajuanDanaFakultas(view, fakultas.getIdFakultas());
     }
    
 }
