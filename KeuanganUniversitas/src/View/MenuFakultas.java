@@ -7,6 +7,7 @@ import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import java.util.Random;
 
 public class MenuFakultas extends javax.swing.JFrame {
 
@@ -460,12 +461,18 @@ public class MenuFakultas extends javax.swing.JFrame {
         return tfPengajuan;
     }
 
-    public JTextField getTfTotal() {
-        return tfTotalpengeluaran;
-    }
-
     public JTextField getTfTotalPengajuan() {
         return tfTotalPengajuan;
+    }
+   public  JTextField getTfTotalPengeluaran(){
+        return tfTotalpengeluaran;
+    }
+    
+    public void refresh(String s){
+        tfIDPengeluaran.setText(s);
+        Random r = new Random();
+        int randId = r.nextInt(999-111) + 111;
+        tfIDPengeluaran.setText(""+Integer.toString(randId));
     }
 
     

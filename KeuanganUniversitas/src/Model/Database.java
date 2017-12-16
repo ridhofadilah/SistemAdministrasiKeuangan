@@ -3,6 +3,7 @@ package Model;
 import View.MenuAdmin;
 import View.MenuMahasiswa;
 import View.MenuWakilRektor;
+import View.MenuFakultas;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -644,4 +645,90 @@ public class Database {
     public int showDanaUniversitas() {
         return sumPembayaran()-sumPengeluaran()-sumPengajuan();
     } 
+    
+      //======== Fakultas
+    public void addPengeluaranFakultas (PengeluaranDana f){
+        try {
+            String sql = "INSERT INTO PENGELUARANDANA VALUES ("+
+                    //"'"+a+"',"+
+                    "'"+f.getIdPengeluaran()+"',"+
+                    "'"+f.getIdFakultas()+"',"+
+                    "'"+f.getTahunAjar()+"',"+
+                    "'"+f.getKeterangan()+"',"
+                    +f.getTotal()+");";
+            statement.execute(sql,Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs=statement.getGeneratedKeys();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+    
+    public int sumPengeluranFakultas(String idFakultas){
+        try {
+            String query = "SELECT SUM(total) FROM PENGELUARANDANA where idFakultas = '"+idFakultas+"';";
+            ResultSet rs = statement.executeQuery(query);
+            int totalPengeluaranFakultas=0;
+            while (rs.next()) {
+                totalPengeluaranFakultas = rs.getInt(1);
+            }
+            return totalPengeluaranFakultas;
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Failed");
+            return 0;
+        }
+    }
+    
+    public int sumPembagianDanaFakultas(String idFakultas){
+        try {
+            String query = "SELECT SUM(TotalDana) FROM PEMBAGIANDANA where idFakultas = '"+idFakultas+"';";
+            ResultSet rs = statement.executeQuery(query);
+            int danaFakultas=0;
+            while (rs.next()) {
+                danaFakultas = rs.getInt(1);
+            }
+            return danaFakultas;
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Failed");
+            return 0;
+        }
+    }
+    
+        public void loadPembagianDanaFakultas(MenuFakultas view, String idFakultas) {
+        String[] kolom = {"ID PEMBAGIAN", "Total Dana"};
+        _tabel = new DefaultTableModel(null, kolom) {
+            Class[] types = new Class[]{
+                java.lang.String.class,
+                java.lang.String.class,
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            // Agar table tidak bisa diedit
+            @Override
+            public boolean isCellEditable(int row, int col) {
+                int cola = _tabel.getColumnCount();
+                return (col < cola) ? false : true;
+            }
+        };
+        view.getTabelPembagianDana().setModel(_tabel);
+        try {
+            HapusTabel();
+            String sql = "SELECT idPembagian,TotalDana from PEMBAGIANDANA where idFakultas='"+idFakultas+"';";
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String idPembagian = rs.getString(1);
+                int total = rs.getInt(2);
+                Object[] data = {idPembagian, total};
+                _tabel.addRow(data);
+            }
+            view.getTabelPembagianDana().getColumnModel().getColumn(0).setPreferredWidth(30);
+            view.getTabelPembagianDana().getColumnModel().getColumn(1).setPreferredWidth(30);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed");
+        }
+    }
+    
 }

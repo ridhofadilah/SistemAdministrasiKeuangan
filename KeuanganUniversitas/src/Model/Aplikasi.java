@@ -2,6 +2,7 @@ package Model;
 
 import View.MenuMahasiswa;
 import View.MenuWakilRektor;
+import View.MenuFakultas;
 import View.MenuAdmin;
 import javax.swing.JTextField;
 
@@ -141,5 +142,19 @@ public class Aplikasi {
 
     public int showDana() {
         return data.showDanaUniversitas();
+    }
+    
+    //fakultas
+
+    public void tambahPengeluaranFakultas(PengeluaranDana f){
+        data.addPengeluaranFakultas(f);
+    }
+    
+    public int showDanaSisa(String id){
+        return (data.sumPembagianDanaFakultas(id)-data.sumPengeluranFakultas(id));
+    }
+    
+    public void showTabelPembagianDanaFakultas(MenuFakultas view,String id){
+        data.loadPembagianDanaFakultas(view, id);
     }
 }
