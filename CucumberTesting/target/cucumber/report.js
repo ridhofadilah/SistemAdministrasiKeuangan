@@ -45,7 +45,7 @@ formatter.match({
   "location": "DemoContext.data_user_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 74928433,
+  "duration": 72419854,
   "status": "passed"
 });
 formatter.match({
@@ -58,7 +58,7 @@ formatter.match({
   "location": "DemoContext.memasukan_data_user_dengan_nama(String)"
 });
 formatter.result({
-  "duration": 1697913,
+  "duration": 1540375,
   "status": "passed"
 });
 formatter.match({
@@ -71,7 +71,7 @@ formatter.match({
   "location": "DemoContext.respon(String)"
 });
 formatter.result({
-  "duration": 51418,
+  "duration": 50325,
   "status": "passed"
 });
 formatter.scenario({
@@ -107,7 +107,7 @@ formatter.match({
   "location": "DemoContext.data_user_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 22245,
+  "duration": 41208,
   "status": "passed"
 });
 formatter.match({
@@ -120,7 +120,7 @@ formatter.match({
   "location": "DemoContext.memasukan_data_user_dengan_nama(String)"
 });
 formatter.result({
-  "duration": 54701,
+  "duration": 47772,
   "status": "passed"
 });
 formatter.match({
@@ -133,7 +133,7 @@ formatter.match({
   "location": "DemoContext.respon_gagal_dengan_pesan(String)"
 });
 formatter.result({
-  "duration": 71841,
+  "duration": 36102,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/InputDataPengajuanDana.feature");
@@ -183,14 +183,14 @@ formatter.match({
   "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_sesuai_format()"
 });
 formatter.result({
-  "duration": 55795,
+  "duration": 64912,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pengajuan_dana()"
 });
 formatter.result({
-  "duration": 22245,
+  "duration": 31726,
   "status": "passed"
 });
 formatter.match({
@@ -203,7 +203,7 @@ formatter.match({
   "location": "DemoContext.respon_pengajuan_dana(String)"
 });
 formatter.result({
-  "duration": 40478,
+  "duration": 55065,
   "status": "passed"
 });
 formatter.scenario({
@@ -239,14 +239,14 @@ formatter.match({
   "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_sesuai_format()"
 });
 formatter.result({
-  "duration": 24798,
+  "duration": 26986,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pengajuan_dana()"
 });
 formatter.result({
-  "duration": 28810,
+  "duration": 18598,
   "status": "passed"
 });
 formatter.match({
@@ -259,7 +259,7 @@ formatter.match({
   "location": "DemoContext.respon_gagal_pengajuan_dana(String)"
 });
 formatter.result({
-  "duration": 62359,
+  "duration": 57619,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/InputDataPengeluaran.feature");
@@ -309,14 +309,14 @@ formatter.match({
   "location": "DemoContext.data_pengeluaran_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 32092,
+  "duration": 27350,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pengeluaran_dana()"
 });
 formatter.result({
-  "duration": 23339,
+  "duration": 14222,
   "status": "passed"
 });
 formatter.match({
@@ -329,7 +329,7 @@ formatter.match({
   "location": "DemoContext.respon_pengeluaran_dana(String)"
 });
 formatter.result({
-  "duration": 50689,
+  "duration": 39385,
   "status": "passed"
 });
 formatter.scenario({
@@ -365,14 +365,14 @@ formatter.match({
   "location": "DemoContext.data_pengeluaran_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 35009,
+  "duration": 35738,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pengeluaran_dana()"
 });
 formatter.result({
-  "duration": 35738,
+  "duration": 16410,
   "status": "passed"
 });
 formatter.match({
@@ -385,7 +385,7 @@ formatter.match({
   "location": "DemoContext.respon_gagal_pengeluaran_dana(String)"
 });
 formatter.result({
-  "duration": 67464,
+  "duration": 72205,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/LaporanTahunan.feature");
@@ -435,14 +435,14 @@ formatter.match({
   "location": "DemoContext.data_laporan_tahunan_yang_akan_dimasukkan_dan_sesuai_format()"
 });
 formatter.result({
-  "duration": 44855,
+  "duration": 29903,
   "status": "passed"
 });
 formatter.match({
   "location": "InputPengajuanDanaContext.melakukan_laporan_tahunan()"
 });
 formatter.result({
-  "duration": 34644,
+  "duration": 22245,
   "status": "passed"
 });
 formatter.match({
@@ -455,7 +455,7 @@ formatter.match({
   "location": "DemoContext.respon_laporan_tahunan(String)"
 });
 formatter.result({
-  "duration": 76217,
+  "duration": 46313,
   "status": "passed"
 });
 formatter.scenario({
@@ -491,14 +491,14 @@ formatter.match({
   "location": "DemoContext.data_laporan_tahunan_yang_akan_dimasukkan_dan_sesuai_format()"
 });
 formatter.result({
-  "duration": 46313,
+  "duration": 35738,
   "status": "passed"
 });
 formatter.match({
   "location": "InputPengajuanDanaContext.melakukan_laporan_tahunan()"
 });
 formatter.result({
-  "duration": 45220,
+  "duration": 28445,
   "status": "passed"
 });
 formatter.match({
@@ -511,7 +511,7 @@ formatter.match({
   "location": "DemoContext.respon_gagal_laporan_tahunan(String)"
 });
 formatter.result({
-  "duration": 78040,
+  "duration": 56889,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/Login.feature");
@@ -561,7 +561,7 @@ formatter.match({
   "location": "LoginContext.Data_account_yang_dimiliki_ketika_divalidasi_ada_di_database_system()"
 });
 formatter.result({
-  "duration": 86427,
+  "duration": 52148,
   "status": "passed"
 });
 formatter.match({
@@ -574,7 +574,7 @@ formatter.match({
   "location": "LoginContext.Login_ke_dalam_sistem_keuangan_dengan_account(String)"
 });
 formatter.result({
-  "duration": 98097,
+  "duration": 52877,
   "status": "passed"
 });
 formatter.match({
@@ -587,7 +587,7 @@ formatter.match({
   "location": "LoginContext.respon(String)"
 });
 formatter.result({
-  "duration": 95909,
+  "duration": 58712,
   "status": "passed"
 });
 formatter.scenario({
@@ -623,7 +623,7 @@ formatter.match({
   "location": "LoginContext.Data_account_yang_dimiliki_ketika_divalidasi_ada_di_database_system()"
 });
 formatter.result({
-  "duration": 58347,
+  "duration": 33185,
   "status": "passed"
 });
 formatter.match({
@@ -636,7 +636,7 @@ formatter.match({
   "location": "LoginContext.Login_ke_dalam_sistem_keuangan_dengan_account(String)"
 });
 formatter.result({
-  "duration": 82416,
+  "duration": 42667,
   "status": "passed"
 });
 formatter.match({
@@ -649,7 +649,7 @@ formatter.match({
   "location": "LoginContext.respon_gagal_dengan_pesan(String)"
 });
 formatter.result({
-  "duration": 80228,
+  "duration": 43760,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/PembagianDana.feature");
@@ -699,14 +699,14 @@ formatter.match({
   "location": "DemoContext.data_pembagian_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 55430,
+  "duration": 34279,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pembagian_dana()"
 });
 formatter.result({
-  "duration": 25891,
+  "duration": 21516,
   "status": "passed"
 });
 formatter.match({
@@ -719,7 +719,7 @@ formatter.match({
   "location": "DemoContext.respon_pembagian_dana(String)"
 });
 formatter.result({
-  "duration": 76581,
+  "duration": 61995,
   "status": "passed"
 });
 formatter.scenario({
@@ -755,14 +755,14 @@ formatter.match({
   "location": "DemoContext.data_pembagian_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 54336,
+  "duration": 40114,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pembagian_dana()"
 });
 formatter.result({
-  "duration": 30633,
+  "duration": 18598,
   "status": "passed"
 });
 formatter.match({
@@ -775,7 +775,7 @@ formatter.match({
   "location": "DemoContext.respon_gagal_pembagian_dana(String)"
 });
 formatter.result({
-  "duration": 83510,
+  "duration": 71111,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/PembayaranMahasiswa.feature");
@@ -825,14 +825,14 @@ formatter.match({
   "location": "DemoContext.data_pembayaran_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 279703,
+  "duration": 45220,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pembayaran_mahasiswa()"
 });
 formatter.result({
-  "duration": 34644,
+  "duration": 23704,
   "status": "passed"
 });
 formatter.match({
@@ -845,7 +845,7 @@ formatter.match({
   "location": "DemoContext.responnya(String)"
 });
 formatter.result({
-  "duration": 99921,
+  "duration": 57983,
   "status": "passed"
 });
 formatter.scenario({
@@ -881,14 +881,14 @@ formatter.match({
   "location": "DemoContext.data_pembayaran_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 44490,
+  "duration": 36102,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pembayaran_mahasiswa()"
 });
 formatter.result({
-  "duration": 21880,
+  "duration": 16410,
   "status": "passed"
 });
 formatter.match({
@@ -901,7 +901,7 @@ formatter.match({
   "location": "DemoContext.responnya_gagal_dengan_pesan(String)"
 });
 formatter.result({
-  "duration": 88980,
+  "duration": 55065,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/PengajuanDana.feature");
@@ -951,14 +951,14 @@ formatter.match({
   "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 327111,
+  "duration": 60535,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pengajuan_dana()"
 });
 formatter.result({
-  "duration": 56159,
+  "duration": 33914,
   "status": "passed"
 });
 formatter.match({
@@ -971,7 +971,7 @@ formatter.match({
   "location": "DemoContext.respon_pengajuan_dana(String)"
 });
 formatter.result({
-  "duration": 158632,
+  "duration": 84969,
   "status": "passed"
 });
 formatter.scenario({
@@ -1007,14 +1007,14 @@ formatter.match({
   "location": "InputPengajuanDanaContext.data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem()"
 });
 formatter.result({
-  "duration": 52513,
+  "duration": 44855,
   "status": "passed"
 });
 formatter.match({
   "location": "DemoContext.melakukan_pengajuan_dana()"
 });
 formatter.result({
-  "duration": 41572,
+  "duration": 30268,
   "status": "passed"
 });
 formatter.match({
@@ -1027,7 +1027,7 @@ formatter.match({
   "location": "DemoContext.respon_gagal_pengajuan_dana(String)"
 });
 formatter.result({
-  "duration": 77310,
+  "duration": 61995,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/ViewPengeluaranDana.feature");
@@ -1077,7 +1077,7 @@ formatter.match({
   "location": "ViewPengeluaranDanaContext.Admin_fakultas_masuk_ke_halaman_homepage_admin_fakultas_pengeluarn_dana()"
 });
 formatter.result({
-  "duration": 95544,
+  "duration": 81687,
   "status": "passed"
 });
 formatter.match({
@@ -1090,7 +1090,7 @@ formatter.match({
   "location": "ViewPengeluaranDanaContext.Mengklik_tombol_pengeluaran(String)"
 });
 formatter.result({
-  "duration": 118153,
+  "duration": 94450,
   "status": "passed"
 });
 formatter.match({
@@ -1103,7 +1103,7 @@ formatter.match({
   "location": "ViewPengeluaranDanaContext.respon_sistem_pengeluaran(String)"
 });
 formatter.result({
-  "duration": 81687,
+  "duration": 56159,
   "status": "passed"
 });
 formatter.uri("com/mycompany/cucumbertesting/viewPembagianDana.feature");
@@ -1153,7 +1153,7 @@ formatter.match({
   "location": "VeiwPembagianDanaContext.Admin_fakultas_masuk_ke_halaman_homepage_admin_fakultas()"
 });
 formatter.result({
-  "duration": 96273,
+  "duration": 72205,
   "status": "passed"
 });
 formatter.match({
@@ -1166,7 +1166,7 @@ formatter.match({
   "location": "VeiwPembagianDanaContext.Mengklik_tombol(String)"
 });
 formatter.result({
-  "duration": 97368,
+  "duration": 78769,
   "status": "passed"
 });
 formatter.match({
@@ -1179,7 +1179,7 @@ formatter.match({
   "location": "VeiwPembagianDanaContext.respon_sistem(String)"
 });
 formatter.result({
-  "duration": 86427,
+  "duration": 95179,
   "status": "passed"
 });
 });
