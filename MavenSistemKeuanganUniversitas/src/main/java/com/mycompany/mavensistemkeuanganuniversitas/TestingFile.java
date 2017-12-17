@@ -20,6 +20,7 @@ public class TestingFile {
         else
             return "Segera Lakukan Pembayaran";                
     }
+    
     public static String validasiLogin(String account){
         if (account.equals("irwan"))
             return "Login Berhasil";
