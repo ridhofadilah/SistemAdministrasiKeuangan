@@ -9,10 +9,11 @@ package com.mycompany.mavensistemkeuanganuniversitas.Model;
  *
  * @author MIAfandi
  */
-import View.MenuMahasiswa;
-import View.MenuWakilRektor;
-import View.MenuFakultas;
-import View.MenuAdmin;
+
+import com.mycompany.mavensistemkeuanganuniversitas.View.MenuAdmin;
+import com.mycompany.mavensistemkeuanganuniversitas.View.MenuFakultas;
+import com.mycompany.mavensistemkeuanganuniversitas.View.MenuMahasiswa;
+import com.mycompany.mavensistemkeuanganuniversitas.View.MenuWakilRektor;
 import javax.swing.JTextField;
 
 public class Aplikasi {

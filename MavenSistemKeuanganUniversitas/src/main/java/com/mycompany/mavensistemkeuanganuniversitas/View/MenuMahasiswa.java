@@ -1,10 +1,19 @@
-package View;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.mavensistemkeuanganuniversitas.View;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
+/**
+ *
+ * @author User
+ */
 public class MenuMahasiswa extends javax.swing.JFrame {
 
     /**
@@ -27,14 +36,13 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tabelTagihan = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        tfIDPembayaran = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        tfIDPembayaran = new javax.swing.JTextField();
         tfTotalBayar = new javax.swing.JTextField();
         btnAddPembayaran = new javax.swing.JButton();
         btlLogoutMahasiswa = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 500));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel3.setText("MAHASISWA");
@@ -78,7 +86,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(tfIDPembayaran)
                                     .addComponent(tfTotalBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(188, 188, 188)
                 .addComponent(jLabel3)
@@ -103,7 +111,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(tfTotalBayar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(btnAddPembayaran)
                 .addGap(31, 31, 31))
         );
@@ -111,10 +119,6 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    
     public void addListener(ActionListener e){
         btnAddPembayaran.addActionListener(e);
         btlLogoutMahasiswa.addActionListener(e);
@@ -144,7 +148,6 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         tfIDPembayaran.setText(s);
         tfTotalBayar.setText(s);
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btlLogoutMahasiswa;
