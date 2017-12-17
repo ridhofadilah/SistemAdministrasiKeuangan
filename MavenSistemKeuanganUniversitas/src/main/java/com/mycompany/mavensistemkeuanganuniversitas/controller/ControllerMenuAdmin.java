@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavensistemkeuanganuniversitas.Contoller;
+package com.mycompany.mavensistemkeuanganuniversitas.controller;
 
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Aplikasi;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Database;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Pembayaran;
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuAdmin;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Aplikasi;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Database;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Pembayaran;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuAdmin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -37,7 +37,7 @@ public class ControllerMenuAdmin implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
         if (source == view.getBtnKonfirmasiPembayaran()){
-            if (view.getTfIDPembayaranKonfirmasiA().getText().equals("")){
+            if ("".equals(view.getTfIDPembayaranKonfirmasiA().getText())){
                 JOptionPane.showMessageDialog(null, "Fill the ID!");
             } else {
                 Pembayaran pb = model.cariIDPembayaran(view.getTfIDPembayaranKonfirmasiA().getText());
@@ -52,7 +52,7 @@ public class ControllerMenuAdmin implements ActionListener{
                 }
             }           
         } else if (source == view.getBtnAddPembayaranA()){
-            if (view.getTfIDMahasiswaA().equals("") || view.getTfTotalBayarA().equals("")){
+            if ("".equals(view.getTfIDMahasiswaA().getText())|| "".equals(view.getTfTotalBayarA().getText())){
                 JOptionPane.showMessageDialog(null, "Fill all the textfield!");
             } else {
                 if (model.cariMahasiswa(view.getTfIDMahasiswaA().getText()) != null){
@@ -62,7 +62,7 @@ public class ControllerMenuAdmin implements ActionListener{
                 }
             }
          else if (source == view.getBtnLogout()){
-            new ControllerLogin(model);
+            ControllerLogin c = new ControllerLogin(model);
             view.dispose();
         }
         model.showTabelPembayaran(view);

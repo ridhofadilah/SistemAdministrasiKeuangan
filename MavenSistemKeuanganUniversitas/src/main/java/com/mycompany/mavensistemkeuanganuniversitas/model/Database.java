@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavensistemkeuanganuniversitas.Model;
+package com.mycompany.mavensistemkeuanganuniversitas.model;
 
 /**
  *
  * @author MIAfandi
  */
 
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuAdmin;
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuFakultas;
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuMahasiswa;
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuWakilRektor;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuAdmin;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuFakultas;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuMahasiswa;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuWakilRektor;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -26,15 +26,11 @@ public class Database {
 
     private String server = "jdbc:mysql://localhost:3306/keuanganuniversitas";
     private String dbuser = "root";
-    private String dbpasswd = "";
     private Statement statement = null;
     private Connection connection = null;
-    private String status;
-    private Mahasiswa mahasiswa;
-    private Fakultas fakultas;
     private ResultSet rs;
     
-    private DefaultTableModel _tabel;
+    private DefaultTableModel tabel;
     
     public Database() {
         try {
@@ -46,7 +42,7 @@ public class Database {
 
     public void connect() {
         try {
-            this.connection = DriverManager.getConnection(server, dbuser, dbpasswd);
+            this.connection = DriverManager.getConnection(server, dbuser, "");
             this.statement = connection.createStatement();
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, e.getMessage(), "Terjadi kesalahan saat konek", JOptionPane.WARNING_MESSAGE);
@@ -85,7 +81,7 @@ public class Database {
 
     public void LoadDataTagihan(MenuMahasiswa view, String idMahasiswa) {
         String[] kolom = {"ID Pembayaran", "Tahun Ajar", "Total", "Status"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class,
@@ -101,11 +97,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelTagihan().setModel(_tabel);
+        view.getTabelTagihan().setModel(tabel);
         try {
             HapusTabel();
             String sql = "" + "SELECT * from PEMBAYARAN where idMahasiswa = '"+idMahasiswa+"'";
@@ -123,7 +119,7 @@ public class Database {
                     status = "Pembayaran ditolak";
                 }
                 Object[] data = {idPembayaran, tahunAjar, total, status};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelTagihan().getColumnModel().getColumn(0).setPreferredWidth(30);
             view.getTabelTagihan().getColumnModel().getColumn(1).setPreferredWidth(30);
@@ -135,9 +131,9 @@ public class Database {
     }
     
     public void HapusTabel(){
-        int row = _tabel.getRowCount();
+        int row = tabel.getRowCount();
         for (int i = 0;i < row;i++){
-            _tabel.removeRow(0);
+            tabel.removeRow(0);
         }
     }
 
@@ -218,7 +214,7 @@ public class Database {
 
     public void loadDataPengajuanWR(MenuWakilRektor view) {
         String[] kolom = {"ID Pengajuan", "ID Fakultas", "Tujuan", "Total"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class,
@@ -234,11 +230,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelPengajuanWR().setModel(_tabel);
+        view.getTabelPengajuanWR().setModel(tabel);
         try {
             HapusTabel();
             String sql = "SELECT * from PENGAJUANDANA where status = 0";
@@ -249,7 +245,7 @@ public class Database {
                 String Tujuan = rs.getString(3);
                 int total = rs.getInt(4);
                 Object[] data = {idPengajuan, idFakultas, Tujuan, total};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelPengajuanWR().getColumnModel().getColumn(0).setPreferredWidth(20);
             view.getTabelPengajuanWR().getColumnModel().getColumn(1).setPreferredWidth(20);
@@ -262,7 +258,7 @@ public class Database {
     
     public void loadDataPengajuanDiterima(MenuWakilRektor view) {
         String[] kolom = {"ID Pengajuan", "ID Fakultas", "Tujuan", "Total"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class,
@@ -278,11 +274,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelPengajuanDiterima().setModel(_tabel);
+        view.getTabelPengajuanDiterima().setModel(tabel);
         try {
             HapusTabel();
             String sql = "SELECT * from PENGAJUANDANA where status = 1";
@@ -293,7 +289,7 @@ public class Database {
                 String Tujuan = rs.getString(3);
                 int total = rs.getInt(4);
                 Object[] data = {idPengajuan, idFakultas, Tujuan, total};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelPengajuanDiterima().getColumnModel().getColumn(0).setPreferredWidth(20);
             view.getTabelPengajuanDiterima().getColumnModel().getColumn(1).setPreferredWidth(20);
@@ -306,7 +302,7 @@ public class Database {
     
     public void loadDataPengajuanDitolak(MenuWakilRektor view) {
         String[] kolom = {"ID Pengajuan", "ID Fakultas", "Tujuan", "Total"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class,
@@ -322,11 +318,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelPengajuanDitolak().setModel(_tabel);
+        view.getTabelPengajuanDitolak().setModel(tabel);
         try {
             HapusTabel();
             String sql = "SELECT * from PENGAJUANDANA where status = -1";
@@ -337,7 +333,7 @@ public class Database {
                 String Tujuan = rs.getString(3);
                 int total = rs.getInt(4);
                 Object[] data = {idPengajuan, idFakultas, Tujuan, total};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelPengajuanDitolak().getColumnModel().getColumn(0).setPreferredWidth(20);
             view.getTabelPengajuanDitolak().getColumnModel().getColumn(1).setPreferredWidth(20);
@@ -350,7 +346,7 @@ public class Database {
 
     void loadDataDanaMasuk(MenuWakilRektor view) {
         String[] kolom = {"ID Pembayaran", "ID Mahasiswa", "Tahun Ajar", "Total"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class,
@@ -366,11 +362,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelDanaMasuk().setModel(_tabel);
+        view.getTabelDanaMasuk().setModel(tabel);
         try {
             HapusTabel();
             String sql = "SELECT * from PEMBAYARAN where status = 1";
@@ -381,7 +377,7 @@ public class Database {
                 String tahunAjar = rs.getString(3);
                 int total = rs.getInt(4);
                 Object[] data = {idPembayaran, idMahasiswa, tahunAjar, total};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelDanaMasuk().getColumnModel().getColumn(0).setPreferredWidth(30);
             view.getTabelDanaMasuk().getColumnModel().getColumn(1).setPreferredWidth(30);
@@ -394,7 +390,7 @@ public class Database {
 
     void loadDataDanaKeluar(MenuWakilRektor view) {
         String[] kolom = {"ID Pengeluaran", "ID Fakultas", "Tahun Ajar","Keterangan", "Total"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class,
@@ -411,11 +407,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelDanaKeluar().setModel(_tabel);
+        view.getTabelDanaKeluar().setModel(tabel);
         try {
             HapusTabel();
             String sql = "SELECT * from PENGELUARANDANA";
@@ -427,7 +423,7 @@ public class Database {
                 String keterangan = rs.getString(4);
                 int total = rs.getInt(5);
                 Object[] data = {idPengeluaran, idFakultas, tahunAjar, keterangan, total};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelDanaKeluar().getColumnModel().getColumn(0).setPreferredWidth(15);
             view.getTabelDanaKeluar().getColumnModel().getColumn(1).setPreferredWidth(15);
@@ -441,7 +437,7 @@ public class Database {
 
     public void loadPembagianWR(MenuWakilRektor view) {
         String[] kolom = {"ID PEMBAGIAN", "ID Fakultas", "Total"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class,
@@ -456,11 +452,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelPembagianWR().setModel(_tabel);
+        view.getTabelPembagianWR().setModel(tabel);
         try {
             HapusTabel();
             String sql = "SELECT * from PEMBAGIANDANA";
@@ -470,7 +466,7 @@ public class Database {
                 String idFakultas = rs.getString(2);
                 int total = rs.getInt(3);
                 Object[] data = {idPembagian, idFakultas, total};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelDanaKeluar().getColumnModel().getColumn(0).setPreferredWidth(30);
             view.getTabelDanaKeluar().getColumnModel().getColumn(1).setPreferredWidth(30);
@@ -482,7 +478,7 @@ public class Database {
     
       void loadDataPembayaran(MenuAdmin view) {
         String[] kolom = {"ID Pembayaran", "ID Mahasiswa", "Total", "Status"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class,
@@ -498,11 +494,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelPembayaran().setModel(_tabel);
+        view.getTabelPembayaran().setModel(tabel);
         try {
             HapusTabel();
             String sql = "SELECT * from PEMBAYARAN";
@@ -513,7 +509,7 @@ public class Database {
                 int total = rs.getInt(3);
                 String status = rs.getString(4);
                 Object[] data = {idPembayaran, idMahasiswa, total, status};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelPembayaran().getColumnModel().getColumn(0).setPreferredWidth(15);
             view.getTabelPembayaran().getColumnModel().getColumn(1).setPreferredWidth(15);
@@ -705,7 +701,7 @@ public class Database {
     
     public void loadPembagianDanaFakultas(MenuFakultas view, String idFakultas) {
         String[] kolom = {"ID PEMBAGIAN", "Total Dana"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class
@@ -719,11 +715,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelPembagianDana().setModel(_tabel);
+        view.getTabelPembagianDana().setModel(tabel);
         try {
             HapusTabel();
             String sql = "SELECT idPembagian,TotalDana from PEMBAGIANDANA where idFakultas='"+idFakultas+"';";
@@ -732,7 +728,7 @@ public class Database {
                 String idPembagian = rs.getString(1);
                 int total = rs.getInt(2);
                 Object[] data = {idPembagian, total};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelPembagianDana().getColumnModel().getColumn(0).setPreferredWidth(30);
             view.getTabelPembagianDana().getColumnModel().getColumn(1).setPreferredWidth(30);
@@ -743,7 +739,7 @@ public class Database {
     
     public void loadPengeluaranFakultas(MenuFakultas view, String idFakultas) {
         String[] kolom = {"ID Pengeluaran","Tahun Ajar", "Total"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class,
@@ -758,11 +754,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelPengeluaran().setModel(_tabel);
+        view.getTabelPengeluaran().setModel(tabel);
         try {
             HapusTabel();
             String sql = "SELECT idPengeluaran,tahunajar, total from PENGELUARANDANA where idFakultas='"+idFakultas+"';";
@@ -772,7 +768,7 @@ public class Database {
                 String tahunajar = rs.getString(2);
                 int total = rs.getInt(3);
                 Object[] data = {idPengeluaran, tahunajar, total};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelPengeluaran().getColumnModel().getColumn(0).setPreferredWidth(30);
             view.getTabelPengeluaran().getColumnModel().getColumn(1).setPreferredWidth(30);
@@ -814,7 +810,7 @@ public class Database {
 
     public void loadPengajuanDanaFakultas(MenuFakultas view, String idFakultas) {
         String[] kolom = {"ID Pengajuan","Total", "Status"};
-        _tabel = new DefaultTableModel(null, kolom) {
+        tabel = new DefaultTableModel(null, kolom) {
             Class[] types = new Class[]{
                 java.lang.String.class,
                 java.lang.String.class,
@@ -829,11 +825,11 @@ public class Database {
             // Agar table tidak bisa diedit
             @Override
             public boolean isCellEditable(int row, int col) {
-                int cola = _tabel.getColumnCount();
+                int cola = tabel.getColumnCount();
                 return (col < cola) ? false : true;
             }
         };
-        view.getTabelPengajuanDanaF().setModel(_tabel);
+        view.getTabelPengajuanDanaF().setModel(tabel);
         try {
             HapusTabel();
             String sql = "SELECT idPengajuan,total,status from PENGAJUANDANA where idFakultas='"+idFakultas+"';";
@@ -851,7 +847,7 @@ public class Database {
                 }
 
                 Object[] data = {idPengeluaran, total, status};
-                _tabel.addRow(data);
+                tabel.addRow(data);
             }
             view.getTabelPengajuanDanaF().getColumnModel().getColumn(0).setPreferredWidth(30);
             view.getTabelPengajuanDanaF().getColumnModel().getColumn(1).setPreferredWidth(30);

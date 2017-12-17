@@ -3,25 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavensistemkeuanganuniversitas.Model;
+package com.mycompany.mavensistemkeuanganuniversitas.model;
 
 /**
  *
  * @author MIAfandi
  */
 
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuAdmin;
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuFakultas;
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuMahasiswa;
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuWakilRektor;
-import javax.swing.JTextField;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuAdmin;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuFakultas;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuMahasiswa;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuWakilRektor;
 
 public class Aplikasi {
 
     private Database data;
     private Mahasiswa mahasiswa;
     private Fakultas fakultas;
-    private PembagianDana pembagian;
     private Pembayaran pembayaran;
     private PengajuanDana pengajuan;
     private PengeluaranDana pengeluaran;
@@ -161,7 +159,7 @@ public class Aplikasi {
     }
     
     public int showDanaSisa(String id){
-        return (data.sumPembagianDanaFakultas(id)-data.sumPengeluranFakultas(id));
+        return data.sumPembagianDanaFakultas(id)-data.sumPengeluranFakultas(id);
     }
     
     public void showTabelPembagianDanaFakultas(MenuFakultas view,String id){
@@ -172,8 +170,8 @@ public class Aplikasi {
         data.loadPengeluaranFakultas(view, id);
     }
     
-    public PengeluaranDana cariPengeluaran(String IdPengeluran) {
-        pengeluaran = data.cariPengeluaran(IdPengeluran);
+    public PengeluaranDana cariPengeluaran(String idPengeluran) {
+        pengeluaran = data.cariPengeluaran(idPengeluran);
         if (pengeluaran !=null){
             return pengeluaran;
         } else {

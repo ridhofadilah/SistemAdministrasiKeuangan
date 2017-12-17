@@ -4,9 +4,8 @@
  * and open the template in the editor.
  */
 package com.mycompany.mavensistemkeuanganuniversitas;
-
-import com.mycompany.mavensistemkeuanganuniversitas.Contoller.ControllerLogin;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Aplikasi;
+import com.mycompany.mavensistemkeuanganuniversitas.controller.ControllerLogin;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Aplikasi;
 
 /**
  *
@@ -15,18 +14,18 @@ import com.mycompany.mavensistemkeuanganuniversitas.Model.Aplikasi;
 public class TestingFile {
     public static void main(String[] args) {
         Aplikasi driver = new Aplikasi();
-        new ControllerLogin(driver);
+        ControllerLogin x = new ControllerLogin(driver);
     }
     
     public static String cekStatusPembayaran(String nim){
-        if (nim.equals("1301154424"))
+        if("1301154424".equals(nim))
             return "Status Pembayaran Lunas";
         else
             return "Segera Lakukan Pembayaran";                
     }
     
     public static String validasiLogin(String account){
-        if (account.equals("irwan"))
+        if ("irwan".equals(account))
             return "Login Berhasil";
         else
             return "Login Gagal cek account anda";                

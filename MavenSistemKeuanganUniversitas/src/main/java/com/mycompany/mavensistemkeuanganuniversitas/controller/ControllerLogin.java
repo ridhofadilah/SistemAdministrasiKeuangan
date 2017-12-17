@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavensistemkeuanganuniversitas.Contoller;
+package com.mycompany.mavensistemkeuanganuniversitas.controller;
 
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Aplikasi;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Database;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Fakultas;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Mahasiswa;
-import com.mycompany.mavensistemkeuanganuniversitas.View.Login;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Aplikasi;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Database;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Fakultas;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Mahasiswa;
+import com.mycompany.mavensistemkeuanganuniversitas.view.Login;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -37,21 +37,21 @@ public class ControllerLogin implements ActionListener{
         if (source == view.getBtnLogin()){
             String uname = view.getTfUsername();
             String pw = view.getTfPassword();
-            if (uname.equals("")|| pw.equals("")){
+            if ("".equals(uname)|| "".equals(pw)){
                 JOptionPane.showMessageDialog(null,"Fill the username/password");
-            } else if (uname.equals("admin") && pw.equals("admin")){
-                new ControllerMenuAdmin(model);
+            } else if ("admin".equals(uname) && "admin".equals(pw)){
+                ControllerMenuAdmin x = new ControllerMenuAdmin(model);
                 view.dispose();
-            } else if (uname.equals("wakilrektor") && pw.equals("wakilrektor")){
-                new ControllerMenuWakilRektor(model);
+            } else if ("wakilrektor".equals(uname) && "wakilrektor".equals(pw)){
+                ControllerMenuWakilRektor y = new ControllerMenuWakilRektor(model);
                 view.dispose();
             } else if (model.findMahasiswa(uname,pw) != null){
                 Mahasiswa m = model.findMahasiswa(uname, pw);
-                new ControllerMenuMahasiswa(model, m);
+                ControllerMenuMahasiswa z = new ControllerMenuMahasiswa(model, m);
                 view.dispose();
             } else if (model.findFakultas(uname,pw) != null){
                 Fakultas f = model.findFakultas(uname, pw);
-                new ControllerMenuFakultas(model, f);
+                ControllerMenuFakultas s = new ControllerMenuFakultas(model, f);
             } else {
                 JOptionPane.showMessageDialog(null, "Sorry user is not in database!");
             }

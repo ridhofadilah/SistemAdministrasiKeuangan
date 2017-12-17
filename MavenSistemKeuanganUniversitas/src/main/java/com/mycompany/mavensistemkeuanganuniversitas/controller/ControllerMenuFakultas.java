@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavensistemkeuanganuniversitas.Contoller;
+package com.mycompany.mavensistemkeuanganuniversitas.controller;
 
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Aplikasi;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Database;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Fakultas;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.PengajuanDana;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.PengeluaranDana;
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuFakultas;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Aplikasi;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Database;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Fakultas;
+import com.mycompany.mavensistemkeuanganuniversitas.model.PengajuanDana;
+import com.mycompany.mavensistemkeuanganuniversitas.model.PengeluaranDana;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuFakultas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -45,7 +45,7 @@ public class ControllerMenuFakultas implements ActionListener{
     Object source = ae.getSource();
        
         if (source == view.getBtnAddPengeluaran()){          
-            if(!view.getTaKeterangan().getText().equals("")&&!view.getTfTotalPengeluaran().getText().equals("")){
+            if(!"".equals(view.getTaKeterangan().getText())&&!"".equals(view.getTfTotalPengeluaran().getText())){
                 String idPengeluran = view.getTfIDPengeluaran().getText();
                 String tahunAjar = (String)view.getComboTahunAjar().getSelectedItem();
                 String taKeterangan = view.getTaKeterangan().getText();
@@ -64,7 +64,7 @@ public class ControllerMenuFakultas implements ActionListener{
             }           
         }else if (source == view.getBtnLihatKeterangan()){
             String keterangan = view.getTfLihatIDPengeluaran().getText();
-            if(!view.getTfLihatIDPengeluaran().getText().equals("")){
+            if(!"".equals(view.getTfLihatIDPengeluaran().getText())){
                 PengeluaranDana p = model.cariPengeluaran(keterangan);
                 if(p!=null){
                     view.getLabelKeterangan().setText(p.getKeterangan());
@@ -76,7 +76,7 @@ public class ControllerMenuFakultas implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Please fill ID Pengeluaran");
             }
         }else if (source == view.getBtnAddPengajuan()){
-            if(!view.getTaTujuanPengajuan().getText().equals("") && !view.getTfTotalPengajuan().getText().equals("")){
+            if(!"".equals(view.getTaTujuanPengajuan().getText()) && !"".equals(view.getTfTotalPengajuan().getText())){
                 String idPengajuan = view.getTfPengajuan().getText();
                 String idFakultas = fakultas.getIdFakultas();
                 String tujuanPengajuan = view.getTaTujuanPengajuan().getText();
@@ -91,7 +91,7 @@ public class ControllerMenuFakultas implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Plese fill all the blank");
             }
         }else if (source == view.getBtnLogoutFakultas()){
-            new ControllerLogin(model);
+            ControllerLogin c = new ControllerLogin(model);
             view.dispose();
         }
         model.showTabelPengeluaranDanaFakultas(view, fakultas.getIdFakultas());

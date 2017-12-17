@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavensistemkeuanganuniversitas.Contoller;
+package com.mycompany.mavensistemkeuanganuniversitas.controller;
 
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Aplikasi;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Database;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Fakultas;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.PembagianDana;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.PengajuanDana;
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuWakilRektor;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Aplikasi;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Database;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Fakultas;
+import com.mycompany.mavensistemkeuanganuniversitas.model.PembagianDana;
+import com.mycompany.mavensistemkeuanganuniversitas.model.PengajuanDana;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuWakilRektor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -42,7 +42,7 @@ public class ControllerMenuWakilRektor implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
         if (source == view.getBtnAddKonfirmasiPengajuan()){
-            if (view.getTfIDPengajuanWR().getText().equals("")){
+            if ("".equals(view.getTfIDPengajuanWR().getText())){
                 JOptionPane.showMessageDialog(null, "Fill the ID");
             } else {
                 PengajuanDana pd = model.cariIDPengajuan(view.getTfIDPengajuanWR().getText());
@@ -62,7 +62,7 @@ public class ControllerMenuWakilRektor implements ActionListener {
                 }
             }
         } else if (source == view.getBtnAddPembagianDana()){
-            if (view.getTfFakultas().equals("") || view.getTfTotaLDana().equals("")){
+            if ("".equals(view.getTfFakultas().getText()) || "".equals(view.getTfTotaLDana().getText())){
                 JOptionPane.showMessageDialog(null, "Fill all the textfield!");
             } else {
                 if (model.cariFakultas(view.getTfFakultas().getText()) != null){
@@ -77,7 +77,7 @@ public class ControllerMenuWakilRektor implements ActionListener {
                 }
             }
         } else if (source == view.getBtnLogout()){
-            new ControllerLogin(model);
+            ControllerLogin c = new ControllerLogin(model);
             view.dispose();
         }
         model.showTabelPengajuan(view);

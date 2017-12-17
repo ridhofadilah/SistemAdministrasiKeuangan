@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavensistemkeuanganuniversitas.Contoller;
+package com.mycompany.mavensistemkeuanganuniversitas.controller;
 
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Aplikasi;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Database;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Mahasiswa;
-import com.mycompany.mavensistemkeuanganuniversitas.Model.Pembayaran;
-import com.mycompany.mavensistemkeuanganuniversitas.View.MenuMahasiswa;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Aplikasi;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Database;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Mahasiswa;
+import com.mycompany.mavensistemkeuanganuniversitas.model.Pembayaran;
+import com.mycompany.mavensistemkeuanganuniversitas.view.MenuMahasiswa;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -38,7 +38,7 @@ public class ControllerMenuMahasiswa implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
         if (source == view.getBtnAddPembayaran()){
-            if (view.getTfIDPembayaran().getText().equals("") || view.getTfTotalBayar().getText().equals("")){
+            if ("".equals(view.getTfIDPembayaran().getText()) || "".equals(view.getTfTotalBayar().getText())){
                 JOptionPane.showMessageDialog(null, "Please fill all the text!");
             } else {
                 String id = view.getTfIDPembayaran().getText();
@@ -55,7 +55,7 @@ public class ControllerMenuMahasiswa implements ActionListener{
                 }
             }   
         } else if (source == view.getBtlLogoutMahasiswa()){
-            new ControllerLogin(model);
+            ControllerLogin c = new ControllerLogin(model);
             view.dispose();
         }
         view.refresh("");
