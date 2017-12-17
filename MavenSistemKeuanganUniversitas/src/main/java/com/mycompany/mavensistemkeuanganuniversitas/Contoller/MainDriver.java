@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavensistemkeuanganuniversitas;
+package com.mycompany.mavensistemkeuanganuniversitas.Contoller;
 
 import com.mycompany.mavensistemkeuanganuniversitas.Contoller.ControllerLogin;
 import com.mycompany.mavensistemkeuanganuniversitas.Model.Aplikasi;
@@ -12,12 +12,11 @@ import com.mycompany.mavensistemkeuanganuniversitas.Model.Aplikasi;
  *
  * @author MIAfandi
  */
-public class TestingFile {
-    public static void main(String[] args) {
-        Aplikasi driver = new Aplikasi();
-        new ControllerLogin(driver);
-    }
-    
+public class MainDriver {
+//    public static void main(String[] args) {
+//        Aplikasi driver = new Aplikasi();
+//        new ControllerLogin(driver);
+//    }
     public static String cekStatusPembayaran(String nim){
         if (nim.equals("1301154424"))
             return "Status Pembayaran Lunas";
