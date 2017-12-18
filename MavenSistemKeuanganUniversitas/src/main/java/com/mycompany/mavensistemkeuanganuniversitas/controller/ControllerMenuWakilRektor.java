@@ -77,7 +77,7 @@ public class ControllerMenuWakilRektor implements ActionListener {
                 }
             }
         } else if (source == view.getBtnLogout()){
-            ControllerLogin c = new ControllerLogin(model);
+            new ControllerLogin(model);
             view.dispose();
         }
         model.showTabelPengajuan(view);

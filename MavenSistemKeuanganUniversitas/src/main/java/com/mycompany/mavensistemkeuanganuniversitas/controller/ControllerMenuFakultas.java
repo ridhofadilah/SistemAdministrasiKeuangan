@@ -37,7 +37,7 @@ public class ControllerMenuFakultas implements ActionListener{
         model.showTabelPembagianDanaFakultas(view,fakultas.getIdFakultas());
         model.showTabelPengeluaranDanaFakultas(view, fakultas.getIdFakultas());
         model.showTablePengajuanDanaFakultas(view, fakultas.getIdFakultas());
-        view.SetIDPengajuan("");
+        view.setIDPengajuan("");
     }
     
     @Override
@@ -91,13 +91,13 @@ public class ControllerMenuFakultas implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Plese fill all the blank");
             }
         }else if (source == view.getBtnLogoutFakultas()){
-            ControllerLogin c = new ControllerLogin(model);
+            new ControllerLogin(model);
             view.dispose();
         }
         model.showTabelPengeluaranDanaFakultas(view, fakultas.getIdFakultas());
         view.getTfDana().setText(Integer.toString(model.showDanaSisa(fakultas.getIdFakultas())));
         view.refresh("");
-        view.SetIDPengajuan("");
+        view.setIDPengajuan("");
         model.showTablePengajuanDanaFakultas(view, fakultas.getIdFakultas());
     }
 }

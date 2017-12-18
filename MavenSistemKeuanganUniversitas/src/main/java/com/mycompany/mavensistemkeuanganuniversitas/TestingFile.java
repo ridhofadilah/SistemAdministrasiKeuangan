@@ -14,7 +14,7 @@ import com.mycompany.mavensistemkeuanganuniversitas.model.Aplikasi;
 public class TestingFile {
     public static void main(String[] args) {
         Aplikasi driver = new Aplikasi();
-        ControllerLogin x = new ControllerLogin(driver);
+        new ControllerLogin(driver);
     }
     
     public static String cekStatusPembayaran(String nim){

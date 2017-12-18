@@ -21,8 +21,6 @@ public class Aplikasi {
     private Mahasiswa mahasiswa;
     private Fakultas fakultas;
     private Pembayaran pembayaran;
-    private PengajuanDana pengajuan;
-    private PengeluaranDana pengeluaran;
     
     public Aplikasi(){
         this.data = new Database();
@@ -48,7 +46,7 @@ public class Aplikasi {
     }
 
     public void showTabelTagihan(MenuMahasiswa view, String idMahasiswa) {
-       data.LoadDataTagihan(view, idMahasiswa);
+       data.loadDataTagihan(view, idMahasiswa);
     }
 
     public Pembayaran findIDPembayaran(String id, String idMahasiswa) {
@@ -60,8 +58,8 @@ public class Aplikasi {
         }
     }
 
-    public void updatePembayaranM(String id, String idMahasiswa) {
-        data.updatePembayaranMahasiswa(id,idMahasiswa);
+    public void updatePembayaranM(String id) {
+        data.updatePembayaranMahasiswa(id);
     }
 
     public void konfirmasiPengajuan(String text, String setuju) {
@@ -73,7 +71,7 @@ public class Aplikasi {
     }
     
     public PengajuanDana cariIDPengajuan(String text) {
-        pengajuan = data.findIDPengajuan(text);
+        PengajuanDana pengajuan = data.findIDPengajuan(text);
         if (pengajuan != null){
             return pengajuan;
         } else {
@@ -141,7 +139,7 @@ public class Aplikasi {
     }
 
     public void updateDanaFakultas(PembagianDana pd, Fakultas f) {
-        data.UpdateDanaF(pd, f);
+        data.updateDanaF(pd, f);
     }
     
     public void tambahPembayaran(Pembayaran pb) {
@@ -171,7 +169,7 @@ public class Aplikasi {
     }
     
     public PengeluaranDana cariPengeluaran(String idPengeluran) {
-        pengeluaran = data.cariPengeluaran(idPengeluran);
+        PengeluaranDana pengeluaran = data.cariPengeluaran(idPengeluran);
         if (pengeluaran !=null){
             return pengeluaran;
         } else {

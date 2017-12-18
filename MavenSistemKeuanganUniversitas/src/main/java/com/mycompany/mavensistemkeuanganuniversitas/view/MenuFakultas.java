@@ -483,7 +483,7 @@ public class MenuFakultas extends javax.swing.JFrame {
         tfIDPengeluaran.setText("PGL"+Integer.toString(randId));
     }
     
-    public void SetIDPengajuan(String s){
+    public void setIDPengajuan(String s){
         tfPengajuan.setText(s);
         Random r = new Random();
         int randId = r.nextInt(999-111) + 111;

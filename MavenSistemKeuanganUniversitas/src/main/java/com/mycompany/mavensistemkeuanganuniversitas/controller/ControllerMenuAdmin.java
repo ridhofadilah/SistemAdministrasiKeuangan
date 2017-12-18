@@ -62,7 +62,7 @@ public class ControllerMenuAdmin implements ActionListener{
                 }
             }
          else if (source == view.getBtnLogout()){
-            ControllerLogin c = new ControllerLogin(model);
+            new ControllerLogin(model);
             view.dispose();
         }
         model.showTabelPembayaran(view);

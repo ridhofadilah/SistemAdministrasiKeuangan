@@ -13,7 +13,7 @@ import javax.swing.JButton;
  * @author User
  */
 public class Login extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Login
      */
@@ -109,11 +109,11 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPasswordActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_tfPasswordActionPerformed
 
     private void tfUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUsernameActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_tfUsernameActionPerformed
 
     public void addListener(ActionListener e){

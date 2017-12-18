@@ -13,14 +13,14 @@ public class PengeluaranDana {
     private String idPengeluaran;
     private String idFakultas;
     private String tahunAjar;
-    private String Keterangan;
+    private String keterangan;
     private int total;
 
-    public PengeluaranDana(String idPengeluaran, String idFakultas, String tahunAjar, String Keterangan, int total) {
+    public PengeluaranDana(String idPengeluaran, String idFakultas, String tahunAjar, String keterangan, int total) {
         this.idPengeluaran = idPengeluaran;
         this.idFakultas = idFakultas;
         this.tahunAjar = tahunAjar;
-        this.Keterangan = Keterangan;
+        this.keterangan = keterangan;
         this.total = total;
     }
 
@@ -49,11 +49,11 @@ public class PengeluaranDana {
     }
 
     public String getKeterangan() {
-        return Keterangan;
+        return keterangan;
     }
 
-    public void setKeterangan(String Keterangan) {
-        this.Keterangan = Keterangan;
+    public void setKeterangan(String keterangan) {
+        this.keterangan = keterangan;
     }
 
     public int getTotal() {

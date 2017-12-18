@@ -46,7 +46,7 @@ public class ControllerMenuMahasiswa implements ActionListener{
                 if (model.findIDPembayaran(id,mahasiswa.getIdMahasiswa()) != null){
                     Pembayaran p = model.findIDPembayaran(id, mahasiswa.getIdMahasiswa());
                     if (total == p.getTotal()){
-                        model.updatePembayaranM(id,mahasiswa.getIdMahasiswa());
+                        model.updatePembayaranM(id);
                     } else {
                         JOptionPane.showMessageDialog(null, "Sorry incorrect amount!");
                     }
@@ -55,7 +55,7 @@ public class ControllerMenuMahasiswa implements ActionListener{
                 }
             }   
         } else if (source == view.getBtlLogoutMahasiswa()){
-            ControllerLogin c = new ControllerLogin(model);
+            new ControllerLogin(model);
             view.dispose();
         }
         view.refresh("");

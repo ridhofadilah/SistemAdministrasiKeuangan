@@ -40,18 +40,18 @@ public class ControllerLogin implements ActionListener{
             if ("".equals(uname)|| "".equals(pw)){
                 JOptionPane.showMessageDialog(null,"Fill the username/password");
             } else if ("admin".equals(uname) && "admin".equals(pw)){
-                ControllerMenuAdmin x = new ControllerMenuAdmin(model);
+                new ControllerMenuAdmin(model);
                 view.dispose();
             } else if ("wakilrektor".equals(uname) && "wakilrektor".equals(pw)){
-                ControllerMenuWakilRektor y = new ControllerMenuWakilRektor(model);
+                new ControllerMenuWakilRektor(model);
                 view.dispose();
             } else if (model.findMahasiswa(uname,pw) != null){
                 Mahasiswa m = model.findMahasiswa(uname, pw);
-                ControllerMenuMahasiswa z = new ControllerMenuMahasiswa(model, m);
+                new ControllerMenuMahasiswa(model, m);
                 view.dispose();
             } else if (model.findFakultas(uname,pw) != null){
                 Fakultas f = model.findFakultas(uname, pw);
-                ControllerMenuFakultas s = new ControllerMenuFakultas(model, f);
+                new ControllerMenuFakultas(model, f);
             } else {
                 JOptionPane.showMessageDialog(null, "Sorry user is not in database!");
             }
