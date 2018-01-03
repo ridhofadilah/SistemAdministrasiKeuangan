@@ -1,0 +1,248 @@
+<html><head><title>DemoContext.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="sourcestyles.css" />
+</head><body link="blue" vlink="blue">
+<h3>File: Z:\demo\impal\ridho-keuangan\CucumberTesting\src\test\java\com\mycompany\cucumbertesting\DemoContext.java</h3>
+<SCRIPT>
+defaultStatus = "File: Z:\\demo\\impal\\ridho-keuangan\\CucumberTesting\\src\\test\\java\\com\\mycompany\\cucumbertesting\\DemoContext.java";
+top.document.title  = "DemoContext.java";
+</SCRIPT>
+<pre><span class="default"></span><a name="1"><font size=-1>1     </font></a><span class="default"></span><span class="comment">/*</span>
+<a name="2"><font size=-1>2     </font></a><span class="comment"> * To change this license header, choose License Headers in Project Properties.</span>
+<a name="3"><font size=-1>3     </font></a><span class="comment"> * To change this template file, choose Tools | Templates</span>
+<a name="4"><font size=-1>4     </font></a><span class="comment"> * and open the template in the editor.</span>
+<a name="5"><font size=-1>5     </font></a><span class="comment"> */</span>
+<a name="6"><font size=-1>6     </font></a><span class="comment"></span><span class="keyword">package </span><span class="default">com.mycompany.<a href="dictionary_C.html#20229">cucumbertesting</a>;</span>
+<a name="7"><font size=-1>7     </font></a><span class="default"></span>
+<a name="8"><font size=-1>8     </font></a><span class="default"></span><span class="keyword">import </span><span class="default">cucumber.<a href="dictionary_C.html#2403">api</a>.<a href="dictionary_C.html#2398">CucumberOptions</a>;</span>
+<a name="9"><font size=-1>9     </font></a><span class="default"></span><span class="keyword">import </span><span class="default">cucumber.api.java.<a href="dictionary_C.html#20226">bm</a>.<a href="dictionary_C.html#20225">Maka</a>;</span>
+<a name="10"><font size=-1>10     </font></a><span class="default"></span><span class="keyword">import </span><span class="default">cucumber.api.java.<a href="dictionary_C.html#20228">id</a>.<a href="dictionary_C.html#20211">Dengan</a>;</span>
+<a name="11"><font size=-1>11     </font></a><span class="default"></span><span class="keyword">import </span><span class="default">cucumber.api.java.<a href="dictionary_C.html#20228">id</a>.<a href="dictionary_C.html#20212">Ketika</a>;</span>
+<a name="12"><font size=-1>12     </font></a><span class="default"></span><span class="keyword">import </span><span class="default">junit.<a href="dictionary_J.html#20227">framework</a>.<a href="dictionary_J.html#20210">Assert</a>;</span>
+<a name="13"><font size=-1>13     </font></a><span class="default"></span>
+<a name="14"><font size=-1>14     </font></a><span class="default"></span><span class="comment">/**</span>
+<a name="15"><font size=-1>15     </font></a><span class="comment"> *</span>
+<a name="16"><font size=-1>16     </font></a><span class="comment"> * @author MIAfandi and Ridho</span>
+<a name="17"><font size=-1>17     </font></a><span class="comment"> */</span>
+<a name="18"><font size=-1>18     </font></a><span class="comment"></span><span class="default">@<a href="dictionary_C.html#2398">CucumberOptions</a>(plugin = {</span><span class="string">&quot;pretty&quot;</span><span class="default">, </span><span class="string">&quot;html:target/cucumber&quot;</span><span class="default">, </span><span class="string">&quot;json:target/cucumber.json&quot;</span><span class="default">})</span>
+<a name="19"><font size=-1>19     </font></a><span class="default"></span><span class="keyword">public class <a href="dictionary_C.html#49705">DemoContext</a> </span><span class="default">{</span>
+<a name="20"><font size=-1>20     </font></a><span class="default"></span>
+<a name="21"><font size=-1>21     </font></a><span class="default">    String <a href="dictionary_C.html#49779">respon</a>;</span>
+<a name="22"><font size=-1>22     </font></a><span class="default"></span>
+<a name="23"><font size=-1>23     </font></a><span class="default">    @<a href="dictionary_C.html#20211">Dengan</a>(</span><span class="string">&quot;^Data user baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem$&quot;</span><span class="default">)</span>
+<a name="24"><font size=-1>24     </font></a><span class="default">    </span><span class="keyword">public void <a href="dictionary_C.html#49721">data_user_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="25"><font size=-1>25     </font></a><span class="default">        </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="26"><font size=-1>26     </font></a><span class="comment">        </span><span class="keyword">boolean <a href="dictionary_C.html#49722">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="27"><font size=-1>27     </font></a><span class="default">        </span><span class="comment">///kode untuk cek ke database apakah user sudah ada</span>
+<a name="28"><font size=-1>28     </font></a><span class="comment">        </span><span class="keyword">boolean <a href="dictionary_C.html#49723">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span><span class="comment">///harusnya dari database.</span>
+<a name="29"><font size=-1>29     </font></a><span class="comment">        <a href="dictionary_J.html#20210">Assert</a></span><span class="default">.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49722">expected</a>, <a href="dictionary_C.html#49723">result</a>);</span>
+<a name="30"><font size=-1>30     </font></a><span class="default"></span>
+<a name="31"><font size=-1>31     </font></a><span class="default">    }</span>
+<a name="32"><font size=-1>32     </font></a><span class="default"></span>
+<a name="33"><font size=-1>33     </font></a><span class="default">    @<a href="dictionary_C.html#20212">Ketika</a>(</span><span class="string">&quot;^Memasukan data user dengan nama \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="34"><font size=-1>34     </font></a><span class="default">    </span><span class="keyword">public void <a href="dictionary_C.html#49743">memasukan_data_user_dengan_nama</a></span><span class="default">(String <a href="dictionary_C.html#49744">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="35"><font size=-1>35     </font></a><span class="default">        </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="36"><font size=-1>36     </font></a><span class="comment">        <a href="dictionary_C.html#49779">respon</a> </span><span class="default">= <a href="dictionary_C.html#20230">Demo</a>.<a href="dictionary_C.html#31502">addUser</a>(<a href="dictionary_C.html#49744">arg1</a>);</span>
+<a name="37"><font size=-1>37     </font></a><span class="default">    }</span>
+<a name="38"><font size=-1>38     </font></a><span class="default"></span>
+<a name="39"><font size=-1>39     </font></a><span class="default">    @<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^respon \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="40"><font size=-1>40     </font></a><span class="default">    </span><span class="keyword">public void <a href="dictionary_C.html#49745">respon</a></span><span class="default">(String <a href="dictionary_C.html#49746">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="41"><font size=-1>41     </font></a><span class="default">        </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="42"><font size=-1>42     </font></a><span class="comment">        ///kode untuk cek ke database apakah user sudah ada</span>
+<a name="43"><font size=-1>43     </font></a><span class="comment">        <a href="dictionary_J.html#20210">Assert</a></span><span class="default">.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49746">arg1</a>, <a href="dictionary_C.html#49779">respon</a>);</span>
+<a name="44"><font size=-1>44     </font></a><span class="default">    }</span>
+<a name="45"><font size=-1>45     </font></a><span class="default"></span>
+<a name="46"><font size=-1>46     </font></a><span class="default">    @<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^respon gagal dengan pesan \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="47"><font size=-1>47     </font></a><span class="default">    </span><span class="keyword">public void <a href="dictionary_C.html#49747">respon_gagal_dengan_pesan</a></span><span class="default">(String <a href="dictionary_C.html#49748">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="48"><font size=-1>48     </font></a><span class="default">        </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="49"><font size=-1>49     </font></a><span class="comment">        <a href="dictionary_J.html#20210">Assert</a></span><span class="default">.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49748">arg1</a>, <a href="dictionary_C.html#49779">respon</a>);</span>
+<a name="50"><font size=-1>50     </font></a><span class="default">    }</span>
+<a name="51"><font size=-1>51     </font></a><span class="default"></span>
+<a name="52"><font size=-1>52     </font></a><span class="default">    @<a href="dictionary_C.html#20211">Dengan</a>(</span><span class="string">&quot;^Data pembayaran baru yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem$&quot;</span><span class="default">)</span>
+<a name="53"><font size=-1>53     </font></a><span class="default">    </span><span class="keyword">public void <a href="dictionary_C.html#49712">data_pembayaran_baru_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="54"><font size=-1>54     </font></a><span class="default">        </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="55"><font size=-1>55     </font></a><span class="comment">        </span><span class="keyword">boolean <a href="dictionary_C.html#49713">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="56"><font size=-1>56     </font></a><span class="default">        </span><span class="comment">///kode untuk cek ke database apakah user sudah ada</span>
+<a name="57"><font size=-1>57     </font></a><span class="comment">        </span><span class="keyword">boolean <a href="dictionary_C.html#49714">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span><span class="comment">///harusnya dari database.</span>
+<a name="58"><font size=-1>58     </font></a><span class="comment">        <a href="dictionary_J.html#20210">Assert</a></span><span class="default">.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49713">expected</a>, <a href="dictionary_C.html#49714">result</a>);</span>
+<a name="59"><font size=-1>59     </font></a><span class="default"></span>
+<a name="60"><font size=-1>60     </font></a><span class="default">    }</span>
+<a name="61"><font size=-1>61     </font></a><span class="default"></span>
+<a name="62"><font size=-1>62     </font></a><span class="default">    @<a href="dictionary_C.html#20212">Ketika</a>(</span><span class="string">&quot;^Melakukan pembayaran mahasiswa \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="63"><font size=-1>63     </font></a><span class="default">    </span><span class="keyword">public void <a href="dictionary_C.html#49730">melakukan_pembayaran_mahasiswa</a></span><span class="default">(String <a href="dictionary_C.html#49731">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="64"><font size=-1>64     </font></a><span class="default">        </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="65"><font size=-1>65     </font></a><span class="comment">        </span><span class="keyword">boolean <a href="dictionary_C.html#49732">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="66"><font size=-1>66     </font></a><span class="default">        </span><span class="keyword">boolean <a href="dictionary_C.html#49733">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="67"><font size=-1>67     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49732">expected</a>, <a href="dictionary_C.html#49733">result</a>);</span>
+<a name="68"><font size=-1>68     </font></a><span class="default">    }</span>
+<a name="69"><font size=-1>69     </font></a><span class="default"></span>
+<a name="70"><font size=-1>70     </font></a><span class="default">    </span>
+<a name="71"><font size=-1>71     </font></a><span class="default">    @<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^responnya \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="72"><font size=-1>72     </font></a><span class="default">    </span><span class="keyword">public void <a href="dictionary_C.html#49773">responnya</a></span><span class="default">(String <a href="dictionary_C.html#49775">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="73"><font size=-1>73     </font></a><span class="default">        </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="74"><font size=-1>74     </font></a><span class="comment">        </span><span class="default">String <a href="dictionary_C.html#49774">ans</a> = </span><span class="string">&quot;Mahasiswa sukses melakukan pembayaran&quot;</span><span class="default">;</span>
+<a name="75"><font size=-1>75     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49775">arg1</a>, <a href="dictionary_C.html#49774">ans</a>);</span>
+<a name="76"><font size=-1>76     </font></a><span class="default">    }</span>
+<a name="77"><font size=-1>77     </font></a><span class="default"></span>
+<a name="78"><font size=-1>78     </font></a><span class="default">    @<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^responnya gagal dengan pesan \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="79"><font size=-1>79     </font></a><span class="default">    </span><span class="keyword">public void <a href="dictionary_C.html#49776">responnya_gagal_dengan_pesan</a></span><span class="default">(String <a href="dictionary_C.html#49778">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="80"><font size=-1>80     </font></a><span class="default">        </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="81"><font size=-1>81     </font></a><span class="comment">        </span><span class="default">String <a href="dictionary_C.html#49777">ans</a> = </span><span class="string">&quot;Mahasiswa gagal melakukan pembayaran&quot;</span><span class="default">;</span>
+<a name="82"><font size=-1>82     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49778">arg1</a>, <a href="dictionary_C.html#49777">ans</a>);</span>
+<a name="83"><font size=-1>83     </font></a><span class="default">    }</span>
+<a name="84"><font size=-1>84     </font></a><span class="default">    </span>
+<a name="85"><font size=-1>85     </font></a><span class="default">    @<a href="dictionary_C.html#20212">Ketika</a>(</span><span class="string">&quot;^Melakukan pembayaran mahasiswa$&quot;</span><span class="default">)</span>
+<a name="86"><font size=-1>86     </font></a><span class="default">    </span><span class="keyword">public void <a href="dictionary_C.html#49734">melakukan_pembayaran_mahasiswa</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="87"><font size=-1>87     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="88"><font size=-1>88     </font></a><span class="comment">    //throw new PendingException();</span>
+<a name="89"><font size=-1>89     </font></a><span class="comment">    </span><span class="keyword">boolean <a href="dictionary_C.html#49735">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="90"><font size=-1>90     </font></a><span class="default">        </span><span class="keyword">boolean <a href="dictionary_C.html#49736">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="91"><font size=-1>91     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49735">expected</a>, <a href="dictionary_C.html#49736">result</a>);</span>
+<a name="92"><font size=-1>92     </font></a><span class="default">}</span>
+<a name="93"><font size=-1>93     </font></a><span class="default">    </span>
+<a name="94"><font size=-1>94     </font></a><span class="default">    @<a href="dictionary_C.html#20211">Dengan</a>(</span><span class="string">&quot;^Data pembagian dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem$&quot;</span><span class="default">)</span>
+<a name="95"><font size=-1>95     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49709">data_pembagian_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="96"><font size=-1>96     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="97"><font size=-1>97     </font></a><span class="comment">    //throw new PendingException();</span>
+<a name="98"><font size=-1>98     </font></a><span class="comment">    </span><span class="keyword">boolean <a href="dictionary_C.html#49710">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="99"><font size=-1>99     </font></a><span class="default">        </span><span class="keyword">boolean <a href="dictionary_C.html#49711">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="100"><font size=-1>100     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49710">expected</a>, <a href="dictionary_C.html#49711">result</a>);</span>
+<a name="101"><font size=-1>101     </font></a><span class="default">}</span>
+<a name="102"><font size=-1>102     </font></a><span class="default"></span>
+<a name="103"><font size=-1>103     </font></a><span class="default">@<a href="dictionary_C.html#20212">Ketika</a>(</span><span class="string">&quot;^Melakukan pembagian dana$&quot;</span><span class="default">)</span>
+<a name="104"><font size=-1>104     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49727">melakukan_pembagian_dana</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="105"><font size=-1>105     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="106"><font size=-1>106     </font></a><span class="comment">   // throw new PendingException();</span>
+<a name="107"><font size=-1>107     </font></a><span class="comment">   </span><span class="keyword">boolean <a href="dictionary_C.html#49728">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="108"><font size=-1>108     </font></a><span class="default">        </span><span class="keyword">boolean <a href="dictionary_C.html#49729">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="109"><font size=-1>109     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49728">expected</a>, <a href="dictionary_C.html#49729">result</a>);</span>
+<a name="110"><font size=-1>110     </font></a><span class="default">}</span>
+<a name="111"><font size=-1>111     </font></a><span class="default"></span>
+<a name="112"><font size=-1>112     </font></a><span class="default">@<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^respon pembagian dana \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="113"><font size=-1>113     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49764">respon_pembagian_dana</a></span><span class="default">(String <a href="dictionary_C.html#49766">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="114"><font size=-1>114     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="115"><font size=-1>115     </font></a><span class="comment">    //throw new PendingException();</span>
+<a name="116"><font size=-1>116     </font></a><span class="comment">    </span><span class="default">String <a href="dictionary_C.html#49765">ans</a> = </span><span class="string">&quot;Pembagian Dana Berhasil&quot;</span><span class="default">;</span>
+<a name="117"><font size=-1>117     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49766">arg1</a>, <a href="dictionary_C.html#49765">ans</a>);</span>
+<a name="118"><font size=-1>118     </font></a><span class="default">}</span>
+<a name="119"><font size=-1>119     </font></a><span class="default">@<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^respon gagal pembagian dana \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="120"><font size=-1>120     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49752">respon_gagal_pembagian_dana</a></span><span class="default">(String <a href="dictionary_C.html#49754">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="121"><font size=-1>121     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="122"><font size=-1>122     </font></a><span class="comment">   // throw new PendingException();</span>
+<a name="123"><font size=-1>123     </font></a><span class="comment">   </span>
+<a name="124"><font size=-1>124     </font></a><span class="comment">    </span><span class="default">String <a href="dictionary_C.html#49753">ans</a> = </span><span class="string">&quot;Pembagian Dana Gagal&quot;</span><span class="default">;</span>
+<a name="125"><font size=-1>125     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49754">arg1</a>, <a href="dictionary_C.html#49753">ans</a>);</span>
+<a name="126"><font size=-1>126     </font></a><span class="default">}</span>
+<a name="127"><font size=-1>127     </font></a><span class="default">    </span>
+<a name="128"><font size=-1>128     </font></a><span class="default">@<a href="dictionary_C.html#20211">Dengan</a>(</span><span class="string">&quot;^Data pengajuan dana yang akan dimasukan tersedia dan sesuai format$&quot;</span><span class="default">)</span>
+<a name="129"><font size=-1>129     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49715">data_pengajuan_dana_yang_akan_dimasukan_tersedia_dan_sesuai_format</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="130"><font size=-1>130     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="131"><font size=-1>131     </font></a><span class="comment">    //throw new PendingException();</span>
+<a name="132"><font size=-1>132     </font></a><span class="comment">    </span>
+<a name="133"><font size=-1>133     </font></a><span class="comment">   </span><span class="keyword">boolean <a href="dictionary_C.html#49716">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="134"><font size=-1>134     </font></a><span class="default">        </span><span class="keyword">boolean <a href="dictionary_C.html#49717">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="135"><font size=-1>135     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49716">expected</a>, <a href="dictionary_C.html#49717">result</a>);</span>
+<a name="136"><font size=-1>136     </font></a><span class="default">}</span>
+<a name="137"><font size=-1>137     </font></a><span class="default"></span>
+<a name="138"><font size=-1>138     </font></a><span class="default">@<a href="dictionary_C.html#20212">Ketika</a>(</span><span class="string">&quot;^Melakukan pengajuan dana$&quot;</span><span class="default">)</span>
+<a name="139"><font size=-1>139     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49737">melakukan_pengajuan_dana</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="140"><font size=-1>140     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="141"><font size=-1>141     </font></a><span class="comment">    //throw new PendingException();</span>
+<a name="142"><font size=-1>142     </font></a><span class="comment">    </span>
+<a name="143"><font size=-1>143     </font></a><span class="comment">   </span><span class="keyword">boolean <a href="dictionary_C.html#49738">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="144"><font size=-1>144     </font></a><span class="default">        </span><span class="keyword">boolean <a href="dictionary_C.html#49739">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="145"><font size=-1>145     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49738">expected</a>, <a href="dictionary_C.html#49739">result</a>);</span>
+<a name="146"><font size=-1>146     </font></a><span class="default">    </span>
+<a name="147"><font size=-1>147     </font></a><span class="default">}</span>
+<a name="148"><font size=-1>148     </font></a><span class="default"></span>
+<a name="149"><font size=-1>149     </font></a><span class="default">@<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^respon pengajuan dana \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="150"><font size=-1>150     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49767">respon_pengajuan_dana</a></span><span class="default">(String <a href="dictionary_C.html#49769">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="151"><font size=-1>151     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="152"><font size=-1>152     </font></a><span class="comment">   // throw new PendingException();</span>
+<a name="153"><font size=-1>153     </font></a><span class="comment">   </span>
+<a name="154"><font size=-1>154     </font></a><span class="comment">    </span><span class="default">String <a href="dictionary_C.html#49768">ans</a> = </span><span class="string">&quot;Pengajuan Dana Berhasil&quot;</span><span class="default">;</span>
+<a name="155"><font size=-1>155     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49769">arg1</a>, <a href="dictionary_C.html#49768">ans</a>);</span>
+<a name="156"><font size=-1>156     </font></a><span class="default">}</span>
+<a name="157"><font size=-1>157     </font></a><span class="default"></span>
+<a name="158"><font size=-1>158     </font></a><span class="default">@<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^respon gagal pengajuan dana \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="159"><font size=-1>159     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49755">respon_gagal_pengajuan_dana</a></span><span class="default">(String <a href="dictionary_C.html#49757">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="160"><font size=-1>160     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="161"><font size=-1>161     </font></a><span class="comment">   // throw new PendingException();</span>
+<a name="162"><font size=-1>162     </font></a><span class="comment">   </span>
+<a name="163"><font size=-1>163     </font></a><span class="comment">    </span><span class="default">String <a href="dictionary_C.html#49756">ans</a> = </span><span class="string">&quot;Pengajuan Dana Gagal&quot;</span><span class="default">;</span>
+<a name="164"><font size=-1>164     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49757">arg1</a>, <a href="dictionary_C.html#49756">ans</a>);</span>
+<a name="165"><font size=-1>165     </font></a><span class="default">}</span>
+<a name="166"><font size=-1>166     </font></a><span class="default"></span>
+<a name="167"><font size=-1>167     </font></a><span class="default">@<a href="dictionary_C.html#20211">Dengan</a>(</span><span class="string">&quot;^Data pengeluaran dana yang akan dimasukan tersedia dan tidak duplikat dengan data yang telah ada di sistem$&quot;</span><span class="default">)</span>
+<a name="168"><font size=-1>168     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49718">data_pengeluaran_dana_yang_akan_dimasukan_tersedia_dan_tidak_duplikat_dengan_data_yang_telah_ada_di_sistem</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="169"><font size=-1>169     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="170"><font size=-1>170     </font></a><span class="comment">    //throw new PendingException();</span>
+<a name="171"><font size=-1>171     </font></a><span class="comment">    </span><span class="keyword">boolean <a href="dictionary_C.html#49719">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="172"><font size=-1>172     </font></a><span class="default">        </span><span class="keyword">boolean <a href="dictionary_C.html#49720">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="173"><font size=-1>173     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49719">expected</a>, <a href="dictionary_C.html#49720">result</a>);</span>
+<a name="174"><font size=-1>174     </font></a><span class="default">}</span>
+<a name="175"><font size=-1>175     </font></a><span class="default"></span>
+<a name="176"><font size=-1>176     </font></a><span class="default">@<a href="dictionary_C.html#20212">Ketika</a>(</span><span class="string">&quot;^Melakukan pengeluaran dana$&quot;</span><span class="default">)</span>
+<a name="177"><font size=-1>177     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49740">melakukan_pengeluaran_dana</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="178"><font size=-1>178     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="179"><font size=-1>179     </font></a><span class="comment">    //throw new PendingException();</span>
+<a name="180"><font size=-1>180     </font></a><span class="comment">    </span><span class="keyword">boolean <a href="dictionary_C.html#49741">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="181"><font size=-1>181     </font></a><span class="default">        </span><span class="keyword">boolean <a href="dictionary_C.html#49742">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="182"><font size=-1>182     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49741">expected</a>, <a href="dictionary_C.html#49742">result</a>);</span>
+<a name="183"><font size=-1>183     </font></a><span class="default">}</span>
+<a name="184"><font size=-1>184     </font></a><span class="default"></span>
+<a name="185"><font size=-1>185     </font></a><span class="default">@<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^respon pengeluaran dana \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="186"><font size=-1>186     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49770">respon_pengeluaran_dana</a></span><span class="default">(String <a href="dictionary_C.html#49772">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="187"><font size=-1>187     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="188"><font size=-1>188     </font></a><span class="comment">   // throw new PendingException();</span>
+<a name="189"><font size=-1>189     </font></a><span class="comment">   </span>
+<a name="190"><font size=-1>190     </font></a><span class="comment">    </span><span class="default">String <a href="dictionary_C.html#49771">ans</a> = </span><span class="string">&quot;Pengeluaran Dana Berhasil&quot;</span><span class="default">;</span>
+<a name="191"><font size=-1>191     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49772">arg1</a>, <a href="dictionary_C.html#49771">ans</a>);</span>
+<a name="192"><font size=-1>192     </font></a><span class="default">}</span>
+<a name="193"><font size=-1>193     </font></a><span class="default"></span>
+<a name="194"><font size=-1>194     </font></a><span class="default">@<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^respon gagal pengeluaran dana \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="195"><font size=-1>195     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49758">respon_gagal_pengeluaran_dana</a></span><span class="default">(String <a href="dictionary_C.html#49760">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="196"><font size=-1>196     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="197"><font size=-1>197     </font></a><span class="comment">   </span>
+<a name="198"><font size=-1>198     </font></a><span class="comment">    </span><span class="default">String <a href="dictionary_C.html#49759">ans</a> = </span><span class="string">&quot;Pengeluaran Dana Gagal&quot;</span><span class="default">;</span>
+<a name="199"><font size=-1>199     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49760">arg1</a>, <a href="dictionary_C.html#49759">ans</a>);</span>
+<a name="200"><font size=-1>200     </font></a><span class="default">}</span>
+<a name="201"><font size=-1>201     </font></a><span class="default">    </span>
+<a name="202"><font size=-1>202     </font></a><span class="default">@<a href="dictionary_C.html#20211">Dengan</a>(</span><span class="string">&quot;^Data laporan tahunan yang akan dimasukkan dan sesuai format$&quot;</span><span class="default">)</span>
+<a name="203"><font size=-1>203     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49706">data_laporan_tahunan_yang_akan_dimasukkan_dan_sesuai_format</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="204"><font size=-1>204     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="205"><font size=-1>205     </font></a><span class="comment">    //throw new PendingException();</span>
+<a name="206"><font size=-1>206     </font></a><span class="comment">    </span><span class="keyword">boolean <a href="dictionary_C.html#49707">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="207"><font size=-1>207     </font></a><span class="default">        </span><span class="keyword">boolean <a href="dictionary_C.html#49708">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="208"><font size=-1>208     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49707">expected</a>, <a href="dictionary_C.html#49708">result</a>);</span>
+<a name="209"><font size=-1>209     </font></a><span class="default">}</span>
+<a name="210"><font size=-1>210     </font></a><span class="default"></span>
+<a name="211"><font size=-1>211     </font></a><span class="default">@<a href="dictionary_C.html#20212">Ketika</a>(</span><span class="string">&quot;^Melakukan input laporan tahunan$&quot;</span><span class="default">)</span>
+<a name="212"><font size=-1>212     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49724">melakukan_input_laporan_tahunan</a></span><span class="default">() </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="213"><font size=-1>213     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="214"><font size=-1>214     </font></a><span class="comment">    //throw new PendingException();</span>
+<a name="215"><font size=-1>215     </font></a><span class="comment">    </span><span class="keyword">boolean <a href="dictionary_C.html#49725">expected</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="216"><font size=-1>216     </font></a><span class="default">        </span><span class="keyword">boolean <a href="dictionary_C.html#49726">result</a> </span><span class="default">= </span><span class="keyword">false</span><span class="default">;</span>
+<a name="217"><font size=-1>217     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49725">expected</a>, <a href="dictionary_C.html#49726">result</a>);</span>
+<a name="218"><font size=-1>218     </font></a><span class="default">}</span>
+<a name="219"><font size=-1>219     </font></a><span class="default"></span>
+<a name="220"><font size=-1>220     </font></a><span class="default">@<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^respon laporan tahunan \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="221"><font size=-1>221     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49761">respon_laporan_tahunan</a></span><span class="default">(String <a href="dictionary_C.html#49763">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="222"><font size=-1>222     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="223"><font size=-1>223     </font></a><span class="comment">   // throw new PendingException();</span>
+<a name="224"><font size=-1>224     </font></a><span class="comment">   </span>
+<a name="225"><font size=-1>225     </font></a><span class="comment">    </span><span class="default">String <a href="dictionary_C.html#49762">ans</a> = </span><span class="string">&quot;Laporan Tahunan tersimpan&quot;</span><span class="default">;</span>
+<a name="226"><font size=-1>226     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49763">arg1</a>, <a href="dictionary_C.html#49762">ans</a>);</span>
+<a name="227"><font size=-1>227     </font></a><span class="default">}</span>
+<a name="228"><font size=-1>228     </font></a><span class="default"></span>
+<a name="229"><font size=-1>229     </font></a><span class="default">@<a href="dictionary_C.html#20225">Maka</a>(</span><span class="string">&quot;^respon gagal laporan tahunan \&quot;([^\&quot;]*)\&quot;$&quot;</span><span class="default">)</span>
+<a name="230"><font size=-1>230     </font></a><span class="default"></span><span class="keyword">public void <a href="dictionary_C.html#49749">respon_gagal_laporan_tahunan</a></span><span class="default">(String <a href="dictionary_C.html#49751">arg1</a>) </span><span class="keyword">throws </span><span class="default">Throwable {</span>
+<a name="231"><font size=-1>231     </font></a><span class="default">    </span><span class="comment">// Write code here that turns the phrase above into concrete actions</span>
+<a name="232"><font size=-1>232     </font></a><span class="comment">   </span>
+<a name="233"><font size=-1>233     </font></a><span class="comment">    </span><span class="default">String <a href="dictionary_C.html#49750">ans</a> = </span><span class="string">&quot;Laporan Tahunan gagal tersimpan&quot;</span><span class="default">;</span>
+<a name="234"><font size=-1>234     </font></a><span class="default">        <a href="dictionary_J.html#20210">Assert</a>.<a href="dictionary_A.html#20215">assertEquals</a>(<a href="dictionary_C.html#49751">arg1</a>, <a href="dictionary_C.html#49750">ans</a>);</span>
+<a name="235"><font size=-1>235     </font></a><span class="default">}</span>
+<a name="236"><font size=-1>236     </font></a><span class="default"></span>
+<a name="237"><font size=-1>237     </font></a><span class="default">}</span>
+<a name="238"><font size=-1>238     </font></a><span class="default"></span>
+</pre></body></html>
